@@ -11,10 +11,10 @@ imports Main
 begin
 
 lemma
-  assumes "C ∧ Q ⟶ P" 
-          "¬C ⟶ ¬Op" 
-          "¬Q ⟶ M" 
-          "¬P"  
+  assumes "C ∧ Q ⟶ P"
+          "¬C ⟶ ¬Op"
+          "¬Q ⟶ M"
+          "¬P"
           "E ⟶ Op ∧ ¬M"
   shows  "¬E"
   oops
@@ -28,10 +28,6 @@ donde se han usado los siguientes símbolos
 + M:  Dios es malévolo.
 + P:  Dios evita el mal.
 + E:  Dios existe.
-
-<h4>Soluciones</h4>
-
-Puedes escribir tus soluciones en los comentarios (con el código entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;) o ver las soluciones propuestas pulsando [expand title="aquí"]
 
 <h4>Soluciones con Isabelle/HOL</h4>
 
@@ -47,10 +43,10 @@ lemma mt: "⟦F ⟶ G; ¬G⟧ ⟹ ¬F"
   by simp
 
 lemma
-  assumes "C ∧ Q ⟶ P" 
-          "¬C ⟶ ¬Op" 
-          "¬Q ⟶ M" 
-          "¬P"  
+  assumes "C ∧ Q ⟶ P"
+          "¬C ⟶ ¬Op"
+          "¬Q ⟶ M"
+          "¬P"
           "E ⟶ Op ∧ ¬M"
   shows  "¬E"
 proof (rule notI)
@@ -58,7 +54,7 @@ proof (rule notI)
   with ‹E ⟶ Op ∧ ¬M› have "Op ∧ ¬M" by (rule mp)
   then have "Op" by (rule conjunct1)
   then have "¬¬Op" by (rule notnotI)
-  with ‹¬C ⟶ ¬Op› have "¬¬C" by (rule mt) 
+  with ‹¬C ⟶ ¬Op› have "¬¬C" by (rule mt)
   then have "C" by (rule notnotD)
   moreover
   have "¬M" using ‹Op ∧ ¬M› by (rule conjunct2)
@@ -71,4 +67,9 @@ qed
 
 end
 </pre>
-[/expand]
+
+<h4>Otras soluciones</h4>
+<ul>
+<li>Se pueden escribir otras soluciones en los comentarios.
+<li>El código se debe escribir entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
+</ul>
