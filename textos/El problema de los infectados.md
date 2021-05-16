@@ -7,10 +7,6 @@ Existe una persona tal que si dicha persona, entonces todas las personas se infe
 
 En la formalización se usará I(x) para representar que la persona x está infectada. El problema consiste en completar la siguiente teoría de Isabelle/HOL:
 
-<h4>Soluciones</h4>
-
-Puedes escribir tus soluciones en los comentarios (con el código entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;) o ver las soluciones propuestas pulsando [expand title="aquí"]
-
 <h4>Soluciones con Isabelle/HOL</h4>
 
 <pre lang="isar">
@@ -39,7 +35,7 @@ lemma "∃x. (I x ⟶ (∀y. I y))"
 proof -
   have "¬ (∀y. I y) ∨ (∀y. I y)" ..
   then show "∃x. (I x ⟶ (∀y. I y))"
-  proof 
+  proof
     assume "¬ (∀y. I y)"
     then have "∃y. ¬(I y)" by simp
     then obtain a where "¬ I a" ..
@@ -59,14 +55,14 @@ lemma aux1:
 proof (rule ccontr)
   assume "∄y. ¬ I y"
   have "∀y. I y"
-  proof 
+  proof
     fix a
     show "I a"
     proof (rule ccontr)
       assume "¬ I a"
       then have "∃y. ¬ I y" by (rule exI)
       with ‹∄y. ¬ I y› show False by (rule notE)
-    qed 
+    qed
   qed
   with assms show False by (rule notE)
 qed
@@ -85,11 +81,11 @@ lemma aux3:
 proof
   fix a
   show "¬ P a"
-  proof 
+  proof
     assume "P a"
     then have "∃x. P x" by (rule exI)
     with assms show False by (rule notE)
-  qed 
+  qed
 qed
 
 lemma aux4:
@@ -112,7 +108,7 @@ lemma "∃x. (I x ⟶ (∀y. I y))"
 proof -
   have "¬ (∀y. I y) ∨ (∀y. I y)" ..
   then show "∃x. (I x ⟶ (∀y. I y))"
-  proof 
+  proof
     assume "¬ (∀y. I y)"
     then have "∃y. ¬(I y)" by (rule aux1)
     then obtain a where "¬ I a" by (rule exE)
@@ -126,4 +122,9 @@ qed
 
 end
 </pre>
-[/expand]
+
+<h4>Otras soluciones</h4>
+<ul>
+<li>Se pueden escribir otras soluciones en los comentarios.
+<li>El código se debe escribir entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
+</ul>
