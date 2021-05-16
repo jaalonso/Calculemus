@@ -9,13 +9,9 @@ begin
 
 lemma "(p ⟶ q) ∧ (r ⟶ s) ⟶ ((p ∧ r) ⟶ (q ∧ s))"
   oops
-  
+
 end
 </pre>
-
-<h4>Soluciones</h4>
-
-Puedes escribir tus soluciones en los comentarios (con el código entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;) o ver las soluciones propuestas pulsando [expand title="aquí"]
 
 <h4>Soluciones con Isabelle/HOL</h4>
 
@@ -55,7 +51,7 @@ proof
     next
       have "r ⟶ s" using ‹(p ⟶ q) ∧ (r ⟶ s)› ..
       moreover have "r" using ‹p ∧ r› ..
-      ultimately show "s" ..   
+      ultimately show "s" ..
     qed
   qed
 qed
@@ -82,5 +78,9 @@ qed
 
 end
 </pre>
-[/expand]
 
+<h4>Otras soluciones</h4>
+<ul>
+<li>Se pueden escribir otras soluciones en los comentarios.
+<li>El código se debe escribir entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
+</ul>
