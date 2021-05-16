@@ -15,6 +15,6 @@
 <h4>Otras soluciones</h4>
 <ul>
 <li>Se pueden escribir otras soluciones en los comentarios.
-<li>El código se debe escribir entre una línea con &#60;pre lang="isar"&#62; y otra con &#60;/pre&#62;
+<li>El código se debe escribir entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
 </ul>
 [/schedule]
