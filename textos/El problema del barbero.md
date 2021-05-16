@@ -11,7 +11,7 @@ Se usará la siguiente simbolización:
 + C(x)   para x es un habitante de Las Chinas
 + c      para Carlos
 
- 
+
 El problema consiste en completar la siguiente teoría de Isabelle/HOL:
 
 <pre lang="isar">
@@ -26,10 +26,6 @@ lemma
   oops
 end
 </pre>
-
-<h4>Soluciones</h4>
-
-Puedes escribir tus soluciones en los comentarios (con el código entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;) o ver las soluciones propuestas pulsando [expand title="aquí"]
 
 <h4>Soluciones con Isabelle/HOL</h4>
 
@@ -57,7 +53,7 @@ proof -
   proof (rule ccontr)
     assume "¬A(c,c)"
     with assms(2) have "C(c) ∧ ¬A(c,c)" ..
-    with 1 have "A(c,c)" .. 
+    with 1 have "A(c,c)" ..
     with ‹¬A(c,c)› show False ..
   qed
   have "¬A(c,c)"
@@ -69,7 +65,7 @@ proof -
 qed
 
 ― ‹La demostración detallada es›
-lemma 
+lemma
   assumes "∀x. A(c,x) ⟷ C(x) ∧ ¬A(x,x)"
           "C(c)"
   shows   "¬(∃x. A(c,x))"
@@ -92,4 +88,9 @@ qed
 
 end
 </pre>
-[/expand]
+
+<h4>Otras soluciones</h4>
+<ul>
+<li>Se pueden escribir otras soluciones en los comentarios.
+<li>El código se debe escribir entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
+</ul>
