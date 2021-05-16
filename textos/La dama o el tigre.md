@@ -11,8 +11,8 @@ Sabiendo que uno de los carteles dice la verdad y el otro no, demostrar que la d
 
 Para la formalización del problema se usarán los siguientes símbolos
 
-+ c1 que representa *el contenido del cartel de la puerta 1*, 
-+ c2 que representa *el contenido del cartel de la puerta 2* , 
++ c1 que representa *el contenido del cartel de la puerta 1*,
++ c2 que representa *el contenido del cartel de la puerta 2* ,
 + dp que representa *hay una dama en la primera habitación*,
 + tp que representa *hay un tigre en la primera habitación*,
 + ds que representa *hay una dama en la segunda habitación* y
@@ -34,10 +34,6 @@ end
 </pre>
 
 Demostrar con Isabelle/HOL que el argumento anterior es correcto.
-
-<h4>Soluciones</h4>
-
-Puedes escribir tus soluciones en los comentarios (con el código entre  una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con  &#60;/pre&#62;) o ver las soluciones propuestas pulsando [expand  title="aquí"]
 
 <h4>Soluciones con Isabelle/HOL</h4>
 
@@ -65,10 +61,10 @@ lemma
 proof -
   note ‹(c1 ∧ ¬ c2) ∨ (c2 ∧ ¬ c1)›
   then show "ds"
-  proof 
+  proof
     assume "c1 ∧ ¬ c2"
     then have "c1" ..
-    with ‹c1 ⟷ dp ∧ ts› have "dp ∧ ts" .. 
+    with ‹c1 ⟷ dp ∧ ts› have "dp ∧ ts" ..
     then have "(dp ∧ ts) ∨ (ds ∧ tp)" ..
     with assms(2) have "c2" ..
     have "¬ c2" using ‹c1 ∧ ¬ c2› ..
@@ -102,7 +98,7 @@ proof -
   proof (rule disjE)
     assume "c1 ∧ ¬ c2"
     then have "c1" by (rule conjunct1)
-    with ‹c1 ⟷ dp ∧ ts› have "dp ∧ ts" by (rule iffD1) 
+    with ‹c1 ⟷ dp ∧ ts› have "dp ∧ ts" by (rule iffD1)
     then have "(dp ∧ ts) ∨ (ds ∧ tp)" by (rule disjI1)
     with assms(2) have "c2" by (rule iffD2)
     have "¬ c2" using ‹c1 ∧ ¬ c2› by (rule conjunct2)
@@ -126,4 +122,9 @@ qed
 
 end
 </pre>
-[/expand]
+
+<h4>Otras soluciones</h4>
+<ul>
+<li>Se pueden escribir otras soluciones en los comentarios.
+<li>El código se debe escribir entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
+</ul>
