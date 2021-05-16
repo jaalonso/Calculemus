@@ -13,18 +13,14 @@ theory Las_reflexivas_circulares_son_simetricas
 imports Main
 begin
 
-lemma 
+lemma
   assumes "∀x. R(x, x)"
-          "∀x y z. R(x, y) ∧ R(y, z) ⟶ R(z, x)" 
+          "∀x y z. R(x, y) ∧ R(y, z) ⟶ R(z, x)"
   shows   "∀x y. R(x, y) ⟶ R(y, x)"
   oops
-  
+
 end
 </pre>
-
-<h4>Soluciones</h4>
-
-Puedes escribir tus soluciones en los comentarios (con el código entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;) o ver las soluciones propuestas pulsando [expand title="aquí"]
 
 <h4>Soluciones con Isabelle/HOL</h4>
 
@@ -34,9 +30,9 @@ imports Main
 begin
 
 (* 1ª demostración: automática *)
-lemma 
+lemma
   assumes "∀x. R(x, x)"
-          "∀x y z. R(x, y) ∧ R(y, z) ⟶ R(z, x)" 
+          "∀x y z. R(x, y) ∧ R(y, z) ⟶ R(z, x)"
   shows   "∀x y. R(x, y) ⟶ R(y, x)"
   using assms
   by blast
@@ -44,24 +40,24 @@ lemma
 (* 2ª demostración: estructurada *)
 lemma
   assumes "∀x. R(x, x)"
-          "∀x y z. R(x, y) ∧ R(y, z) ⟶ R(z, x)" 
+          "∀x y z. R(x, y) ∧ R(y, z) ⟶ R(z, x)"
   shows   "∀x y. R(x, y) ⟶ R(y, x)"
 proof (rule allI)+
   fix a b
   show "R (a, b) ⟶ R (b, a)"
   proof (rule impI)
     assume "R(a, b)"
-    have "R(b, b)" 
+    have "R(b, b)"
       using assms(1) by (rule allE)
-    with `R(a, b)` have "R(a, b) ∧ R(b, b)" 
+    with `R(a, b)` have "R(a, b) ∧ R(b, b)"
       by (rule conjI)
-    have  "∀y z. R(a, y) ∧ R(y, z) ⟶ R(z, a)" 
+    have  "∀y z. R(a, y) ∧ R(y, z) ⟶ R(z, a)"
       using assms(2) by (rule allE)
-    then have "∀z. R(a, b) ∧ R(b, z) ⟶R(z, a)" 
+    then have "∀z. R(a, b) ∧ R(b, z) ⟶R(z, a)"
       by (rule allE)
-    then have "R(a, b) ∧ R(b, b) ⟶R(b, a)" 
+    then have "R(a, b) ∧ R(b, b) ⟶R(b, a)"
       by (rule allE)
-    then show "R(b, a)" using `R(a, b) ∧ R(b, b)` 
+    then show "R(b, a)" using `R(a, b) ∧ R(b, b)`
       by (rule mp)
   qed
 qed
@@ -69,7 +65,7 @@ qed
 (* 3º demostración: detallada *)
 lemma
   assumes "∀x. R(x, x)"
-          "∀x y z. R(x, y) ∧ R(y, z) ⟶ R(z, x)" 
+          "∀x y z. R(x, y) ∧ R(y, z) ⟶ R(z, x)"
   shows   "∀x y. R(x, y) ⟶ R(y, x)"
 proof (rule allI)+
   fix a b
@@ -87,4 +83,9 @@ qed
 
 end
 </pre>
-[/expand]
+
+<h4>Otras soluciones</h4>
+<ul>
+<li>Se pueden escribir otras soluciones en los comentarios.
+<li>El código se debe escribir entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
+</ul>
