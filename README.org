@@ -2,3 +2,16 @@
 
 En este repositorio se encuentran los ejercicios propuestos en [[https://www.glc.us.es/~jalonso/calculemus][Calculemus]] para
 demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
+
+Los problemas publicados (por orden cronológico inverso) son
+
++ 08-04-20: [[./textos/Las reflexivas circulares son simétricas.md][Las reflexivas circulares son simétricas]].
++ 31-03-20: [[./textos/El problema del barbero.md][El problema del barbero]].
++ 19-03-20: [[./textos/El problema de los infectados.md][El problema de los infectados]].
++ 12-03-20: [[./textos/La dama o el tigre.md][La dama o el tigre]].
++ 05-03-20: [[./textos/El problema lógico del mal.md][El problema lógico del mal]].
++ 24-02-20: [[./textos/Praeclarum theorema.md][Praeclarum theorema]].
++ 30-01-20: [[./textos/Teorema de Nicómaco.md][Teorema de Nicómaco]].
++ 24-01-20: [[./textos/Reto f (f (f b)) = f b.md][Reto f (f (f b)) = f b]].
++ 14-01-20: [[./textos/Celebracion del Dia Mundial de la Logica.md][Celebración del día mundial de la lógica]].
++ 14-01-20: [[./textos/Dia mundial de la logica y Calculemus.md][Día mundial de la lógica y Calculemus]].
