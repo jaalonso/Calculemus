@@ -20,7 +20,7 @@ text \<open>-- ---------------------------------------------------------------
 lemma 
   assumes "s \<subseteq> t"
   shows   "s \<inter> u \<subseteq> t \<inter> u"
-proof
+proof (rule subsetI)
   fix x
   assume hx: "x \<in> s \<inter> u"
   have xs: "x \<in> s"
