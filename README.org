@@ -5,10 +5,7 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
-* Segunda época
 + 17-05-21: [[./textos/Propiedad_de_monotonia_de_la_interseccion.md][Propiedad de monotonía de la intersección]] ([[./src/Propiedad_de_monotonia_de_la_interseccion.lean][Lean]] e [[./thy//Propiedad_de_monotonia_de_la_interseccion.thy][Isabelle]]).
-
-* Primera época
 + 08-04-20: [[./textos/Las reflexivas circulares son simétricas.md][Las reflexivas circulares son simétricas]].
 + 31-03-20: [[./textos/El problema del barbero.md][El problema del barbero]].
 + 19-03-20: [[./textos/El problema de los infectados.md][El problema de los infectados]].
