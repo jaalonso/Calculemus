@@ -1,8 +1,8 @@
-% Propiedad_de_monotonia_de_la_interseccion.lean
-% Propiedad de monotonía de la intersección.
-% José A. Alonso Jiménez
-% Sevilla, 17 de mayo de 2021
-% ---------------------------------------------------------------------
+---
+title:  Propiedad de monotonía de la intersección.
+author: José A. Alonso Jiménez
+date:   Sevilla, 17 de mayo de 2021
+---
 
 Demostrar que la intersección es monótona por la izquierda; es decir, si
 
