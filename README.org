@@ -5,6 +5,7 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
++ 19-05-21: [[./textos/Diferencia_de_diferencia_de_conjuntos.md][Diferencia de diferencia de conjuntos]] (En [[./src/Diferencia_de_diferencia_de_conjuntos.lean][Lean]] y en [[./thy/Diferencia_de_diferencia_de_conjuntos.thy][Isabelle]]).
 + 18-05-21: [[./textos/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.md][Propiedad semidistributiva de la intersección sobre la unión]] (En [[./src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.lean][Lean]] y en [[./thy/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.thy][Isabelle]]).
 + 17-05-21: [[./textos/Propiedad_de_monotonia_de_la_interseccion.md][Propiedad de monotonía de la intersección]] (En [[./src/Propiedad_de_monotonia_de_la_interseccion.lean][Lean]] y en [[./thy//Propiedad_de_monotonia_de_la_interseccion.thy][Isabelle]]).
 + 08-04-20: [[./textos/Las reflexivas circulares son simétricas.md][Las reflexivas circulares son simétricas]].
