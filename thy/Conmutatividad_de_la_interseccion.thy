@@ -14,8 +14,6 @@ theory Conmutatividad_de_la_interseccion
 imports Main
 begin
 
-find_theorems "_ \<in> _ \<inter> _"
-
 (* 1\<ordfeminine> demostración *)
 lemma "s \<inter> t = t \<inter> s"
 proof (rule set_eqI)
