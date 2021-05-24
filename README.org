@@ -5,6 +5,7 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
++ 24-05-21: [[./textos/Conmutatividad_de_la_interseccion.md][Conmutatividad de la intersección]] (En [[./src/Conmutatividad_de_la_interseccion.lean][Lean]] y en [[./thy/Conmutatividad_de_la_interseccion.thy][Isabelle]]).
 + 21-05-21: [[./textos/Diferencia_de_diferencia_de_conjuntos_2.md][2ª diferencia de diferencia de conjuntos]] (En [[./src/Diferencia_de_diferencia_de_conjuntos_2.lean][Lean]] y en [[./thy/Diferencia_de_diferencia_de_conjuntos.thy][Isabelle]]).
 + 20-05-21: [[./textos/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union_2.md][2ª propiedad semidistributiva de la intersección sobre la unión]] (En [[./src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union_2.lean][Lean]] y en [[./thy/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union_2.thy][Isabelle]]).
 + 19-05-21: [[./textos/Diferencia_de_diferencia_de_conjuntos.md][Diferencia de diferencia de conjuntos]] (En [[./src/Diferencia_de_diferencia_de_conjuntos.lean][Lean]] y en [[./thy/Diferencia_de_diferencia_de_conjuntos.thy][Isabelle]]).
