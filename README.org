@@ -5,6 +5,7 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
++ 27-05-21: [[./textos/Union_con_su_diferencia.md][Unión con su diferencia]] (En [[./src/Union_con_su_diferencia.lean][Lean]] y en [[./thy/Union_con_su_diferencia.thy][Isabelle]]).
 + 26-05-21: [[./textos/Union_con_su_interseccion.md][Unión con su intersección]] (En [[./src/Union_con_su_interseccion.lean][Lean]] y en [[./thy/Union_con_su_interseccion.thy][Isabelle]]).
 + 25-05-21: [[./textos/Interseccion_con_su_union.md][Intersección con su unión]] (En [[./src/Interseccion_con_su_union.lean][Lean]] y en [[./thy/Interseccion_con_su_union.thy][Isabelle]]).
 + 24-05-21: [[./textos/Conmutatividad_de_la_interseccion.md][Conmutatividad de la intersección]] (En [[./src/Conmutatividad_de_la_interseccion.lean][Lean]] y en [[./thy/Conmutatividad_de_la_interseccion.thy][Isabelle]]).
