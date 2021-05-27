@@ -1,5 +1,5 @@
 (* Diferencia_de_union_e_interseccion.thy
-   Diferencia de unión e interseccion
+   Diferencia de unión e intersección
    José A. Alonso Jiménez
    Sevilla, 28 de mayo de 2021
    ---------------------------------------------------------------------

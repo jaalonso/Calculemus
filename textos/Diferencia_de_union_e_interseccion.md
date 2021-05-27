@@ -1,5 +1,5 @@
 ---
-Título: Diferencia de unión e interseccion
+Título: Diferencia de unión e intersección
 Autor:  José A. Alonso
 ---
 
