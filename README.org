@@ -5,6 +5,8 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
++ 02-06-21: [[./textos/Distributiva_de_la_interseccion_respecto_de_la_union_general.md][Distributiva de la intersección respecto de la unión general]] (En [[./src/Distributiva_de_la_interseccion_respecto_de_la_union_general.lean][Lean]] y en [[./thy/Distributiva_de_la_interseccion_respecto_de_la_union_general.thy][Isabelle]]).
++ 01-06-21: [[./textos/Interseccion_de_los_primos_y_los_mayores_que_dos.md][Intersección de los primos y los mayores que dos]] (En [[./src/Interseccion_de_los_primos_y_los_mayores_que_dos.lean][Lean]] y en [[./thy/Interseccion_de_los_primos_y_los_mayores_que_dos.thy][Isabelle]]).
 + 31-05-21: [[./textos/Union_de_pares_e_impares.md][Unión de los conjuntos de los pares e impares]] (En [[./src/Union_de_pares_e_impares.lean][Lean]] y en [[./thy/Union_de_pares_e_impares.thy][Isabelle]]).
 + 28-05-21: [[./textos/Diferencia_de_union_e_interseccion.md][Diferencia de unión e intersección]] (En [[./src/Diferencia_de_union_e_interseccion.lean][Lean]] y en [[./thy/Diferencia_de_union_e_interseccion.thy][Isabelle]]).
 + 27-05-21: [[./textos/Union_con_su_diferencia.md][Unión con su diferencia]] (En [[./src/Union_con_su_diferencia.lean][Lean]] y en [[./thy/Union_con_su_diferencia.thy][Isabelle]]).
