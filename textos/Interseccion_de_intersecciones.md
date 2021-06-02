@@ -95,7 +95,7 @@ example : (⋂ i, A i ∩ B i) = (⋂ i, A i) ∩ (⋂ i, B i) :=
 by finish [mem_inter_eq, mem_Inter, ext_iff]
 </pre>
 
-Se puede interactuar con la prueba anterior en [esta sesión con Lean](???).
+Se puede interactuar con la prueba anterior en [esta sesión con Lean](https://bit.ly/3uJjKub).
 
 **Soluciones con Isabelle/HOL**
 
