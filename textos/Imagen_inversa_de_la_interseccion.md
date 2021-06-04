@@ -3,9 +3,7 @@ Título: Imagen inversa de la intersección
 Autor:  José A. Alonso
 ---
 
-En Lean, la imagen inversa de un conjunto s (de elementos de tipo β)
-por la función f (de tipo α → β) es el conjunto `f ⁻¹' s` de
-elementos x (de tipo α) tales que `f x ∈ s`.
+En Lean, la imagen inversa de un conjunto s (de elementos de tipo  por la función f (de tipo α → β) es el conjunto `f ⁻¹' s` de elementos x (de tipo α) tales que `f x ∈ s`.
 
 Demostrar que
 <pre lang="text">
@@ -105,7 +103,7 @@ example : f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v :=
 preimage_inter
 </pre>
 
-Se puede interactuar con la prueba anterior en [esta sesión con Lean](???).
+Se puede interactuar con la prueba anterior en [esta sesión con Lean](https://bit.ly/3yXZw3j).
 
 **Soluciones con Isabelle/HOL**
 
