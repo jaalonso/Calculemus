@@ -6,7 +6,7 @@
 *)
 
 text \<open>------------------------------------------------------------------
-   En Lean, la imagen de un conjunto s por una función f se representa
+   En Isabelle, la imagen de un conjunto s por una función f se representa
    por
       f ` s = {y | \<exists> x, x \<in> s \<and> f x = y}
 
