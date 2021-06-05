@@ -1,7 +1,7 @@
 (* Imagen_inversa_de_la_interseccion.thy
    Imagen inversa de la intersección
    José A. Alonso Jiménez
-   Sevilla, 7 de junio de 2021
+   Sevilla, 5 de junio de 2021
    ---------------------------------------------------------------------
 *)
 
