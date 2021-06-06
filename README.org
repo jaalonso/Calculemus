@@ -5,6 +5,7 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
++ 09-06-21: [[./textos/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.md][Imagen inversa de la imagen de aplicaciones inyectivas]] (En [[./src/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.thy][Isabelle]]).
 + 08-06-21: [[./textos/Subconjunto_de_la_imagen_inversa.md][Subconjunto de la imagen inversa]] (En [[./src/Subconjunto_de_la_imagen_inversa.lean][Lean]] y en [[./thy/Subconjunto_de_la_imagen_inversa.thy][Isabelle]]).
 + 07-06-21: [[./textos/Imagen_inversa_de_la_imagen.md][Imagen inversa de la imagen]] (En [[./src/Imagen_inversa_de_la_imagen.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_imagen.thy][Isabelle]]).
 + 06-06-21: [[./textos/Imagen_de_la_union.md][Imagen de la unión]] (En [[./src/Imagen_de_la_union.lean][Lean]] y en [[./thy/Imagen_de_la_union.thy][Isabelle]]).
