@@ -5,7 +5,7 @@ Autor:  José A. Alonso
 
 Demostrar que si s ⊆ t, entonces
 <pre lang="text">
-    f '' s ⊆ f '' t
+    f[s] ⊆ f[t]
 </pre>
 
 Para ello, completar la siguiente teoría de Lean:
