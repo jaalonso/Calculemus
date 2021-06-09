@@ -5,6 +5,7 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
++ 14-06-21: [[./textos/Imagen_inversa_de_la_union.md][Imagen inversa de la unión]] (En [[./src/Imagen_inversa_de_la_union.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_union.thy][Isabelle]]).
 + 13-06-21: [[./textos/Monotonia_de_la_imagen_inversa.md][Monotonía de la imagen inversa]] (En [[./src/Monotonia_de_la_imagen_inversa.lean][Lean]] y en [[./thy/Monotonia_de_la_imagen_inversa.thy][Isabelle]]).
 + 12-06-21: [[./textos/Monotonia_de_la_imagen_de_conjuntos.md][Monotonía de la imagen de conjuntos]] (En [[./src/Monotonia_de_la_imagen_de_conjuntos.lean][Lean]] y en [[./thy/Monotonia_de_la_imagen_de_conjuntos.thy][Isabelle]]).
 + 11-06-21: [[./textos/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.md][Imagen de imagen inversa de aplicaciones suprayectivas]] (En [[./src/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.lean][Lean]] y en [[./thy/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.thy][Isabelle]]).
