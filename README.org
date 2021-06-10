@@ -5,6 +5,7 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
++ 16-06-21: [[./textos/Imagen_de_la_interseccion_de_aplicaciones_inyectivas.md][Imagen de la intersección de aplicaciones inyectivas]] (En [[./src/Imagen_de_la_interseccion_de_aplicaciones_inyectivas.lean][Lean]] y en [[./thy/Imagen_de_la_interseccion_de_aplicaciones_inyectivas.thy][Isabelle]]).
 + 15-06-21: [[./textos/Imagen_de_la_interseccion.md][Imagen de la intersección]] (En [[./src/Imagen_de_la_interseccion.lean][Lean]] y en [[./thy/Imagen_de_la_interseccion.thy][Isabelle]]).
 + 14-06-21: [[./textos/Imagen_inversa_de_la_union.md][Imagen inversa de la unión]] (En [[./src/Imagen_inversa_de_la_union.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_union.thy][Isabelle]]).
 + 13-06-21: [[./textos/Monotonia_de_la_imagen_inversa.md][Monotonía de la imagen inversa]] (En [[./src/Monotonia_de_la_imagen_inversa.lean][Lean]] y en [[./thy/Monotonia_de_la_imagen_inversa.thy][Isabelle]]).
