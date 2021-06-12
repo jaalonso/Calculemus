@@ -22,10 +22,7 @@ example : f '' (f⁻¹' u) ⊆ u :=
 sorry
 </pre>
 
-<h4>Soluciones</h4>
-<!--more-->
-
-**Soluciones con Lean**
+[expand title="Soluciones con Lean"]
 
 <pre lang="lean">
 import data.set.basic
@@ -90,9 +87,10 @@ example : f '' (f⁻¹' u) ⊆ u :=
 by simp
 </pre>
 
-Se puede interactuar con la prueba anterior en [esta sesión con Lean](https://bit.ly/3z5qxBD).
+Se puede interactuar con la prueba anterior en <a href="https://bit.ly/3z5qxBD" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>,
+[/expand]
 
-**Soluciones con Isabelle/HOL**
+[expand title="Soluciones con Isabelle/HOL"]
 
 <pre lang="isar">
 theory Imagen_de_la_imagen_inversa
@@ -147,9 +145,11 @@ lemma "f ` (f -` u) ⊆ u"
 
 end
 </pre>
+[/expand]
 
-**Nuevas soluciones**
+[expand title="Nuevas soluciones"]
 <ul>
 <li>En los comentarios se pueden escribir nuevas soluciones.
 <li>El código se debe escribir entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
 </ul>
+[/expand]

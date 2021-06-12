@@ -25,10 +25,7 @@ example
 sorry
 </pre>
 
-<h4>Soluciones</h4>
-<!--more-->
-
-**Soluciones con Lean**
+[expand title="Soluciones con Lean"]
 
 <pre lang="lean">
 import data.set.basic
@@ -103,9 +100,10 @@ example
 by intro ; unfold injective at *  ; finish
 </pre>
 
-Se puede interactuar con la prueba anterior en [esta sesión con Lean](https://bit.ly/3x9eUYK).
+Se puede interactuar con la prueba anterior en <a href="https://bit.ly/3x9eUYK" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>,
+[/expand]
 
-**Soluciones con Isabelle/HOL**
+[expand title="Soluciones con Isabelle/HOL"]
 
 <pre lang="isar">
 theory Imagen_de_la_interseccion_de_aplicaciones_inyectivas
@@ -202,9 +200,11 @@ lemma
 
 end
 </pre>
+[/expand]
 
-**Nuevas soluciones**
+[expand title="Nuevas soluciones"]
 <ul>
 <li>En los comentarios se pueden escribir nuevas soluciones.
-<li>El código se debe escribir entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
+<li>El código se debe escribir entre una línea con &#60;pre lang=&quot;lean&quot;&#62; (o &#60;pre lang=&quot;isar&quot;&#62;) y otra con &#60;/pre&#62;
 </ul>
+[/expand]
