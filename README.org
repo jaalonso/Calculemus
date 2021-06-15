@@ -5,6 +5,7 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
++ 24-06-21: [[./textos/Imagen_de_la_interseccion_general.md][Imagen de la intersección general]] (En [[./src/Imagen_de_la_interseccion_general.lean][Lean]] y en [[./thy/Imagen_de_la_interseccion_general.thy][Isabelle]]).
 + 23-06-21: [[./textos/Imagen_de_la_union_general.md][Imagen de la unión general]] (En [[./src/Imagen_de_la_union_general.lean][Lean]] y en [[./thy/Imagen_de_la_union_general.thy][Isabelle]]).
 + 22-06-21: [[./textos/Union_con_la_imagen_inversa.md][Unión con la imagen inversa]] (En [[./src/Union_con_la_imagen_inversa.lean][Lean]] y en [[./thy/Union_con_la_imagen_inversa.thy][Isabelle]]).
 + 21-06-21: [[./textos/Interseccion_con_la_imagen_inversa.md][Intersección con la imagen inversa]] (En [[./src/Interseccion_con_la_imagen_inversa.lean][Lean]] y en [[./thy/Interseccion_con_la_imagen_inversa.thy][Isabelle]]).
