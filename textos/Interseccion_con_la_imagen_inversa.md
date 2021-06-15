@@ -97,7 +97,7 @@ En los comentarios se pueden escribir otras soluciones, escribiendo el código e
 [expand title="Soluciones con Isabelle/HOL"]
 
 <pre lang="isar">
-theory Union_con_la_imagen_inversa
+theory Interseccion_con_la_imagen_inversa
 imports Main
 begin
 

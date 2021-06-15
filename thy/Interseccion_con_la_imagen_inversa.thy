@@ -9,7 +9,7 @@
 --    s \<inter> f -'  v \<subseteq> f -` (f ` s \<inter> v)
 -- ------------------------------------------------------------------ *)
 
-theory Union_con_la_imagen_inversa
+theory Interseccion_con_la_imagen_inversa
 imports Main
 begin
 
