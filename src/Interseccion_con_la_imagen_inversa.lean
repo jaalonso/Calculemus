@@ -1,5 +1,5 @@
--- Union_con_la_imagen_inversa.lean
--- Unión con la imagen inversa
+-- Interseccion_con_la_imagen_inversa.lean
+-- Intersección con la imagen inversa
 -- José A. Alonso Jiménez
 -- Sevilla, 21 de junio de 2021
 -- ---------------------------------------------------------------------

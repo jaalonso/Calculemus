@@ -1,5 +1,5 @@
 ---
-Título: Unión con la imagen inversa
+Título: Intersección con la imagen inversa
 Autor:  José A. Alonso
 ---
 
