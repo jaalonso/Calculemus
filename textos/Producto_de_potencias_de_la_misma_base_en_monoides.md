@@ -1,5 +1,5 @@
 ---
-Título: Producto_de_potencias_de_la_misma_base_en_monoides
+Título: Producto de potencias de la misma base en monoides
 Autor:  José A. Alonso
 ---
 
