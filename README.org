@@ -5,6 +5,7 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
++ 02-07-21: [[./textos/Unicidad_de_inversos_en_monoides.md][Unicidad de inversos en monoides]] (En [[./src/Unicidad_de_inversos_en_monoides.lean][Lean]] y en [[./thy/Unicidad_de_inversos_en_monoides.thy][Isabelle]]).
 + 01-07-21: [[./textos/Equivalencia_de_inversos_iguales_al_neutro.md][Equivalencia de inversos iguales al neutro]] (En [[./src/Equivalencia_de_inversos_iguales_al_neutro.lean][Lean]] y en [[./thy/Equivalencia_de_inversos_iguales_al_neutro.thy][Isabelle]]).
 + 30-06-21: [[./textos/Producto_de_potencias_de_la_misma_base_en_monoides.md][Producto_de_potencias_de_la_misma_base_en_monoides]] (En [[./src/Producto_de_potencias_de_la_misma_base_en_monoides.lean][Lean]] y en [[./thy/Producto_de_potencias_de_la_misma_base_en_monoides.thy][Isabelle]]).
 + 29-06-21: [[./textos/En_los_monoides_los_inversos_a_la_izquierda_y_a_la_derecha_son_iguales.md][En los monoides, los inversos a la izquierda y a la derecha son iguales]] (En [[./src/En_los_monoides_los_inversos_a_la_izquierda_y_a_la_derecha_son_iguales.lean][Lean]] y en [[./thy/En_los_monoides_los_inversos_a_la_izquierda_y_a_la_derecha_son_iguales.thy][Isabelle]]).
