@@ -5,6 +5,7 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
++ 04-07-21: [[./textos/Unicidad_del_elemento_neutro_en_los_grupos.md][Unicidad del elemento neutro en los grupos]] (En [[./src/Unicidad_del_elemento_neutro_en_los_grupos.lean][Lean]] y en [[./thy/Unicidad_del_elemento_neutro_en_los_grupos.thy][Isabelle]]).
 + 03-07-21: [[./textos/Caracterizacion_de_producto_igual_al_primer_factor.md][Caracterización de producto igual al primer factor]] (En [[./src/Caracterizacion_de_producto_igual_al_primer_factor.lean][Lean]] y en [[./thy/Caracterizacion_de_producto_igual_al_primer_factor.thy][Isabelle]]).
 + 02-07-21: [[./textos/Unicidad_de_inversos_en_monoides.md][Unicidad de inversos en monoides]] (En [[./src/Unicidad_de_inversos_en_monoides.lean][Lean]] y en [[./thy/Unicidad_de_inversos_en_monoides.thy][Isabelle]]).
 + 01-07-21: [[./textos/Equivalencia_de_inversos_iguales_al_neutro.md][Equivalencia de inversos iguales al neutro]] (En [[./src/Equivalencia_de_inversos_iguales_al_neutro.lean][Lean]] y en [[./thy/Equivalencia_de_inversos_iguales_al_neutro.thy][Isabelle]]).
