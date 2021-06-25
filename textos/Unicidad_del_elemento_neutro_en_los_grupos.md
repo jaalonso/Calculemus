@@ -59,7 +59,7 @@ by finish
 
 Se puede interactuar con la prueba anterior en <a href="https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Unicidad_del_elemento_neutro_en_los_grupos.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
 
-En los comentarios se pueden escribir otras soluciones, escribiendo el código entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
+En los comentarios se pueden escribir otras soluciones, escribiendo el código entre una línea con &#60;pre lang=&quot;lean&quot;&#62; y otra con &#60;/pre&#62;
 [/expand]
 
 [expand title="Soluciones con Isabelle/HOL"]
@@ -75,30 +75,30 @@ begin
 (* 1ª demostración *)
 
 lemma
-  assumes "∀ x. x ❙* e = ❙1"
-  shows   "e = ❙1"
+  assumes "∀ x. x * e = 1"
+  shows   "e = 1"
 proof -
-  have "e = ❙1 ❙* e"     by (simp only: left_neutral)
-  also have "… = ❙1"   using assms by (rule allE)
-  finally show "e = ❙1" by this
+  have "e = 1 * e"     by (simp only: left_neutral)
+  also have "… = 1"    using assms by (rule allE)
+  finally show "e = 1" by this
 qed
 
 (* 2ª demostración *)
 
 lemma
-  assumes "∀ x. x ❙* e = ❙1"
-  shows   "e = ❙1"
+  assumes "∀ x. x * e = 1"
+  shows   "e = 1"
 proof -
-  have "e = ❙1 ❙* e"     by simp
-  also have "… = ❙1"   using assms by simp
-  finally show "e = ❙1" .
+  have "e = 1 * e"     by simp
+  also have "… = 1"    using assms by simp
+  finally show "e = 1" .
 qed
 
 (* 3ª demostración *)
 
 lemma
-  assumes "∀ x. x ❙* e = ❙1"
-  shows   "e = ❙1"
+  assumes "∀ x. x * e = 1"
+  shows   "e = 1"
   using assms
   by (metis left_neutral)
 
@@ -107,10 +107,9 @@ end
 end
 </pre>
 
+En los comentarios se pueden escribir otras soluciones, escribiendo el código entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
+[/expand]
+
 <h4> Referencia</h4>
 
 Propiedad 3.17 del libro [Abstract algebra: Theory and applications](http://abstract.ups.edu/download/aata-20200730.pdf#page=49) de Thomas W. Judson.
-
-
-En los comentarios se pueden escribir otras soluciones, escribiendo el código entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
-[/expand]
