@@ -17,9 +17,7 @@ begin
 context group
 begin
 
-thm left_inverse right_cancel
-
-(* ?\<ordfeminine> demostración *)
+(* 1\<ordfeminine> demostración *)
 
 lemma
   assumes "a \<^bold>* b = \<^bold>1"
@@ -33,7 +31,7 @@ proof -
   finally show "inverse a = b"         by this
 qed
 
-(* ?\<ordfeminine> demostración *)
+(* 2\<ordfeminine> demostración *)
 
 lemma
   assumes "a \<^bold>* b = \<^bold>1"
@@ -47,7 +45,7 @@ proof -
   finally show "inverse a = b"         .
 qed
 
-(* ?\<ordfeminine> demostración *)
+(* 3\<ordfeminine> demostración *)
 
 lemma
   assumes "a \<^bold>* b = \<^bold>1"
@@ -59,7 +57,7 @@ proof -
     by (simp add: assoc [symmetric])
 qed
 
-(* ?\<ordfeminine> demostración *)
+(* 4\<ordfeminine> demostración *)
 
 lemma
   assumes "a \<^bold>* b = \<^bold>1"

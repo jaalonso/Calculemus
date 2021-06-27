@@ -98,52 +98,50 @@ begin
 context group
 begin
 
-thm left_inverse right_cancel
-
-(* ?ª demostración *)
+(* 1ª demostración *)
 
 lemma
-  assumes "a ❙* b = ❙1"
+  assumes "a * b = 1"
   shows "inverse a = b"
 proof -
-  have "inverse a = inverse a ❙* ❙1"     by (simp only: right_neutral)
-  also have "… = inverse a ❙* (a ❙* b)" by (simp only: assms(1))
-  also have "… = (inverse a ❙* a) ❙* b" by (simp only: assoc [symmetric])
-  also have "… = ❙1 ❙* b"               by (simp only: left_inverse)
+  have "inverse a = inverse a * 1"    by (simp only: right_neutral)
+  also have "… = inverse a * (a * b)" by (simp only: assms(1))
+  also have "… = (inverse a * a) * b" by (simp only: assoc [symmetric])
+  also have "… = 1 * b"               by (simp only: left_inverse)
   also have "… = b"                   by (simp only: left_neutral)
-  finally show "inverse a = b"         by this
+  finally show "inverse a = b"        by this
 qed
 
-(* ?ª demostración *)
+(* 2ª demostración *)
 
 lemma
-  assumes "a ❙* b = ❙1"
+  assumes "a * b = 1"
   shows "inverse a = b"
 proof -
-  have "inverse a = inverse a ❙* ❙1"     by simp
-  also have "… = inverse a ❙* (a ❙* b)" using assms by simp
-  also have "… = (inverse a ❙* a) ❙* b" by (simp add: assoc [symmetric])
-  also have "… = ❙1 ❙* b"               by simp
+  have "inverse a = inverse a * 1"    by simp
+  also have "… = inverse a * (a * b)" using assms by simp
+  also have "… = (inverse a * a) * b" by (simp add: assoc [symmetric])
+  also have "… = 1 * b"               by simp
   also have "… = b"                   by simp
-  finally show "inverse a = b"         .
+  finally show "inverse a = b"        .
 qed
 
-(* ?ª demostración *)
+(* 3ª demostración *)
 
 lemma
-  assumes "a ❙* b = ❙1"
+  assumes "a * b = 1"
   shows "inverse a = b"
 proof -
-  from assms have "inverse a ❙* (a ❙* b) = inverse a"
+  from assms have "inverse a * (a * b) = inverse a"
     by simp
   then show "inverse a = b"
     by (simp add: assoc [symmetric])
 qed
 
-(* ?ª demostración *)
+(* 4ª demostración *)
 
 lemma
-  assumes "a ❙* b = ❙1"
+  assumes "a * b = 1"
   shows "inverse a = b"
   using assms
   by (simp only: inverse_unique)
