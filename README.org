@@ -5,6 +5,7 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
++ 07-07-21: [[./textos/Inverso_de_inverso_en_grupos.md][Inverso del inverso en grupos]] (En [[./src/Inverso_del_inverso_en_grupos.lean][Lean]] y en [[./thy/Inverso_del_inverso_en_grupos.thy][Isabelle]]).
 + 06-07-21: [[./textos/Inverso_del_producto.md][Inverso del producto]] (En [[./src/Inverso_del_producto.lean][Lean]] y en [[./thy/Inverso_del_producto.thy][Isabelle]]).
 + 05-07-21: [[./textos/Unicidad_de_los_inversos_en_los_grupos.md][Unicidad de los inversos en los grupos]] (En [[./src/Unicidad_de_los_inversos_en_los_grupos.lean][Lean]] y en [[./thy/Unicidad_de_los_inversos_en_los_grupos.thy][Isabelle]]).
 + 04-07-21: [[./textos/Unicidad_del_elemento_neutro_en_los_grupos.md][Unicidad del elemento neutro en los grupos]] (En [[./src/Unicidad_del_elemento_neutro_en_los_grupos.lean][Lean]] y en [[./thy/Unicidad_del_elemento_neutro_en_los_grupos.thy][Isabelle]]).
