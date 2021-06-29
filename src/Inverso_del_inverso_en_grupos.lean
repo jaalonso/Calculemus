@@ -15,7 +15,7 @@ universe  u
 variables {G : Type u} [group G]
 variables {a b : G}
 
--- ?ª demostración
+-- 1ª demostración
 -- ===============
 
 example : (a⁻¹)⁻¹ = a :=
@@ -26,7 +26,7 @@ calc (a⁻¹)⁻¹
  ... = 1 * a               : congr_arg (* a) (inv_mul_self a⁻¹)
  ... = a                   : one_mul a
 
--- ?ª demostración
+-- 2ª demostración
 -- ===============
 
 example : (a⁻¹)⁻¹ = a :=
@@ -37,7 +37,7 @@ calc (a⁻¹)⁻¹
  ... = 1 * a               : by simp only [inv_mul_self]
  ... = a                   : by simp only [one_mul]
 
--- ?ª demostración
+-- 3ª demostración
 -- ===============
 
 example : (a⁻¹)⁻¹ = a :=
@@ -48,7 +48,7 @@ calc (a⁻¹)⁻¹
  ... = 1 * a               : by simp
  ... = a                   : by simp
 
--- ?ª demostración
+-- 4ª demostración
 -- ===============
 
 example : (a⁻¹)⁻¹ = a :=
@@ -57,19 +57,19 @@ begin
   exact mul_left_inv a,
 end
 
--- ?ª demostración
+-- 5ª demostración
 -- ===============
 
 example : (a⁻¹)⁻¹ = a :=
 inv_eq_of_mul_eq_one (mul_left_inv a)
 
--- ?ª demostración
+-- 6ª demostración
 -- ===============
 
 example : (a⁻¹)⁻¹ = a:=
 inv_inv a
 
--- ?ª demostración
+-- 7ª demostración
 -- ===============
 
 example : (a⁻¹)⁻¹ = a:=
