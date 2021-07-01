@@ -10,10 +10,10 @@ potencia con exponentes naturales por recursión:
    x^(n+1) = x * x^n
 </pre>
 
-En Lean la potencia x^n se representa por (npow n x) y se caracteriza por los siguientes lemas:
+En Lean la potencia x^n se caracteriza por los siguientes lemas:
 <pre lang="text">
-   npow_zero' : npow 0 x = 1
-   npow_succ' : npow (succ n) x = x * npow n x
+   npow_zero' : x ^ 0 = 1
+   npow_succ' : x ^ (succ n) = x * x ^ n
 </pre>
 
 Demostrar que
@@ -24,21 +24,25 @@ Demostrar que
 Para ello, completar la siguiente teoría de Lean:
 
 <pre lang="lean">
-import algebra.group.defs
+import algebra.group_power.basic
+open monoid nat
 
 variables {M : Type} [monoid M]
 variable  x : M
 variables (m n : ℕ)
 
+set_option pp.structure_projections false
+
 example :
-  npow (m + n) x = npow m x * npow n x :=
+  x ^ (m + n) = x ^ m * x ^ n :=
 sorry
 </pre>
 
 [expand title="Soluciones con Lean"]
 
 <pre lang="lean">
-import algebra.group.defs
+import algebra.group_power.basic
+open monoid nat
 
 variables {M : Type} [monoid M]
 variable  x : M
@@ -51,29 +55,81 @@ set_option pp.structure_projections false
 -- ===============
 
 example :
-  npow (m + n) x = npow m x * npow n x :=
+  x ^ (m + n) = x ^ m * x ^ n :=
 begin
   induction m with m HI,
-  { rw nat.zero_add,
-    rw monoid.npow_zero',
-    rw monoid.one_mul, },
-  { rw nat.succ_add,
-    rw monoid.npow_succ',
-    rw monoid.npow_succ',
-    rw HI,
-    rw ← mul_assoc, },
+  { calc x ^ (0 + n)
+         = x ^ n               : congr_arg ((^) x) (nat.zero_add n)
+     ... = 1 * x ^ n           : (monoid.one_mul (x ^ n)).symm
+     ... = x ^ 0 * x ^ n       : congr_arg (* (x ^ n)) (monoid.npow_zero' x).symm, },
+  { calc x ^ (succ m + n)
+         = x ^ succ (m + n)    : congr_arg ((^) x) (succ_add m n)
+     ... = x * x ^ (m + n)     : pow_succ x (m + n)
+     ... = x * (x ^ m * x ^ n) : congr_arg ((*) x) HI
+     ... = (x * x ^ m) * x ^ n : (monoid.mul_assoc x (x ^ m) (x ^ n)).symm
+     ... = x ^ succ m * x ^ n  : congr_arg (* x^n) (pow_succ x m).symm, },
 end
 
 -- 2ª demostración
 -- ===============
 
 example :
-  npow (m + n) x = npow m x * npow n x :=
+  x ^ (m + n) = x ^ m * x ^ n :=
 begin
   induction m with m HI,
-  { rw [nat.zero_add, monoid.npow_zero', monoid.one_mul], },
-  { rw [nat.succ_add, monoid.npow_succ', monoid.npow_succ', HI, ← mul_assoc] }
+  { calc x ^ (0 + n)
+         = x ^ n               : by simp only [nat.zero_add]
+     ... = 1 * x ^ n           : by simp only [monoid.one_mul]
+     ... = x ^ 0 * x ^ n       : by simp [monoid.npow_zero'] },
+  { calc x ^ (succ m + n)
+         = x ^ succ (m + n)    : by simp only [succ_add]
+     ... = x * x ^ (m + n)     : by simp only [pow_succ]
+     ... = x * (x ^ m * x ^ n) : by simp only [HI]
+     ... = (x * x ^ m) * x ^ n : (monoid.mul_assoc x (x ^ m) (x ^ n)).symm
+     ... = x ^ succ m * x ^ n  : by simp only [pow_succ], },
 end
+
+-- 3ª demostración
+-- ===============
+
+example :
+  x ^ (m + n) = x ^ m * x ^ n :=
+begin
+  induction m with m HI,
+  { calc x ^ (0 + n)
+         = x ^ n               : by simp [nat.zero_add]
+     ... = 1 * x ^ n           : by simp
+     ... = x ^ 0 * x ^ n       : by simp, },
+  { calc x ^ (succ m + n)
+         = x ^ succ (m + n)    : by simp [succ_add]
+     ... = x * x ^ (m + n)     : by simp [pow_succ]
+     ... = x * (x ^ m * x ^ n) : by simp [HI]
+     ... = (x * x ^ m) * x ^ n : (monoid.mul_assoc x (x ^ m) (x ^ n)).symm
+     ... = x ^ succ m * x ^ n  : by simp [pow_succ], },
+end
+
+-- 4ª demostración
+-- ===============
+
+example :
+  x ^ (m + n) = x ^ m * x ^ n :=
+begin
+  induction m with m HI,
+  { show x ^ (0 + n) = x ^ 0 * x ^ n,
+      by simp [nat.zero_add] },
+  { show x ^ (succ m + n) = x ^ succ m * x ^ n,
+      by finish [succ_add,
+                 HI,
+                 monoid.mul_assoc,
+                 pow_succ], },
+end
+
+-- 5ª demostración
+-- ===============
+
+example :
+  x ^ (m + n) = x ^ m * x ^ n :=
+pow_add x m n
 </pre>
 
 Se puede interactuar con la prueba anterior en <a href="https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Producto_de_potencias_de_la_misma_base_en_monoides.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>,
