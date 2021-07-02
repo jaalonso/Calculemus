@@ -5,6 +5,7 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
++ 10-07-21: [[./textos/Los_monoides_booleanos_son_conmutativos.md][Los monoides booleanos son conmutativos]] (En [[./src/Los_monoides_booleanos_son_conmutativos.lean][Lean]] y en [[./thy/Los_monoides_booleanos_son_conmutativos.thy][Isabelle]]).
 + 09-07-21: [[./textos/Potencias_de_potencias_en_monoides.md][Potencias de potencias en monoides]] (En [[./src/Potencias_de_potencias_en_monoides.lean][Lean]] y en [[./thy/Potencias_de_potencias_en_monoides.thy][Isabelle]]).
 + 08-07-21: [[./textos/Propiedad_cancelativa_en_grupos.md][Propiedad cancelativa en grupos]] (En [[./src/Propiedad_cancelativa_en_grupos.lean][Lean]] y en [[./thy/Propiedad_cancelativa_en_grupos.thy][Isabelle]]).
 + 07-07-21: [[./textos/Inverso_de_inverso_en_grupos.md][Inverso del inverso en grupos]] (En [[./src/Inverso_del_inverso_en_grupos.lean][Lean]] y en [[./thy/Inverso_del_inverso_en_grupos.thy][Isabelle]]).
