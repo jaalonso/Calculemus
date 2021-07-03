@@ -133,6 +133,75 @@ En los comentarios se pueden escribir otras soluciones, escribiendo el código e
 [expand title="Soluciones con Isabelle/HOL"]
 
 <pre lang="isar">
+(* ---------------------------------------------------------------------
+-- En Isabelle/HOL, una sucesión u₀, u₁, u₂, ... se puede representar
+-- mediante una función (u : ℕ → ℝ) de forma que u(n) es uₙ.
+--
+-- Se define que a es el límite de la sucesión u, por
+--    definition limite :: "(nat ⇒ real) ⇒ real ⇒ bool"
+--      where "limite u c ⟷ (∀ε>0. ∃k::nat. ∀n≥k. ¦u n - c¦ < ε)"
+--
+-- Demostrar que el límite de la sucesión constante c es c.
+-- ------------------------------------------------------------------ *)
+
+theory Limite_de_sucesiones_constantes
+imports Main HOL.Real
+begin
+
+definition limite :: "(nat ⇒ real) ⇒ real ⇒ bool"
+  where "limite u c ⟷ (∀ε>0. ∃k::nat. ∀n≥k. ¦u n - c¦ < ε)"
+
+(* 1ª demostración *)
+
+lemma "limite (λ n. c) c"
+proof (unfold limite_def)
+  show "∀ε>0. ∃k::nat. ∀n≥k. ¦c - c¦ < ε"
+  proof (intro allI impI)
+    fix ε :: real
+    assume "0 < ε"
+    have "∀n≥0::nat. ¦c - c¦ < ε"
+    proof (intro allI impI)
+      fix n :: nat
+      assume "0 ≤ n"
+      have "c - c = 0"
+        by (simp only: diff_self)
+      then have "¦c - c¦ = 0"
+        by (simp only: abs_eq_0_iff)
+      also have "… < ε"
+        by (simp only: ‹0 < ε›)
+      finally show "¦c - c¦ < ε"
+        by this
+    qed
+    then show "∃k::nat. ∀n≥k. ¦c - c¦ < ε"
+      by (rule exI)
+  qed
+qed
+
+(* 2ª demostración *)
+
+lemma "limite (λ n. c) c"
+proof (unfold limite_def)
+  show "∀ε>0. ∃k::nat. ∀n≥k. ¦c - c¦ < ε"
+  proof (intro allI impI)
+    fix ε :: real
+    assume "0 < ε"
+    have "∀n≥0::nat. ¦c - c¦ < ε"          by (simp add: ‹0 < ε›)
+    then show "∃k::nat. ∀n≥k. ¦c - c¦ < ε" by (rule exI)
+  qed
+qed
+
+(* 3ª demostración *)
+
+lemma "limite (λ n. c) c"
+  unfolding limite_def
+  by simp
+
+(* 4ª demostración *)
+
+lemma "limite (λ n. c) c"
+  by (simp add: limite_def)
+
+end
 </pre>
 
 En los comentarios se pueden escribir otras soluciones, escribiendo el código entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
