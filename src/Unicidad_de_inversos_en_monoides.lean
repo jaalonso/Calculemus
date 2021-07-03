@@ -10,6 +10,7 @@
 -- ---------------------------------------------------------------------
 
 import algebra.group.basic
+import tactic
 
 variables {M : Type} [comm_monoid M]
 variables {x y z : M}
