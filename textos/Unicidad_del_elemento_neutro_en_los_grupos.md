@@ -45,15 +45,6 @@ example
   (e : G)
   (h : ∀ x, x * e = x)
   : e = 1 :=
-self_eq_mul_left.mp (congr_arg _ (congr_arg _ (eq.symm (h e))))
-
--- 3ª demostración
--- ===============
-
-example
-  (e : G)
-  (h : ∀ x, x * e = x)
-  : e = 1 :=
 by finish
 </pre>
 
@@ -75,7 +66,7 @@ begin
 (* 1ª demostración *)
 
 lemma
-  assumes "∀ x. x * e = 1"
+  assumes "∀ x. x * e = x"
   shows   "e = 1"
 proof -
   have "e = 1 * e"     by (simp only: left_neutral)
@@ -86,7 +77,7 @@ qed
 (* 2ª demostración *)
 
 lemma
-  assumes "∀ x. x * e = 1"
+  assumes "∀ x. x * e = x"
   shows   "e = 1"
 proof -
   have "e = 1 * e"     by simp
@@ -97,7 +88,7 @@ qed
 (* 3ª demostración *)
 
 lemma
-  assumes "∀ x. x * e = 1"
+  assumes "∀ x. x * e = x"
   shows   "e = 1"
   using assms
   by (metis left_neutral)

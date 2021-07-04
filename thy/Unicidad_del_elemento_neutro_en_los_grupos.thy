@@ -18,7 +18,7 @@ begin
 (* 1\<ordfeminine> demostración *)
 
 lemma
-  assumes "\<forall> x. x \<^bold>* e = \<^bold>1"
+  assumes "\<forall> x. x \<^bold>* e = x"
   shows   "e = \<^bold>1"
 proof -
   have "e = \<^bold>1 \<^bold>* e"     by (simp only: left_neutral)
@@ -29,7 +29,7 @@ qed
 (* 2\<ordfeminine> demostración *)
 
 lemma
-  assumes "\<forall> x. x \<^bold>* e = \<^bold>1"
+  assumes "\<forall> x. x \<^bold>* e = x"
   shows   "e = \<^bold>1"
 proof -
   have "e = \<^bold>1 \<^bold>* e"     by simp
@@ -40,7 +40,7 @@ qed
 (* 3\<ordfeminine> demostración *)
 
 lemma
-  assumes "\<forall> x. x \<^bold>* e = \<^bold>1"
+  assumes "\<forall> x. x \<^bold>* e = x"
   shows   "e = \<^bold>1"
   using assms
   by (metis left_neutral)
