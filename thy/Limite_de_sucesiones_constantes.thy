@@ -15,7 +15,6 @@
 -- Demostrar que el límite de la sucesión constante c es c.
 -- ------------------------------------------------------------------ *)
 
-
 theory Limite_de_sucesiones_constantes
 imports Main HOL.Real
 begin
