@@ -5,6 +5,7 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
++ 13-07-21: [[./textos/Limite_cuando_se_suma_una_constante.md][Límite cuando se suma una constante]] (En [[./src/Limite_cuando_se_suma_una_constante.lean][Lean]] y en [[./thy/Limite_cuando_se_suma_una_constante.thy][Isabelle]]).
 + 12-07-21: [[./textos/Unicidad_del_limite_de_las_sucesiones_convergentes.md][Unicidad del límite de las sucesiones convergentes]] (En [[./src/Unicidad_del_limite_de_las_sucesiones_convergentes.lean][Lean]] y en [[./thy/Unicidad_del_limite_de_las_sucesiones_convergentes.thy][Isabelle]]).
 + 11-07-21: [[./textos/Limite_de_sucesiones_constantes.md][Límite de sucesiones constantes]] (En [[./src/Limite_de_sucesiones_constantes.lean][Lean]] y en [[./thy/Limite_de_sucesiones_constantes.thy][Isabelle]]).
 + 10-07-21: [[./textos/Los_monoides_booleanos_son_conmutativos.md][Los monoides booleanos son conmutativos]] (En [[./src/Los_monoides_booleanos_son_conmutativos.lean][Lean]] y en [[./thy/Los_monoides_booleanos_son_conmutativos.thy][Isabelle]]).
