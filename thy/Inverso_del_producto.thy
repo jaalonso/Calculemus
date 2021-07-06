@@ -71,7 +71,6 @@ qed
 lemma "inverse (a \<^bold>* b) = inverse b \<^bold>* inverse a"
   by (simp only: inverse_distrib_swap)
 
-(* ?\<ordfeminine> demostración *)
 
 end
 
