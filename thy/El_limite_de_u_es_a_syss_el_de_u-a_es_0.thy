@@ -12,7 +12,7 @@
 --    definition limite :: "(nat \<Rightarrow> real) \<Rightarrow> real \<Rightarrow> bool"
 --      where "limite u c \<longleftrightarrow> (\<forall>\<epsilon>>0. \<exists>k::nat. \<forall>n\<ge>k. \<bar>u n - c\<bar> < \<epsilon>)"
 --
--- Demostrar que que el límite de u(i) es a si y solo si el de u(i)-a es
+-- Demostrar que el límite de u(i) es a si y solo si el de u(i)-a es
 -- 0.
 -- ------------------------------------------------------------------ *)
 

@@ -14,7 +14,7 @@
 -- donde se usa la notación |x| para el valor absoluto de x
 --    notation `|`x`|` := abs x
 --
--- Demostrar que que el límite de u(i) es a si y solo si el de u(i)-a es
+-- Demostrar que el límite de u(i) es a si y solo si el de u(i)-a es
 -- 0.
 -- ---------------------------------------------------------------------
 

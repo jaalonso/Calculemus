@@ -15,7 +15,7 @@ donde se usa la notación |x| para el valor absoluto de x
    notation `|`x`|` := abs x
 </pre>
 
-Demostrar que que el límite de u(n) es a si y solo si el de u(n)-a es 0.
+Demostrar que el límite de u(n) es a si y solo si el de u(n)-a es 0.
 
 Para ello, completar la siguiente teoría de Lean:
 
