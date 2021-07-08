@@ -5,6 +5,7 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
++ 16-07-21: [[./textos/El_limite_de_u_es_a_syss_el_de_u-a_es_0.md][El límite de u es a syss el de u-a es 0]] (En [[./src/El_limite_de_u_es_a_syss_el_de_u-a_es_0.lean][Lean]] y en [[./thy/El_limite_de_u_es_a_syss_el_de_u-a_es_0.thy][Isabelle]]).
 + 15-07-21: [[./textos/Limite_multiplicado_por_una_constante.md][Límite multiplicado por una constante]] (En [[./src/Limite_multiplicado_por_una_constante.lean][Lean]] y en [[./thy/Limite_multiplicado_por_una_constante.thy][Isabelle]]).
 + 14-07-21: [[./textos/Limite_de_la_suma_de_sucesiones_convergentes.md][Límite de la suma de sucesiones convergentes]] (En [[./src/Limite_de_la_suma_de_sucesiones_convergentes.lean][Lean]] y en [[./thy/Limite_de_la_suma_de_sucesiones_convergentes.thy][Isabelle]]).
 + 13-07-21: [[./textos/Limite_cuando_se_suma_una_constante.md][Límite cuando se suma una constante]] (En [[./src/Limite_cuando_se_suma_una_constante.lean][Lean]] y en [[./thy/Limite_cuando_se_suma_una_constante.thy][Isabelle]]).
