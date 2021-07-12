@@ -30,6 +30,33 @@ def limite : (ℕ → ℝ) → ℝ → Prop :=
 -- 1ª demostración
 -- ===============
 
+lemma aux
+  (ha : limite u a)
+  (hb : limite u b)
+  : b ≤ a :=
+begin
+  by_contra h,
+  set ε := b - a with hε,
+  cases ha (ε/2) (by linarith) with A hA,
+  cases hb (ε/2) (by linarith) with B hB,
+  set N := max A B with hN,
+  have hAN : A ≤ N := le_max_left A B,
+  have hBN : B ≤ N := le_max_right A B,
+  specialize hA N hAN,
+  specialize hB N hBN,
+  rw abs_lt at hA hB,
+  linarith,
+end
+
+example
+  (ha : limite u a)
+  (hb : limite u b)
+  : a = b :=
+le_antisymm (aux hb ha) (aux ha hb)
+
+-- 2ª demostración
+-- ===============
+
 example
   (ha : limite u a)
   (hb : limite u b)
@@ -54,7 +81,7 @@ begin
   linarith,
 end
 
--- 2ª demostración
+-- 3ª demostración
 -- ===============
 
 example
