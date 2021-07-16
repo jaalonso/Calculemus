@@ -35,6 +35,19 @@ def limite : (ℕ → ℝ) → ℝ → Prop :=
 example
   : limite u a ↔ limite (λ i, u i - a) 0 :=
 begin
+  rw iff_eq_eq,
+  calc limite u a
+       = ∀ ε > 0, ∃ N, ∀ n ≥ N, |u n - a| < ε       : rfl
+   ... = ∀ ε > 0, ∃ N, ∀ n ≥ N, |(u n - a) - 0| < ε : by simp
+   ... = limite (λ i, u i - a) 0                    : rfl,
+end
+
+-- 2ª demostración
+-- ===============
+
+example
+  : limite u a ↔ limite (λ i, u i - a) 0 :=
+begin
   split,
   { intros h ε hε,
     convert h ε hε,
@@ -44,7 +57,7 @@ begin
     norm_num, },
 end
 
--- 2ª demostración
+-- 3ª demostración
 -- ===============
 
 example
@@ -56,7 +69,7 @@ begin
     norm_num, },
 end
 
--- 3ª demostración
+-- 4ª demostración
 -- ===============
 
 lemma limite_con_suma
