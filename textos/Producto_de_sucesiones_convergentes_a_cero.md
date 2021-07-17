@@ -126,7 +126,7 @@ begin
 end
 </pre>
 
-Se puede interactuar con la prueba anterior en <a href="https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Producto_de_sucesiones_convergentes_a_cero.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
+Se puede interactuar con la prueba anterior en <a href="https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Producto_de_sucesiones_convergentes_a_cero.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
 
 En los comentarios se pueden escribir otras soluciones, escribiendo el código entre una línea con &#60;pre lang=&quot;lean&quot;&#62; y otra con &#60;/pre&#62;
 [/expand]
