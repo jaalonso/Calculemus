@@ -14,8 +14,8 @@
 -- donde se usa la notación |x| para el valor absoluto de x
 --    notation `|`x`|` := abs x
 --
--- Demostrar que si para todo n, u(n) ≤ v(n) ≤ w(n) y u(n) tienen el
--- mismo límite, entonces v(n) también tiene dicho límite.
+-- Demostrar que si para todo n, u(n) ≤ v(n) ≤ w(n) y u(n) tiene el
+-- mismo límite que w(n), entonces v(n) también tiene dicho límite.
 -- ---------------------------------------------------------------------
 
 import data.real.basic

@@ -12,8 +12,8 @@
 --    definition limite :: "(nat \<Rightarrow> real) \<Rightarrow> real \<Rightarrow> bool"
 --      where "limite u c \<longleftrightarrow> (\<forall>\<epsilon>>0. \<exists>k::nat. \<forall>n\<ge>k. \<bar>u n - c\<bar> < \<epsilon>)"
 --
--- Demostrar que si para todo n, u(n) \<le> v(n) \<le> w(n) y u(n) tienen el
--- mismo límite, entonces v(n) también tiene dicho límite.
+-- Demostrar que si para todo n, u(n) \<le> v(n) \<le> w(n) y u(n) tiene el
+-- mismo límite que, entonces v(n) también tiene dicho límite.
 -- ------------------------------------------------------------------ *)
 
 theory Teorema_del_emparedado

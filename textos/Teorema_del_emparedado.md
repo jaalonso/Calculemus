@@ -15,7 +15,7 @@ donde se usa la notación |x| para el valor absoluto de x
    notation `|`x`|` := abs x
 </pre>
 
-Demostrar el [teorema del emparedado](https://bit.ly/3eqlZ0b); es decir, que si para todo n, u(n) ≤ v(n) ≤ w(n) y u(n) tienen el mismo límite, entonces v(n) también tiene dicho límite.
+Demostrar el [teorema del emparedado](https://bit.ly/3eqlZ0b); es decir, que si para todo n, u(n) ≤ v(n) ≤ w(n) y u(n) tiene el mismo límite que w(n), entonces v(n) también tiene dicho límite.
 
 Para ello, completar la siguiente teoría de Lean:
 
