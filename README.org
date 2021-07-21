@@ -5,7 +5,10 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
-+ 10-07-21: [[./textos/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.md][La composición de una función creciente y una decreciente es decreciente]] (En [[./src/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.lean][Lean]] y en [[./thy/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.thy][Isabelle]]).
++ 22-07-21: [[./textos/Las_funciones_crecientes_son_inyectivas.md][Si `f x ≤ f y → x ≤ y`, entonces f es inyectiva]] (En [[./src/Las_funciones_crecientes_son_inyectivas.lean][Lean]] y en [[./thy/Las_funciones_crecientes_son_inyectivas.thy][Isabelle]]).
++ 21-07-21: [[./textos/Una_funcion_creciente_e_involutiva_es_la_identidad.md][Una función creciente e involutiva es la identidad]] (En [[./src/Una_funcion_creciente_e_involutiva_es_la_identidad.lean][Lean]] y en [[./thy/Una_funcion_creciente_e_involutiva_es_la_identidad.thy][Isabelle]]).
+
++ 20-07-21: [[./textos/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.md][La composición de una función creciente y una decreciente es decreciente]] (En [[./src/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.lean][Lean]] y en [[./thy/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.thy][Isabelle]]).
 + 19-07-21: [[./textos/La_composicion_de_crecientes_es_creciente.md][La composición de crecientes es creciente]] (En [[./src/La_composicion_de_crecientes_es_creciente.lean][Lean]] y en [[./thy/La_composicion_de_crecientes_es_creciente.thy][Isabelle]]).
 + 18-07-21: [[./textos/Teorema_del_emparedado.md][Teorema del emparedado]] (En [[./src/Teorema_del_emparedado.lean][Lean]] y en [[./thy/Teorema_del_emparedado.thy][Isabelle]]).
 + 17-07-21: [[./textos/Producto_de_sucesiones_convergentes_a_cero.md][Producto de sucesiones convergentes a cero]] (En [[./src/Producto_de_sucesiones_convergentes_a_cero.lean][Lean]] y en [[./thy/Producto_de_sucesiones_convergentes_a_cero.thy][Isabelle]]).
