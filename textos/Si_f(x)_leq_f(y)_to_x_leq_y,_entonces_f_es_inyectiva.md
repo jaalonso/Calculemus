@@ -84,7 +84,7 @@ proof (rule injI)
   assume "f x = f y"
   show "x = y"
   proof (rule antisym)
-    show "x ≤ y" try
+    show "x ≤ y"
       by (simp only: assms ‹f x = f y›)
   next
     show "y ≤ x"

@@ -22,12 +22,12 @@ lemma
 proof (rule injI)
   fix x y
   assume "f x = f y"
-  show "x = y" 
+  show "x = y"
   proof (rule antisym)
-    show "x \<le> y" try
+    show "x \<le> y"
       by (simp only: assms \<open>f x = f y\<close>)
   next
-    show "y \<le> x" 
+    show "y \<le> x"
       by (simp only: assms \<open>f x = f y\<close>)
   qed
 qed
@@ -40,9 +40,9 @@ lemma
 proof (rule injI)
   fix x y
   assume "f x = f y"
-  then show "x = y" 
+  then show "x = y"
     using assms
-    by (simp add: eq_iff) 
+    by (simp add: eq_iff)
 qed
 
 (* 3\<ordfeminine> demostración *)

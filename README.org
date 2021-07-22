@@ -5,8 +5,9 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
-+ 23-07-21: [[./textos/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.md][Los supremos de las sucesiones crecientes son sus límites]] (En [[./src/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.lean][Lean]] y en [[./thy/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.thy][Isabelle]]).
++ 24-07-21: [[./textos/Un_numero_es_par_syss_lo_es_su_cuadrado.md][Un número es par syss lo es su cuadrado]] (En [[./src/Un_numero_es_par_syss_lo_es_su_cuadrado.lean][Lean]] y en [[./thy/Un_numero_es_par_syss_lo_es_su_cuadrado.thy][Isabelle]]).
 
++ 23-07-21: [[./textos/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.md][Los supremos de las sucesiones crecientes son sus límites]] (En [[./src/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.lean][Lean]] y en [[./thy/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.thy][Isabelle]]).
 + 22-07-21: [[./textos/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.md][Si `f x ≤ f y → x ≤ y`, entonces f es inyectiva]] (En [[./src/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.lean][Lean]] y en [[./thy/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.thy][Isabelle]]).
 + 21-07-21: [[./textos/Una_funcion_creciente_e_involutiva_es_la_identidad.md][Una función creciente e involutiva es la identidad]] (En [[./src/Una_funcion_creciente_e_involutiva_es_la_identidad.lean][Lean]] y en [[./thy/Una_funcion_creciente_e_involutiva_es_la_identidad.thy][Isabelle]]).
 + 20-07-21: [[./textos/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.md][La composición de una función creciente y una decreciente es decreciente]] (En [[./src/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.lean][Lean]] y en [[./thy/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.thy][Isabelle]]).
