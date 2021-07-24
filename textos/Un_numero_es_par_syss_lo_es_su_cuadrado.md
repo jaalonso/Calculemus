@@ -116,6 +116,28 @@ calc even (n^2)
      ↔ even (n * n)      : by ring_nf
  ... ↔ (even n ∨ even n) : int.even_mul
  ... ↔ even n            : by simp
+
+-- 6ª demostración
+example :
+  even (n^2) ↔ even n :=
+begin
+  split,
+  { contrapose,
+    intro h,
+    rw ← odd_iff_not_even at *,
+    cases h with k hk,
+    use 2*k*(k+1),
+    calc n^2
+         = (2*k+1)^2       : by rw hk
+     ... = 4*k^2+4*k+1     : by ring
+     ... = 2*(2*k*(k+1))+1 : by ring, },
+  { intro h,
+    cases h with k hk,
+    use 2*k^2,
+    calc n^2
+         = (2*k)^2   : by rw hk
+     ... = 2*(2*k^2) : by ring, },
+end
 </pre>
 
 Se puede interactuar con la prueba anterior en <a href="https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Un_numero_es_par_syss_lo_es_su_cuadrado.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
