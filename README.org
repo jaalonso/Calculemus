@@ -6,7 +6,6 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 Los problemas publicados (por orden cronológico inverso) son
 
 + 25-07-21: [[./textos/Acotacion_de_convergentes.md][Acotación de sucesiones convergentes]] (En [[./src/Acotacion_de_convergentes.lean][Lean]] y en [[./thy/Acotacion_de_convergentes.thy][Isabelle]]).
-
 + 24-07-21: [[./textos/Un_numero_es_par_syss_lo_es_su_cuadrado.md][Un número es par syss lo es su cuadrado]] (En [[./src/Un_numero_es_par_syss_lo_es_su_cuadrado.lean][Lean]] y en [[./thy/Un_numero_es_par_syss_lo_es_su_cuadrado.thy][Isabelle]]).
 + 23-07-21: [[./textos/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.md][Los supremos de las sucesiones crecientes son sus límites]] (En [[./src/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.lean][Lean]] y en [[./thy/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.thy][Isabelle]]).
 + 22-07-21: [[./textos/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.md][Si `f x ≤ f y → x ≤ y`, entonces f es inyectiva]] (En [[./src/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.lean][Lean]] y en [[./thy/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.thy][Isabelle]]).

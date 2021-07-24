@@ -1,9 +1,9 @@
 ---
-Título: Las sucessiones convergentes están acotadas
+Título: Las sucesiones convergentes están acotadas
 Autor:  José A. Alonso
 ---
 
-Demostrar u es una sucesión convergente, entonces está acotada; es decir,
+Demostrar que si u es una sucesión convergente, entonces está acotada; es decir,
 <pre lang="text">
     ∃ k b, ∀ n, n ≥ k → |u n| ≤ b
 </pre>
@@ -116,7 +116,7 @@ proof -
   proof (intro allI impI)
     fix n
     assume hn : "n ≥ k"
-    have "¦u n¦ = ¦u n - a + a¦"     by simp
+    have "¦u n¦ = ¦u n - a + a¦"    by simp
     also have "… ≤ ¦u n - a¦ + ¦a¦" by simp
     also have "… ≤ 1 + ¦a¦"         by (simp add: hk hn)
     finally show "¦u n¦ ≤ 1 + ¦a¦"  .
@@ -131,11 +131,14 @@ lemma
   shows   "∃ k b. ∀n≥k. ¦u n¦ ≤ b"
 proof -
   obtain a where "limite u a"
-    using assms convergente_def by blast
+    using assms convergente_def
+    by blast
   then obtain k where hk : "∀n≥k. ¦u n - a¦ ≤ 1"
-    using limite_def zero_less_one by blast
+    using limite_def zero_less_one
+    by blast
   have "∀n≥k. ¦u n¦ ≤ 1 + ¦a¦"
-    using hk by fastforce
+    using hk
+    by fastforce
   then show "∃ k b. ∀n≥k. ¦u n¦ ≤ b"
     by auto
 qed

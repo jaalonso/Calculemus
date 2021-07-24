@@ -5,8 +5,8 @@
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
--- Demostrar u es una sucesión convergente, entonces está acotada; es
--- decir
+-- Demostrar que si u es una sucesión convergente, entonces está
+-- acotada; es decir,
 --     ∃ k b. ∀n≥k. ¦u n¦ ≤ b
 -- ----------------------------------------------------------------------
 
