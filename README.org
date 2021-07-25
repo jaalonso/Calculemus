@@ -5,6 +5,8 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
++ 26-07-21: [[./textos/La_paradoja_del_barbero.md][La paradoja del barbero]] (En [[./src/La_paradoja_del_barbero.lean][Lean]] y en [[./thy/La_paradoja_del_barbero.thy][Isabelle]]).
+
 + 25-07-21: [[./textos/Acotacion_de_convergentes.md][Acotación de sucesiones convergentes]] (En [[./src/Acotacion_de_convergentes.lean][Lean]] y en [[./thy/Acotacion_de_convergentes.thy][Isabelle]]).
 + 24-07-21: [[./textos/Un_numero_es_par_syss_lo_es_su_cuadrado.md][Un número es par syss lo es su cuadrado]] (En [[./src/Un_numero_es_par_syss_lo_es_su_cuadrado.lean][Lean]] y en [[./thy/Un_numero_es_par_syss_lo_es_su_cuadrado.thy][Isabelle]]).
 + 23-07-21: [[./textos/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.md][Los supremos de las sucesiones crecientes son sus límites]] (En [[./src/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.lean][Lean]] y en [[./thy/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.thy][Isabelle]]).
