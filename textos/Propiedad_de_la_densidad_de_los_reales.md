@@ -111,7 +111,111 @@ En los comentarios se pueden escribir otras soluciones, escribiendo el código e
 [expand title="Soluciones con Isabelle/HOL"]
 
 <pre lang="isar">
-???
+theory Propiedad_de_la_densidad_de_los_reales
+imports Main HOL.Real
+begin
+
+(* 1ª demostración *)
+lemma
+  fixes x y :: real
+  assumes "∀ z. y < z ⟶ x ≤ z"
+  shows "x ≤ y"
+proof (rule linorder_class.leI; intro notI)
+  assume "y < x"
+  then have "∃z. y < z ∧ z < x"
+    by (rule dense)
+  then obtain a where ha : "y < a ∧ a < x"
+    by (rule exE)
+  have "¬ a < a"
+    by (rule order.irrefl)
+  moreover
+  have "a < a"
+  proof -
+    have "y < a ⟶ x ≤ a"
+      using assms by (rule allE)
+    moreover
+    have "y < a"
+      using ha by (rule conjunct1)
+    ultimately have "x ≤ a"
+      by (rule mp)
+    moreover
+    have "a < x"
+      using ha by (rule conjunct2)
+    ultimately show "a < a"
+      by (simp only: less_le_trans)
+  qed
+  ultimately show False
+    by (rule notE)
+qed
+
+(* 2ª demostración *)
+lemma
+  fixes x y :: real
+  assumes "⋀ z. y < z ⟹ x ≤ z"
+  shows "x ≤ y"
+proof (rule linorder_class.leI; intro notI)
+  assume "y < x"
+  then have "∃z. y < z ∧ z < x"
+    by (rule dense)
+  then obtain a where hya : "y < a" and hax : "a < x"
+    by auto
+  have "¬ a < a"
+    by (rule order.irrefl)
+  moreover
+  have "a < a"
+  proof -
+    have "a < x"
+      using hax .
+    also have "… ≤ a"
+      using assms[OF hya] .
+    finally show "a < a" .
+  qed
+  ultimately show False
+    by (rule notE)
+qed
+
+(* 3ª demostración *)
+lemma
+  fixes x y :: real
+  assumes "⋀ z. y < z ⟹ x ≤ z"
+  shows "x ≤ y"
+proof (rule linorder_class.leI; intro notI)
+  assume "y < x"
+  then have "∃z. y < z ∧ z < x"
+    by (rule dense)
+  then obtain a where hya : "y < a" and hax : "a < x"
+    by auto
+  have "¬ a < a"
+    by (rule order.irrefl)
+  moreover
+  have "a < a"
+    using hax assms[OF hya] by (rule less_le_trans)
+  ultimately show False
+    by (rule notE)
+qed
+
+(* 4ª demostración *)
+lemma
+  fixes x y :: real
+  assumes "⋀ z. y < z ⟹ x ≤ z"
+  shows "x ≤ y"
+by (meson assms dense not_less)
+
+(* 5ª demostración *)
+lemma
+  fixes x y :: real
+  assumes "⋀ z. y < z ⟹ x ≤ z"
+  shows "x ≤ y"
+using assms by (rule dense_ge)
+
+(* 6ª demostración *)
+lemma
+  fixes x y :: real
+  assumes "∀ z. y < z ⟶ x ≤ z"
+  shows "x ≤ y"
+using assms by (simp only: dense_ge)
+
+end
 </pre>
 
 En los comentarios se pueden escribir otras soluciones, escribiendo el código entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;

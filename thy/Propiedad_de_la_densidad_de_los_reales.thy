@@ -14,9 +14,6 @@ theory Propiedad_de_la_densidad_de_los_reales
 imports Main HOL.Real
 begin
 
-find_theorems "\<not> (?x < ?x)"
-thm dense
-
 (* 1\<ordfeminine> demostración *)
 lemma
   fixes x y :: real
