@@ -5,8 +5,9 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
-+ 30-07-21: [[./textos/Limite_de_sucesion_menor_que_otra_sucesion.md][Límite de sucesión menor que otra sucesión]] (En [[./src/Limite_de_sucesion_menor_que_otra_sucesion.lean][Lean]] y en [[./thy/Limite_de_sucesion_menor_que_otra_sucesion.thy][Isabelle]]).
++ 31-07-21: [[./textos/Las_sucesiones_acotadas_por_cero_son_nulas.md][Las sucesiones acotadas por cero son nulas]] (En [[./src/Las_sucesiones_acotadas_por_cero_son_nulas.lean][Lean]] y en [[./thy/Las_sucesiones_acotadas_por_cero_son_nulas.thy][Isabelle]]).
 
++ 30-07-21: [[./textos/Limite_de_sucesion_menor_que_otra_sucesion.md][Límite de sucesión menor que otra sucesión]] (En [[./src/Limite_de_sucesion_menor_que_otra_sucesion.lean][Lean]] y en [[./thy/Limite_de_sucesion_menor_que_otra_sucesion.thy][Isabelle]]).
 + 28-07-21: [[./textos/Propiedad_cancelativa_del_producto_de_numeros_naturales.md][Propiedad cancelativa del producto de números naturales]] (En [[./src/Propiedad_cancelativa_del_producto_de_numeros_naturales.lean][Lean]] y en [[./thy/Propiedad_cancelativa_del_producto_de_numeros_naturales.thy][Isabelle]]).
 + 27-07-21: [[./textos/Propiedad_de_la_densidad_de_los_reales.md][Propiedad de la densidad de los reales]] (En [[./src/Propiedad_de_la_densidad_de_los_reales.lean][Lean]] y en [[./thy/Propiedad_de_la_densidad_de_los_reales.thy][Isabelle]]).
 + 26-07-21: [[./textos/La_paradoja_del_barbero.md][La paradoja del barbero]] (En [[./src/La_paradoja_del_barbero.lean][Lean]] y en [[./thy/La_paradoja_del_barbero.thy][Isabelle]]).

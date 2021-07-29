@@ -14,8 +14,8 @@
 -- donde se usa la notación |x| para el valor absoluto de x
 --    notation `|`x`|` := abs x
 --
--- Demostrar que si aₙ → l, bₙ → m y aₙ ≤ bₙ para todo n, entonces
--- l ≤ m.
+-- Demostrar que si uₙ → a, vₙ → c y uₙ ≤ vₙ para todo n, entonces
+-- a ≤ c.
 -- ---------------------------------------------------------------------
 
 import data.real.basic
