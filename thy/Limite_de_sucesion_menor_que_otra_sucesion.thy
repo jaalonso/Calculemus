@@ -12,8 +12,8 @@
 --    definition limite :: "(nat \<Rightarrow> real) \<Rightarrow> real \<Rightarrow> bool"
 --      where "limite u c \<longleftrightarrow> (\<forall>\<epsilon>>0. \<exists>k::nat. \<forall>n\<ge>k. \<bar>u n - c\<bar> < \<epsilon>)"
 --
--- Demostrar que si aₙ \<rightarrow> l, bₙ \<rightarrow> m y aₙ \<le> bₙ para todo n, entonces
--- l \<le> m.
+-- Demostrar que si u(n) \<rightarrow> a, v(n) \<rightarrow> c y u(n) \<le> v(n) para todo n, 
+-- entonces a \<le> c.
 -- ------------------------------------------------------------------ *)
 
 theory Limite_de_sucesion_menor_que_otra_sucesion
