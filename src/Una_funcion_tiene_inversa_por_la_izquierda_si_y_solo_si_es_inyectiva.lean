@@ -21,15 +21,14 @@
 -- ---------------------------------------------------------------------
 
 import tactic
-open function classical
+open function
 
 variables {α : Type*} [nonempty α]
 variable  {β : Type*}
 variable  {f : α → β}
 
 -- 1ª demostración
-example
-  : has_left_inverse f ↔ injective f :=
+example : has_left_inverse f ↔ injective f :=
 begin
   split,
   { intro hf,
@@ -47,8 +46,7 @@ begin
 end
 
 -- 2ª demostración
-example
-  : has_left_inverse f ↔ injective f :=
+example : has_left_inverse f ↔ injective f :=
 begin
   split,
   { intro hf,
@@ -58,11 +56,9 @@ begin
 end
 
 -- 3ª demostración
-example
-  : has_left_inverse f ↔ injective f :=
+example : has_left_inverse f ↔ injective f :=
 ⟨has_left_inverse.injective, injective.has_left_inverse⟩
 
 -- 4ª demostración
-example
-  : has_left_inverse f ↔ injective f :=
+example : has_left_inverse f ↔ injective f :=
 injective_iff_has_left_inverse.symm
