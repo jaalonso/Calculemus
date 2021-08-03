@@ -5,8 +5,7 @@
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
--- En Lean, que g es una inversa por la izquierda de f que está definido
--- en Lean por
+-- En Lean, que g es una inversa por la izquierda de f está definido por
 --    left_inverse (g : β → α) (f : α → β) : Prop :=
 --       ∀ x, g (f x) = x
 -- y que f tenga inversa por la izquierda está definido por

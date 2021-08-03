@@ -3,7 +3,7 @@ Título: Una función tiene inversa por la izquierda si y solo si es inyectiva
 Autor:  José A. Alonso
 ---
 
-En Lean, que g es una inversa por la izquierda de f que está definido en Lean por
+En Lean, que g es una inversa por la izquierda de f está definido por
 <pre lang="text">
    left_inverse (g : β → α) (f : α → β) : Prop :=
       ∀ x, g (f x) = x

@@ -5,15 +5,11 @@
 -- ------------------------------------------------------------------ *)
 
 (* ---------------------------------------------------------------------
--- En Isabelle/HOL, se puede definir que g es una inversa por la 
--- izquierda de f por
--- en Lean por
---    left_inverse (g : \<beta> \<rightarrow> \<alpha>) (f : \<alpha> \<rightarrow> \<beta>) : Prop :=
---       \<forall> x, g (f x) = x
--- y que f tenga inversa por la izquierda está definido por
---    has_left_inverse (f : \<alpha> \<rightarrow> \<beta>) : Prop :=
---       \<exists> finv : \<beta> \<rightarrow> \<alpha>, left_inverse finv f
--- Finalmente, que f es inyectiva sobre un conjunto está definido por
+-- En Isabelle/HOL, se puede definir que f tenga inversa por la
+-- izquierda por
+--    definition tiene_inversa_izq :: "('a \<Rightarrow> 'b) \<Rightarrow> bool" where
+--      "tiene_inversa_izq f \<longleftrightarrow> (\<exists>g. \<forall>x. g (f x) = x)"
+-- Además, que f es inyectiva sobre un conjunto está definido por
 --    definition inj_on :: "('a \<Rightarrow> 'b) \<Rightarrow> 'a set \<Rightarrow> bool"
 --      where "inj_on f A \<longleftrightarrow> (\<forall>x\<in>A. \<forall>y\<in>A. f x = f y \<longrightarrow> x = y)"
 -- y que f es inyectiva por
@@ -40,11 +36,11 @@ proof (unfold inj_def; intro allI impI)
   assume "f x = f y"
   obtain g where hg : "\<forall>x. g (f x) = x"
     using assms tiene_inversa_izq_def by auto
-  have "x = g (f x)" 
+  have "x = g (f x)"
     by (simp only: hg)
-  also have "\<dots> = g (f y)" 
+  also have "\<dots> = g (f y)"
     by (simp only: \<open>f x = f y\<close>)
-  also have "\<dots> = y" 
+  also have "\<dots> = y"
     by (simp only: hg)
   finally show "x = y" .
 qed
