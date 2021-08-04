@@ -5,7 +5,7 @@
 -- ------------------------------------------------------------------ *)
 
 (* ---------------------------------------------------------------------
--- En Lean se puede definir que g es una inversa de f por
+-- En Isabelle se puede definir que g es una inversa de f por
 --    definition inversa :: "('a \<Rightarrow> 'b) \<Rightarrow> ('b \<Rightarrow> 'a) \<Rightarrow> bool" where
 --      "inversa f g \<longleftrightarrow> (\<forall> x. (g \<circ> f) x = x) \<and> (\<forall> y. (f \<circ> g) y = y)"
 -- y que f tiene inversa por
