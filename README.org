@@ -6,8 +6,9 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 Los problemas publicados (por orden cronológico inverso) son
 
 + ??-08-21: [[./textos/La_equipotencia_es_una_relacion_de_equivalencia.md][La equipotencia es una relación de equivalencia]] (En [[./src/La_equipotencia_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_de_equivalencia.thy][Isabelle]]).
-+ 12-08-21: [[./textos/La_inversa_de_una_funcion_biyectiva_es_biyectiva.md][La inversa de una función biyectiva es biyectiva]] (En [[./src/La_inversa_de_una_funcion_biyectiva_es_biyectiva.lean][Lean]] y en [[./thy/La_inversa_de_una_funcion_biyectiva_es_biyectiva.thy][Isabelle]]).
++ 13-08-21: [[./textos/La_equipotencia_es_una_relacion_simetrica.md][La equipotencia es una relación simétrica]] (En [[./src/La_equipotencia_es_una_relacion_simetrica.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_simetrica.thy][Isabelle]]).
 
++ 12-08-21: [[./textos/La_inversa_de_una_funcion_biyectiva_es_biyectiva.md][La inversa de una función biyectiva es biyectiva]] (En [[./src/La_inversa_de_una_funcion_biyectiva_es_biyectiva.lean][Lean]] y en [[./thy/La_inversa_de_una_funcion_biyectiva_es_biyectiva.thy][Isabelle]]).
 + 11-08-21: [[./textos/La_equipotencia_es_una_relacion_reflexiva.md][La equipotencia es una relación reflexiva]] (En [[./src/La_equipotencia_es_una_relacion_reflexiva.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_reflexiva.thy][Isabelle]]).
 + 10-08-21: [[./textos/Una_funcion_tiene_inversa_si_y_solo_si_es_biyectiva.md][Una función tiene inversa si y solo si es biyectiva]] (En [[./src/Una_funcion_tiene_inversa_si_y_solo_si_es_biyectiva.lean][Lean]] y en [[./thy/Una_funcion_tiene_inversa_si_y_solo_si_es_biyectiva.thy][Isabelle]]).
 + 09-08-21: [[./textos/Las_funciones_biyectivas_tienen_inversa.md][Las funciones biyectivas tienen inversa]] (En [[./src/Las_funciones_biyectivas_tienen_inversa.lean][Lean]] y en [[./thy/Las_funciones_biyectivas_tienen_inversa.thy][Isabelle]]).
