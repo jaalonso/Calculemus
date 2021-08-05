@@ -4,10 +4,24 @@
 -- Sevilla, 11 de agosto de 2021
 -- ---------------------------------------------------------------------
 
+-- ---------------------------------------------------------------------
+-- Dos conjuntos A y B son equipotentes (y se denota por A ≃ B) si
+-- existe una aplicación biyectiva entre ellos. La equipotencia se puede
+-- definir en Lean por
+--    def es_equipotente (A B : Type*) :=
+--      ∃ g : A → B, bijective g
+--
+--    infix ` ⋍ `: 50 := es_equipotente
+--
+-- Demostrar que la relación de equipotencia es reflexiva.
+-- ---------------------------------------------------------------------
+
 import tactic
 open function
 
-def es_equipotente (A B : Type*) := ∃ g : A → B, bijective g
+def es_equipotente (A B : Type*) :=
+  ∃ g : A → B, bijective g
+
 infix ` ⋍ `: 50 := es_equipotente
 
 -- 1ª demostración
