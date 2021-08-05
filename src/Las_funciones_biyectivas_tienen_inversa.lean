@@ -25,7 +25,7 @@ def inversa (f : X → Y) (g : Y → X) :=
   (∀ x, (g ∘ f) x = x) ∧ (∀ y, (f ∘ g) y = y)
 
 def tiene_inversa (f : X → Y) :=
-  ∃ g, inversa f g
+  ∃ g, inversa g f
 
 -- 1ª demostración
 example
@@ -36,10 +36,10 @@ begin
   choose g hg using hfsup,
   use g,
   split,
+  { exact hg, },
   { intro a,
     apply hfiny,
     rw hg (f a), },
-  { exact hg, },
 end
 
 -- 2ª demostración
@@ -51,9 +51,9 @@ begin
   choose g hg using hfsup,
   use g,
   split,
+  { exact hg, },
   { intro a,
     exact @hfiny (g (f a)) a (hg (f a)), },
-  { exact hg, },
 end
 
 -- 3ª demostración
@@ -64,7 +64,7 @@ begin
   rcases hf with ⟨hfiny, hfsup⟩,
   choose g hg using hfsup,
   use g,
-  exact ⟨λ a, @hfiny (g (f a)) a (hg (f a)), hg⟩,
+  exact ⟨hg, λ a, @hfiny (g (f a)) a (hg (f a))⟩,
 end
 
 -- 4ª demostración
@@ -74,5 +74,14 @@ example
 begin
   rcases hf with ⟨hfiny, hfsup⟩,
   choose g hg using hfsup,
-  use [g, ⟨λ a, @hfiny (g (f a)) a (hg (f a)), hg⟩],
+  use [g, ⟨hg, λ a, @hfiny (g (f a)) a (hg (f a))⟩],
+end
+
+-- 5ª demostración
+example
+  (hf : bijective f)
+  : tiene_inversa f :=
+begin
+  cases (bijective_iff_has_inverse.mp hf) with g hg,
+  by tidy,
 end
