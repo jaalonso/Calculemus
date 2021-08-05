@@ -11,7 +11,7 @@ En Lean se puede definir que g es una inversa de f por
 y que f tiene inversa por
 <pre lang="text">
    def tiene_inversa (f : X → Y) :=
-     ∃ g, inversa f g
+     ∃ g, inversa g f
 </pre>
 
 Demostrar que si la función f tiene inversa, entonces f es biyectiva.
@@ -29,7 +29,7 @@ def inversa (f : X → Y) (g : Y → X) :=
   (∀ x, (g ∘ f) x = x) ∧ (∀ y, (f ∘ g) y = y)
 
 def tiene_inversa (f : X → Y) :=
-  ∃ g, inversa f g
+  ∃ g, inversa g f
 
 example
   (hf : tiene_inversa f)
@@ -50,7 +50,7 @@ def inversa (f : X → Y) (g : Y → X) :=
   (∀ x, (g ∘ f) x = x) ∧ (∀ y, (f ∘ g) y = y)
 
 def tiene_inversa (f : X → Y) :=
-  ∃ g, inversa f g
+  ∃ g, inversa g f
 
 -- 1ª demostración
 example
@@ -60,12 +60,12 @@ begin
   rcases hf with ⟨g, ⟨h1, h2⟩⟩,
   split,
   { intros a b hab,
-    calc a = g (f a) : (h1 a).symm
+    calc a = g (f a) : (h2 a).symm
        ... = g (f b) : congr_arg g hab
-       ... = b       : h1 b, },
+       ... = b       : h2 b, },
   { intro y,
     use g y,
-    exact h2 y, },
+    exact h1 y, },
 end
 
 -- 2ª demostración
@@ -76,11 +76,11 @@ begin
   rcases hf with ⟨g, ⟨h1, h2⟩⟩,
   split,
   { intros a b hab,
-    calc a = g (f a) : (h1 a).symm
+    calc a = g (f a) : (h2 a).symm
        ... = g (f b) : congr_arg g hab
-       ... = b       : h1 b, },
+       ... = b       : h2 b, },
   { intro y,
-    use [g y, h2 y], },
+    use [g y, h1 y], },
 end
 
 -- 3ª demostración
@@ -90,8 +90,8 @@ example
 begin
   rcases hf with ⟨g, ⟨h1, h2⟩⟩,
   split,
-  { exact left_inverse.injective h1, },
-  { exact right_inverse.surjective h2, },
+  { exact left_inverse.injective h2, },
+  { exact right_inverse.surjective h1, },
 end
 
 -- 4ª demostración
@@ -100,8 +100,8 @@ example
   : bijective f :=
 begin
   rcases hf with ⟨g, ⟨h1, h2⟩⟩,
-  exact ⟨left_inverse.injective h1,
-         right_inverse.surjective h2⟩,
+  exact ⟨left_inverse.injective h2,
+         right_inverse.surjective h1⟩,
 end
 
 -- 5ª demostración
@@ -109,15 +109,15 @@ example :
   tiene_inversa f → bijective f :=
 begin
   rintros ⟨g, ⟨h1, h2⟩⟩,
-  exact ⟨left_inverse.injective h1,
-         right_inverse.surjective h2⟩,
+  exact ⟨left_inverse.injective h2,
+         right_inverse.surjective h1⟩,
 end
 
 -- 6ª demostración
 example :
   tiene_inversa f → bijective f :=
-λ ⟨g, ⟨h1, h2⟩⟩, ⟨left_inverse.injective h1,
-                  right_inverse.surjective h2⟩
+λ ⟨g, ⟨h1, h2⟩⟩, ⟨left_inverse.injective h2,
+                  right_inverse.surjective h1⟩
 </pre>
 
 Se puede interactuar con la prueba anterior en <a href="https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Las_funciones_con_inversa_son_biyectivas.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
