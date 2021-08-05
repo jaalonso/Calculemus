@@ -11,7 +11,7 @@ En Lean se puede definir que g es una inversa de f por
 y que f tiene inversa por
 <pre lang="text">
    def tiene_inversa (f : X → Y) :=
-     ∃ g, inversa f g
+     ∃ g, inversa g f
 </pre>
 
 Demostrar que la función f tiene inversa si y solo si f es biyectiva.
@@ -28,7 +28,7 @@ def inversa (f : X → Y) (g : Y → X) :=
   (∀ x, (g ∘ f) x = x) ∧ (∀ y, (f ∘ g) y = y)
 
 def tiene_inversa (f : X → Y) :=
-  ∃ g, inversa f g
+  ∃ g, inversa g f
 
 example : tiene_inversa f ↔ bijective f :=
 sorry
@@ -46,7 +46,7 @@ def inversa (f : X → Y) (g : Y → X) :=
   (∀ x, (g ∘ f) x = x) ∧ (∀ y, (f ∘ g) y = y)
 
 def tiene_inversa (f : X → Y) :=
-  ∃ g, inversa f g
+  ∃ g, inversa g f
 
 -- 1ª demostración
 example : tiene_inversa f ↔ bijective f :=
@@ -55,20 +55,20 @@ begin
   { rintro ⟨g, ⟨h1, h2⟩⟩,
     split,
     { intros p q hf,
-      calc p = g (f p) : (h1 p).symm
+      calc p = g (f p) : (h2 p).symm
          ... = g (f q) : congr_arg g hf
-         ... = q       : h1 q, },
+         ... = q       : h2 q, },
     { intro y,
       use g y,
-      exact h2 y, }},
+      exact h1 y, }},
   { rintro ⟨hfinj, hfsur⟩,
     choose g hg using hfsur,
     use g,
     split,
+    { exact hg, },
     { intro a,
       apply hfinj,
-      rw hg (f a), },
-    { exact hg, }},
+      rw hg (f a), }},
 end
 
 -- 2ª demostración
@@ -78,18 +78,18 @@ begin
   { rintro ⟨g, ⟨h1, h2⟩⟩,
     split,
     { intros p q hf,
-      calc p = g (f p) : (h1 p).symm
+      calc p = g (f p) : (h2 p).symm
          ... = g (f q) : congr_arg g hf
-         ... = q       : h1 q, },
+         ... = q       : h2 q, },
     { intro y,
-      use [g y, h2 y], }},
+      use [g y, h1 y], }},
   { rintro ⟨hfinj, hfsur⟩,
     choose g hg using hfsur,
     use g,
     split,
+    { exact hg, },
     { intro a,
-      exact @hfinj (g (f a)) a (hg (f a)), },
-    { exact hg, }},
+      exact @hfinj (g (f a)) a (hg (f a)), }},
 end
 
 -- 3ª demostración
@@ -99,15 +99,15 @@ begin
   { rintro ⟨g, ⟨h1, h2⟩⟩,
     split,
     { intros p q hf,
-      calc p = g (f p) : (h1 p).symm
+      calc p = g (f p) : (h2 p).symm
          ... = g (f q) : congr_arg g hf
-         ... = q       : h1 q, },
+         ... = q       : h2 q, },
     { intro y,
-      use [g y, h2 y], }},
+      use [g y, h1 y], }},
   { rintro ⟨hfinj, hfsur⟩,
     choose g hg using hfsur,
     use g,
-    exact ⟨λ a, @hfinj (g (f a)) a (hg (f a)), hg⟩, },
+    exact ⟨hg, λ a, @hfinj (g (f a)) a (hg (f a))⟩, },
 end
 
 -- 4ª demostración
@@ -118,14 +118,14 @@ begin
   { rintro ⟨g, ⟨h1, h2⟩⟩,
     split,
     { intros p q hf,
-      calc p = g (f p) : (h1 p).symm
+      calc p = g (f p) : (h2 p).symm
          ... = g (f q) : congr_arg g hf
-         ... = q       : h1 q, },
+         ... = q       : h2 q, },
     { intro y,
-      use [g y, h2 y], }},
+      use [g y, h1 y], }},
   { rintro ⟨hfinj, hfsur⟩,
     choose g hg using hfsur,
-    use [g, ⟨λ a, @hfinj (g (f a)) a (hg (f a)), hg⟩], },
+    use [g, ⟨hg, λ a, @hfinj (g (f a)) a (hg (f a))⟩], },
 end
 </pre>
 
