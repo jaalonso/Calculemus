@@ -6,8 +6,9 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 Los problemas publicados (por orden cronológico inverso) son
 
 + ??-08-21: [[./textos/La_equipotencia_es_una_relacion_de_equivalencia.md][La equipotencia es una relación de equivalencia]] (En [[./src/La_equipotencia_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_de_equivalencia.thy][Isabelle]]).
-+ 14-08-21: [[./textos/La_composicion_de_funciones_inyectivas_es_inyectiva.md][La composición de funciones inyectivas es inyectiva]] (En [[./src/La_composicion_de_funciones_inyectivas_es_inyectiva.lean][Lean]] y en [[./thy/La_composicion_de_funciones_inyectivas_es_inyectiva.thy][Isabelle]]).
++ 15-08-21: [[./textos/La_composicion_de_funciones_suprayectivas_es_suprayectiva.md][La composición de funciones suprayectivas es suprayectiva]] (En [[./src/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][Lean]] y en [[./thy/La_composicion_de_funciones_suprayectivas_es_suprayectiva.thy][Isabelle]]).
 
++ 14-08-21: [[./textos/La_composicion_de_funciones_inyectivas_es_inyectiva.md][La composición de funciones inyectivas es inyectiva]] (En [[./src/La_composicion_de_funciones_inyectivas_es_inyectiva.lean][Lean]] y en [[./thy/La_composicion_de_funciones_inyectivas_es_inyectiva.thy][Isabelle]]).
 + 13-08-21: [[./textos/La_equipotencia_es_una_relacion_simetrica.md][La equipotencia es una relación simétrica]] (En [[./src/La_equipotencia_es_una_relacion_simetrica.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_simetrica.thy][Isabelle]]).
 + 12-08-21: [[./textos/La_inversa_de_una_funcion_biyectiva_es_biyectiva.md][La inversa de una función biyectiva es biyectiva]] (En [[./src/La_inversa_de_una_funcion_biyectiva_es_biyectiva.lean][Lean]] y en [[./thy/La_inversa_de_una_funcion_biyectiva_es_biyectiva.thy][Isabelle]]).
 + 11-08-21: [[./textos/La_equipotencia_es_una_relacion_reflexiva.md][La equipotencia es una relación reflexiva]] (En [[./src/La_equipotencia_es_una_relacion_reflexiva.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_reflexiva.thy][Isabelle]]).
