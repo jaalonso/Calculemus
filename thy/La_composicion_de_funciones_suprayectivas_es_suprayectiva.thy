@@ -19,18 +19,18 @@ lemma
           "surj (g :: 'b \<Rightarrow> 'c)"
   shows   "surj (g \<circ> f)"
 proof (unfold surj_def; intro allI)
-  fix z 
+  fix z
   obtain y where hy : "g y = z"
     using \<open>surj g\<close> by (metis surjD)
   obtain x where hx : "f x = y"
     using \<open>surj f\<close> by (metis surjD)
   have "(g \<circ> f) x = g (f x)"
     by (simp only: o_apply)
-  also have "\<dots> = g y" 
+  also have "\<dots> = g y"
     by (simp only: \<open>f x = y\<close>)
-  also have "\<dots> = z" 
+  also have "\<dots> = z"
     by (simp only: \<open>g y = z\<close>)
-  finally have "(g \<circ> f) x = z" 
+  finally have "(g \<circ> f) x = z"
     by this
   then have "z = (g \<circ> f) x"
     by (rule sym)
