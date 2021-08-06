@@ -5,9 +5,9 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
 Los problemas publicados (por orden cronológico inverso) son
 
-+ ??-08-21: [[./textos/La_equipotencia_es_una_relacion_de_equivalencia.md][La equipotencia es una relación de equivalencia]] (En [[./src/La_equipotencia_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_de_equivalencia.thy][Isabelle]]).
-+ 17-08-21: [[./textos/La_equipotencia_es_una_relacion_transitiva.md][La equipotencia es una relación transitiva]] (En [[./src/La_equipotencia_es_una_relacion_transitiva.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_transitiva.thy][Isabelle]]).
++ 18-08-21: [[./textos/La_equipotencia_es_una_relacion_de_equivalencia.md][La equipotencia es una relación de equivalencia]] (En [[./src/La_equipotencia_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_de_equivalencia.thy][Isabelle]]).
 
++ 17-08-21: [[./textos/La_equipotencia_es_una_relacion_transitiva.md][La equipotencia es una relación transitiva]] (En [[./src/La_equipotencia_es_una_relacion_transitiva.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_transitiva.thy][Isabelle]]).
 + 16-08-21: [[./textos/La_composicion_de_funciones_biyectivas_es_biyectiva.md][La composición de funciones biyectivas es biyectiva]] (En [[./src/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][Lean]] y en [[./thy/La_composicion_de_funciones_biyectivas_es_biyectiva.thy][Isabelle]]).
 + 15-08-21: [[./textos/La_composicion_de_funciones_suprayectivas_es_suprayectiva.md][La composición de funciones suprayectivas es suprayectiva]] (En [[./src/La_composicion_de_funciones_suprayectivas_es_suprayectiva.lean][Lean]] y en [[./thy/La_composicion_de_funciones_suprayectivas_es_suprayectiva.thy][Isabelle]]).
 + 14-08-21: [[./textos/La_composicion_de_funciones_inyectivas_es_inyectiva.md][La composición de funciones inyectivas es inyectiva]] (En [[./src/La_composicion_de_funciones_inyectivas_es_inyectiva.lean][Lean]] y en [[./thy/La_composicion_de_funciones_inyectivas_es_inyectiva.thy][Isabelle]]).
