@@ -21,3 +21,6 @@
 /textos/plantilla.md
 /textos/soluciones*
 /twitter/
+/*.bbl
+*.bib
+*.blg
