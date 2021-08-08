@@ -1,3 +1,27 @@
+-- Los_monoides_booleanos_son_conmutativos.lean
+-- Los monoides booleanos son conmutativos
+-- José A. Alonso Jiménez
+-- Sevilla, 10 de julio de 2021
+-- ---------------------------------------------------------------------
+
+-- ---------------------------------------------------------------------
+-- Un monoide es un conjunto junto con una operación binaria que es
+-- asociativa y tiene elemento neutro.
+--
+-- Un monoide M es booleano si
+--    ∀ x ∈ M, x * x = 1
+-- y es conmutativo si
+--    ∀ x y ∈ M, x * y = y * x
+--
+-- En Lean, está definida la clase de los monoides (como `monoid`) y sus
+-- propiedades características son
+--    mul_assoc : (a * b) * c = a * (b * c)
+--    one_mul :   1 * a = a
+--    mul_one :   a * 1 = a
+--
+-- Demostrar que los monoides booleanos son conmutativos.
+-- ---------------------------------------------------------------------
+
 import algebra.group.basic
 
 example
