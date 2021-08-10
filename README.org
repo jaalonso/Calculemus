@@ -104,7 +104,10 @@ Los problemas publicados (por orden cronológico inverso) son
 + 17-08-21: [[./textos/La_equipotencia_es_una_relacion_transitiva.md][La equipotencia es una relación transitiva]] (En [[./src/La_equipotencia_es_una_relacion_transitiva.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_transitiva.thy][Isabelle]]).
 + 18-08-21: [[./textos/La_equipotencia_es_una_relacion_de_equivalencia.md][La equipotencia es una relación de equivalencia]] (En [[./src/La_equipotencia_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_de_equivalencia.thy][Isabelle]]).
 
++ 19-08-21: [[./textos/La_igualdad_de_valores_es_una_relacion_de_equivalencia.md][La igualdad de valores es una relación de equivalencia]] (En [[./src/La_igualdad_de_valores_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_igualdad_de_valores_es_una_relacion_de_equivalencia.thy][Isabelle]]).
+
+
 * Próximos
++ Continuar los [[https://www.ma.imperial.ac.uk/~buzzard/M4000x_html/M40001/M40001_C2.html][apuntes de Kevin Buzzard]].
 + Adaptar [[https://app.edukera.com/?id=bG9naWNfY29ubmVjdG9yX3N5bGxvZ2lzbQ%3D%3D][ejercicios de Edukera]]
-+ Continuar los [[https://www.ma.imperial.ac.uk/~buzzard/M4000x_html/M40001/M40001_C2.html][puntes de Kevin Buzzard]].
 + La equipotencia es una relación de equivalencia con estructura data.equiv.basic
