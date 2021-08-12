@@ -70,6 +70,34 @@ example
   (hg : function.injective g)
   : function.injective ((∘) g : (X → Y) → (X → Z)) :=
 λ f₁ f₂ hgf, funext (λ i, hg (congr_fun hgf i : _))
+
+-- 5ª demostración
+example
+  [hY : nonempty Y]
+  (hg : injective g)
+  (hgf : g ∘ f₁ = g ∘ f₂)
+  : f₁ = f₂ :=
+calc f₁ = id ∘ f₁              : (left_id f₁).symm
+    ... = (inv_fun g ∘ g) ∘ f₁ : congr_arg2 (∘) (inv_fun_comp hg).symm rfl
+    ... = inv_fun g ∘ (g ∘ f₁) : comp.assoc _ _ _
+    ... = inv_fun g ∘ (g ∘ f₂) : congr_arg2 (∘) rfl hgf
+    ... = (inv_fun g ∘ g) ∘ f₂ : comp.assoc _ _ _
+    ... = id ∘ f₂              : congr_arg2 (∘) (inv_fun_comp hg) rfl
+    ... = f₂                   : left_id f₂
+
+-- 6ª demostración
+example
+  [hY : nonempty Y]
+  (hg : injective g)
+  (hgf : g ∘ f₁ = g ∘ f₂)
+  : f₁ = f₂ :=
+calc f₁ = id ∘ f₁              : by finish
+    ... = (inv_fun g ∘ g) ∘ f₁ : by finish [inv_fun_comp]
+    ... = inv_fun g ∘ (g ∘ f₁) : by refl
+    ... = inv_fun g ∘ (g ∘ f₂) : by finish [hgf]
+    ... = (inv_fun g ∘ g) ∘ f₂ : by refl
+    ... = id ∘ f₂              : by finish [inv_fun_comp]
+    ... = f₂                   : by finish
 </pre>
 
 Se puede interactuar con la prueba anterior en <a href="https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
@@ -121,6 +149,45 @@ lemma
   shows   "f1 = f2"
 using assms
 by (metis fun.inj_map_strong inj_eq)
+
+(* 4ª demostración *)
+lemma
+  assumes "inj g"
+          "g ∘ f1 = g ∘ f2"
+  shows   "f1 = f2"
+proof -
+  have "f1 = id ∘ f1"
+    by (rule id_o [symmetric])
+  also have "… = (inv g ∘ g) ∘ f1"
+    by (simp add: assms(1))
+  also have "… = inv g ∘ (g ∘ f1)"
+    by (simp add: comp_assoc)
+  also have "… = inv g ∘ (g ∘ f2)"
+    using assms(2) by (rule arg_cong)
+  also have "… = (inv g ∘ g) ∘ f2"
+    by (simp add: comp_assoc)
+  also have "… = id ∘ f2"
+    by (simp add: assms(1))
+  also have "… = f2"
+    by (rule id_o)
+  finally show "f1 = f2"
+    by this
+qed
+
+(* 5ª demostración *)
+lemma
+  assumes "inj g"
+          "g ∘ f1 = g ∘ f2"
+  shows   "f1 = f2"
+proof -
+  have "f1 = (inv g ∘ g) ∘ f1"
+    by (simp add: assms(1))
+  also have "… = (inv g ∘ g) ∘ f2"
+    using assms(2) by (simp add: comp_assoc)
+  also have "… = f2"
+    using assms(1) by simp
+  finally show "f1 = f2" .
+qed
 
 end
 </pre>

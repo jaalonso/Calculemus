@@ -108,6 +108,7 @@ Los problemas publicados (por orden cronológico inverso) son
 + 20-08-21: [[./textos/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.md][La composición por la izquierda con una inyectiva es una operación inyectiva]] (En [[./src/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.lean][Lean]] y en [[./thy/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.thy][Isabelle]]).
 
 * Próximos
++ Escribir [[https://github.com/saradiazr11/Formalizations_in_Lean/blob/main/cauchy.lean][el de Sara]].
 + Continuar los [[https://www.ma.imperial.ac.uk/~buzzard/M4000x_html/M40001/M40001_C2.html][apuntes de Kevin Buzzard]].
 + Adaptar [[https://app.edukera.com/?id=bG9naWNfY29ubmVjdG9yX3N5bGxvZ2lzbQ%3D%3D][ejercicios de Edukera]]
 + La equipotencia es una relación de equivalencia con estructura data.equiv.basic
