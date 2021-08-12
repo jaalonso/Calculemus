@@ -104,8 +104,9 @@ Los problemas publicados (por orden cronológico inverso) son
 + 17-08-21: [[./textos/La_equipotencia_es_una_relacion_transitiva.md][La equipotencia es una relación transitiva]] (En [[./src/La_equipotencia_es_una_relacion_transitiva.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_transitiva.thy][Isabelle]]).
 + 18-08-21: [[./textos/La_equipotencia_es_una_relacion_de_equivalencia.md][La equipotencia es una relación de equivalencia]] (En [[./src/La_equipotencia_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_de_equivalencia.thy][Isabelle]]).
 + 19-08-21: [[./textos/La_igualdad_de_valores_es_una_relacion_de_equivalencia.md][La igualdad de valores es una relación de equivalencia]] (En [[./src/La_igualdad_de_valores_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_igualdad_de_valores_es_una_relacion_de_equivalencia.thy][Isabelle]]).
-
 + 20-08-21: [[./textos/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.md][La composición por la izquierda con una inyectiva es una operación inyectiva]] (En [[./src/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.lean][Lean]] y en [[./thy/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.thy][Isabelle]]).
+
+
 
 * Próximos
 + Escribir [[https://github.com/saradiazr11/Formalizations_in_Lean/blob/main/cauchy.lean][el de Sara]].

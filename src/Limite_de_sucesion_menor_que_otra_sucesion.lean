@@ -55,7 +55,7 @@ begin
    ... ≤ (a - u N) + (v N - c)   : by simp [HN]
    ... ≤ |(a - u N) + (v N - c)| : le_abs_self ((a - u N) + (v N - c))
    ... ≤ |a - u N| + |v N - c|   : abs_add (a - u N) (v N - c)
-   ... = |u N - a| + |v N - c|   : by simp only [abs_sub]
+   ... = |u N - a| + |v N - c|   : by simp only [abs_sub_comm]
    ... < ε + ε                   : add_lt_add Ha Hc
    ... = a - c                   : add_halves (a - c),
 end
@@ -84,7 +84,7 @@ begin
    ... ≤ (a - u N) + (v N - c)   : by simp [HN]
    ... ≤ |(a - u N) + (v N - c)| : le_abs_self ((a - u N) + (v N - c))
    ... ≤ |a - u N| + |v N - c|   : abs_add (a - u N) (v N - c)
-   ... = |u N - a| + |v N - c|   : by simp only [abs_sub]
+   ... = |u N - a| + |v N - c|   : by simp only [abs_sub_comm]
    ... < ε + ε                   : add_lt_add Ha Hc
    ... = a - c                   : add_halves (a - c),
 end
@@ -113,7 +113,7 @@ begin
    ... ≤ (a - u N) + (v N - c)   : by simp [HN]
    ... ≤ |(a - u N) + (v N - c)| : by simp [le_abs_self]
    ... ≤ |a - u N| + |v N - c|   : by simp [abs_add]
-   ... = |u N - a| + |v N - c|   : by simp [abs_sub]
+   ... = |u N - a| + |v N - c|   : by simp [abs_sub_comm]
    ... < ε + ε                   : add_lt_add Ha Hc
    ... = a - c                   : by simp,
 end

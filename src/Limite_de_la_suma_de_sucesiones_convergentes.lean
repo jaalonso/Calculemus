@@ -108,7 +108,7 @@ begin
   have cota₁ : |u n - a| < ε/2 := hNu n hn₁,
   have cota₂ : |v n - b| < ε/2 := hNv n hn₂,
   calc |(u + v) n - (a + b)|
-       = |u n + v n - (a + b)|   : by rfl
+       = |u n + v n - (a + b)|   : by refl
    ... = |(u n - a) + (v n - b)| : by { congr, ring }
    ... ≤ |u n - a| + |v n - b|   : by apply abs_add
    ... < ε                       : by linarith,
