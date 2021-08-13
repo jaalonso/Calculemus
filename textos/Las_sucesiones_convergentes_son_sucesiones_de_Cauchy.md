@@ -1,6 +1,6 @@
 ---
 Título: Las sucesiones convergentes son sucesiones de Cauchy
-Autor:  José A. Alonso
+Autor:  Sara Díaz Real
 ---
 
 **Nota**: El problema de hoy lo ha escrito Sara Díaz Real y es uno de los que se encuentran en su Trabajo Fin de Máster [Formalización en Lean de problemas de las Olimpiadas Internacionales de Matemáticas (IMO)](https://raw.githubusercontent.com/saradiazr11/IMO_en_Lean/main/doc/IMO_en_Lean.pdf). Concretamente, el problema se encuentra en la [página 52](https://raw.githubusercontent.com/saradiazr11/IMO_en_Lean/main/doc/IMO_en_Lean.pdf#page=52) junto con la demostración en lenguaje natural.
