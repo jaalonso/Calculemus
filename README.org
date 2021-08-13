@@ -106,6 +106,7 @@ Los problemas publicados (por orden cronológico inverso) son
 + 19-08-21: [[./textos/La_igualdad_de_valores_es_una_relacion_de_equivalencia.md][La igualdad de valores es una relación de equivalencia]] (En [[./src/La_igualdad_de_valores_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_igualdad_de_valores_es_una_relacion_de_equivalencia.thy][Isabelle]]).
 + 20-08-21: [[./textos/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.md][La composición por la izquierda con una inyectiva es una operación inyectiva]] (En [[./src/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.lean][Lean]] y en [[./thy/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.thy][Isabelle]]).
 
++ 21-08-21: [[./textos/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.md][Las sucesiones convergentes son sucesiones de Cauchy]] (En [[./src/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.lean][Lean]] y en [[./thy/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.thy][Isabelle]]).
 
 
 * Próximos
