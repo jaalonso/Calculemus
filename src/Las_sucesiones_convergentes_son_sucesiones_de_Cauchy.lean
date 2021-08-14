@@ -31,13 +31,13 @@ variable {u : ℕ → ℝ }
 notation `|`x`|` := abs x
 
 def limite (u : ℕ → ℝ) (l : ℝ) : Prop :=
-  ∀ ε > 0, ∃ N, ∀ n ≥ N, |u n - l| ≤ ε
+  ∀ ε > 0, ∃ N, ∀ n ≥ N, |u n - l| < ε
 
 def suc_convergente (u : ℕ → ℝ) :=
   ∃ l, limite u l
 
 def suc_cauchy (u : ℕ → ℝ) :=
-  ∀ ε > 0, ∃ N, ∀ p ≥ N, ∀ q ≥ N, |u p - u q| ≤ ε
+  ∀ ε > 0, ∃ N, ∀ p ≥ N, ∀ q ≥ N, |u p - u q| < ε
 
 -- 1ª demostración
 example
@@ -56,7 +56,7 @@ begin
        = |(u p - l) + (l - u q)| : by ring_nf
    ... ≤ |u p - l|  + |l - u q|  : abs_add (u p - l) (l - u q)
    ... = |u p - l|  + |u q - l|  : congr_arg2 (+) rfl (abs_sub_comm l (u q))
-   ... ≤ ε/2 + ε/2               : add_le_add (hN p hp) (hN q hq)
+   ... < ε/2 + ε/2               : add_lt_add (hN p hp) (hN q hq)
    ... = ε                       : add_halves ε,
 end
 
@@ -75,7 +75,7 @@ begin
        = |(u p - l) + (l - u q)| : by ring_nf
    ... ≤ |u p - l|  + |l - u q|  : abs_add (u p - l) (l - u q)
    ... = |u p - l|  + |u q - l|  : congr_arg2 (+) rfl (abs_sub_comm l (u q))
-   ... ≤ ε/2 + ε/2               : add_le_add (hN p hp) (hN q hq)
+   ... < ε/2 + ε/2               : add_lt_add (hN p hp) (hN q hq)
    ... = ε                       : add_halves ε,
 end
 
@@ -90,14 +90,14 @@ begin
   clear hε hl,
   use N,
   intros p hp q hq,
-  have cota1 : |u p - l| ≤ ε / 2 := hN p hp,
-  have cota2 : |u q - l| ≤ ε / 2 := hN q hq,
+  have cota1 : |u p - l| < ε / 2 := hN p hp,
+  have cota2 : |u q - l| < ε / 2 := hN q hq,
   clear hN hp hq,
   calc |u p - u q|
        = |(u p - l) + (l - u q)| : by ring_nf
    ... ≤ |u p - l|  + |l - u q|  : abs_add (u p - l) (l - u q)
    ... = |u p - l|  + |u q - l|  : by rw abs_sub_comm l (u q)
-   ... ≤ ε                       : by linarith,
+   ... < ε                       : by linarith,
 end
 
 -- 4ª demostración
@@ -115,7 +115,7 @@ begin
        = |(u p - l) + (l - u q)| : by ring_nf
    ... ≤ |u p - l|  + |l - u q|  : abs_add (u p - l) (l - u q)
    ... = |u p - l|  + |u q - l|  : by rw abs_sub_comm l (u q)
-   ... ≤ ε                       : by linarith [hN p hp, hN q hq],
+   ... < ε                       : by linarith [hN p hp, hN q hq],
 end
 
 -- 5ª demostración
@@ -132,5 +132,5 @@ begin
        = |(u p - l) + (l - u q)| : by ring_nf
    ... ≤ |u p - l|  + |l - u q|  : by simp [abs_add]
    ... = |u p - l|  + |u q - l|  : by simp [abs_sub_comm]
-   ... ≤ ε                       : by linarith [hN p hp, hN q hq],
+   ... < ε                       : by linarith [hN p hp, hN q hq],
 end
