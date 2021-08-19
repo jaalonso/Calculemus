@@ -121,7 +121,6 @@ definition relacion :: "('a set) set ⇒ 'a ⇒ 'a ⇒ bool" where
 definition particion :: "('a set) set ⇒ bool" where
   "particion P ⟷ (∀x. (∃B∈P. x ∈ B ∧ (∀C∈P. x ∈ C ⟶ B = C))) ∧ {} ∉ P"
 
-thm conj_assoc
 (* 1ª demostración *)
 lemma
   assumes "particion P"

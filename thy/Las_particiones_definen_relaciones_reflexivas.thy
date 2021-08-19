@@ -31,7 +31,6 @@ definition relacion :: "('a set) set \<Rightarrow> 'a \<Rightarrow> 'a \<Rightar
 definition particion :: "('a set) set \<Rightarrow> bool" where
   "particion P \<longleftrightarrow> (\<forall>x. (\<exists>B\<in>P. x \<in> B \<and> (\<forall>C\<in>P. x \<in> C \<longrightarrow> B = C))) \<and> {} \<notin> P"
 
-thm conj_assoc
 (* 1\<ordfeminine> demostración *)
 lemma
   assumes "particion P"
