@@ -370,7 +370,7 @@ example
         (λ hm1 hm2, ⟨φ m, hm2, hN' m hm1⟩))))
 </pre>
 
-Se puede interactuar con la prueba anterior en <a href="https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Si_a_es_un_punto_de_acumulacion_de_u,_entonces_forall_epsilon_gt_0,_forall_N,_exists_k_ge_N,_|u(k)-a|_lt_epsilon.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
+Se puede interactuar con la prueba anterior en <a href="https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Si_a_es_un_punto_de_acumulacion_de_u,_entonces_a_tiene_puntos_cercanos.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
 
 En los comentarios se pueden escribir otras soluciones, escribiendo el código entre una línea con &#60;pre lang=&quot;lean&quot;&#62; y otra con &#60;/pre&#62;
 [/expand]

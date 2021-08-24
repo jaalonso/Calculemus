@@ -1,4 +1,4 @@
--- Si_a_es_un_punto_de_acumulacion_de_u,_entonces_forall_epsilon_gt_0,_forall_N,_exists_k_ge_N,_|u(k)-a|_lt_epsilon.lean
+-- Si_a_es_un_punto_de_acumulacion_de_u,_entonces_a_tiene_puntos_cercanos.lean
 -- Si a es un punto de acumulación de u, entonces ∀ε>0, ∀ N, ∃k≥N, |u(k)−a| < ε
 -- José A. Alonso Jiménez
 -- Sevilla, 31 de agosto de 2021
