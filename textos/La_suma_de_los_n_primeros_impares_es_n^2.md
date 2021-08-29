@@ -1,5 +1,5 @@
 ---
-Título: La_suma_de_los_n_primeros_impares_es_n^2
+Título: La suma de los n primeros impares es n^2
 Autor:  José A. Alonso
 ---
 
