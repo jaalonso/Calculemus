@@ -1,5 +1,5 @@
 ---
-Título: Las sucesiones divergentes positivas no_tienen límites finitos
+Título: Las sucesiones divergentes positivas no tienen límites finitos
 Autor:  José A. Alonso
 ---
 
