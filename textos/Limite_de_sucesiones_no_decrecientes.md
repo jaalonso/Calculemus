@@ -1,5 +1,5 @@
 ---
-Título: Limite_de_sucesiones_no_decrecientes.lean
+Título: Límite de sucesiones no decrecientes
 Autor:  José A. Alonso
 ---
 
