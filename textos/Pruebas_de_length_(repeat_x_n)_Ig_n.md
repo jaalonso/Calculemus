@@ -9,8 +9,7 @@ En Lean están definidas las funciones length y repeat tales que
 <pre lang="text">
      length [1,2,5,2] = 4
 </pre>
-+ (repeat x n) es la lista que tiene el elemento x n veces. Por
-  ejemplo,
++ (repeat x n) es la lista que tiene el elemento x n veces. Por ejemplo,
 <pre lang="text">
      repeat 7 3 = [7, 7, 7]
 </pre>

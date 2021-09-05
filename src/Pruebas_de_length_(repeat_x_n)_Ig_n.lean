@@ -26,6 +26,7 @@ variable {α : Type}
 variable (x : α)
 variable (n : ℕ)
 
+-- 1ª demostración
 example :
   length (repeat x n) = n :=
 begin
