@@ -123,5 +123,6 @@ Los problemas publicados (por orden cronológico inverso) son
 + 05-09-21: [[./textos/Las_sucesiones_divergentes_positivas_no_tienen_limites_finitos.md][Las sucesiones divergentes positivas no_tienen límites finitos]] (En [[./src/Las_sucesiones_divergentes_positivas_no_tienen_limites_finitos.lean][Lean]] y en [[./thy/Las_sucesiones_divergentes_positivas_no_tienen_limites_finitos.thy][Isabelle]]).
 + 06-09-21: [[./textos/Limite_de_sucesiones_no_decrecientes.md][Límite de sucesiones no decrecientes]] (En [[./src/Limite_de_sucesiones_no_decrecientes.lean][Lean]] y en [[./thy/Limite_de_sucesiones_no_decrecientes.thy][Isabelle]]).
 + 07-09-21: [[./textos/Pruebas_de_length_(repeat_x_n)_Ig_n.md][Pruebas de length (repeat x n) = n]] (En [[./src/Pruebas_de_length_(repeat_x_n)_Ig_n.lean][Lean]] y en [[./thy/Pruebas_de_length_(repeat_x_n)_Ig_n.thy][Isabelle]]).
-
 + 08-09-21: [[./textos/Asociatividad_de_la_concatenacion_de_listas.md][Asociatividad de la concatenación de listas]] (En [[./src/Asociatividad_de_la_concatenacion_de_listas.lean][Lean]] y en [[./thy/Asociatividad_de_la_concatenacion_de_listas.thy][Isabelle]]).
+
++ 09-09-21: [[./textos/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.md][Pruebas de length(xs ++ ys) =_length(xs) + length(ys)]] (En [[./src/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.lean][Lean]] y en [[./thy/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.thy][Isabelle]]).
