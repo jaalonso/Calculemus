@@ -146,7 +146,7 @@ list.rec_on xs
   ( show length ([] ++ ys) = length [] + length ys, from
       calc length ([] ++ ys)
            = length ys                    : by rw nil_append
-       ... = 0 + length ys                : by exact (zero_add (length ys)).symm
+       ... = 0 + length ys                : (zero_add (length ys)).symm
        ... = length [] + length ys        : by rw length_nil )
   ( assume a as,
     assume HI : length (as ++ ys) = length as + length ys,
@@ -155,7 +155,7 @@ list.rec_on xs
            = length (a :: (as ++ ys))     : by rw cons_append
        ... = length (as ++ ys) + 1        : by rw length_cons
        ... = (length as + length ys) + 1  : by rw HI
-       ... = (length as + 1) + length ys  : by exact add_right_comm (length as) (length ys) 1
+       ... = (length as + 1) + length ys  : add_right_comm (length as) (length ys) 1
        ... = length (a :: as) + length ys : by rw length_cons)
 
 -- 10ª demostración
@@ -178,7 +178,7 @@ lemma longitud_conc_1 :
         = length (a :: (as ++ ys))     : by rw cons_append
     ... = length (as ++ ys) + 1        : by rw length_cons
     ... = (length as + length ys) + 1  : by rw longitud_conc_1
-    ... = (length as + 1) + length ys  : by exact add_right_comm (length as) (length ys) 1
+    ... = (length as + 1) + length ys  : add_right_comm (length as) (length ys) 1
     ... = length (a :: as) + length ys : by rw length_cons
 
 -- 12ª demostración

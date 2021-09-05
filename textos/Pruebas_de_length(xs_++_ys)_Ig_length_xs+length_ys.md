@@ -1,5 +1,5 @@
 ---
-Título: Pruebas de length(xs ++ ys) = length(xs) + length(ys)
+Título: Pruebas de length (xs ++ ys) = length xs + length ys
 Autor:  José A. Alonso
 ---
 

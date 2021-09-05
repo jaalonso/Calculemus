@@ -41,8 +41,7 @@ proof (induct xs)
 next
   fix x xs
   assume HI : "length (xs @ ys) = length xs + length ys"
-  have "length ((x # xs) @ ys) = 
-        length (x # (xs @ ys))"
+  have "length ((x # xs) @ ys) = length (x # (xs @ ys))"
     by (simp only: append_Cons)
   also have "\<dots> = length (xs @ ys) + 1"
     by (simp only: list.size(4))
@@ -54,7 +53,7 @@ next
     by (simp only: list.size(4))
   then show "length ((x # xs) @ ys) = length (x # xs) + length ys"
     by simp
-qed 
+qed
 
 (* 2\<ordfeminine> demostración *)
 lemma "length (xs @ ys) = length xs + length ys"
@@ -66,7 +65,7 @@ next
   assume "length (xs @ ys) = length xs + length ys"
   then show "length ((x # xs) @ ys) = length (x # xs) + length ys"
     by simp
-qed 
+qed
 
 (* 3\<ordfeminine> demostración *)
 lemma "length (xs @ ys) = length xs + length ys"
@@ -76,7 +75,7 @@ proof (induct xs)
 next
   case (Cons a xs)
   then show ?case by simp
-qed 
+qed
 
 (* 4\<ordfeminine> demostración *)
 lemma "length (xs @ ys) = length xs + length ys"
