@@ -47,6 +47,21 @@ example :
 begin
   induction xs with a as HI,
   { calc [] ++ (ys ++ zs)
+         = ys ++ zs                : append.equations._eqn_1 (ys ++ zs)
+     ... = ([] ++ ys) ++ zs        : congr_arg2 (++) (append.equations._eqn_1 ys) rfl, },
+  { calc (a :: as) ++ (ys ++ zs)
+         = a :: (as ++ (ys ++ zs)) : append.equations._eqn_2 a as (ys ++ zs)
+     ... = a :: ((as ++ ys) ++ zs) : congr_arg2 (::) rfl HI
+     ... = (a :: (as ++ ys)) ++ zs : (append.equations._eqn_2 a (as ++ ys) zs).symm
+     ... = ((a :: as) ++ ys) ++ zs : congr_arg2 (++) (append.equations._eqn_2 a as ys).symm rfl, },
+end
+
+-- 2ª demostración
+example :
+  xs ++ (ys ++ zs) = (xs ++ ys) ++ zs :=
+begin
+  induction xs with a as HI,
+  { calc [] ++ (ys ++ zs)
          = ys ++ zs                : nil_append (ys ++ zs)
      ... = ([] ++ ys) ++ zs        : congr_arg2 (++) (nil_append ys) rfl, },
   { calc (a :: as) ++ (ys ++ zs)
@@ -56,7 +71,7 @@ begin
      ... = ((a :: as) ++ ys) ++ zs : congr_arg2 (++) (cons_append a as ys).symm rfl, },
 end
 
--- 2ª demostración
+-- 3ª demostración
 example :
   xs ++ (ys ++ zs) = (xs ++ ys) ++ zs :=
 begin
@@ -71,7 +86,7 @@ begin
      ... = ((a :: as) ++ ys) ++ zs : by rw ← cons_append, },
 end
 
--- 3ª demostración
+-- 4ª demostración
 example :
   xs ++ (ys ++ zs) = (xs ++ ys) ++ zs :=
 begin
@@ -86,7 +101,7 @@ begin
      ... = ((a :: as) ++ ys) ++ zs : rfl, },
 end
 
--- 4ª demostración
+-- 5ª demostración
 example :
   xs ++ (ys ++ zs) = (xs ++ ys) ++ zs :=
 begin
@@ -101,7 +116,7 @@ begin
      ... = ((a :: as) ++ ys) ++ zs : by simp, },
 end
 
--- 5ª demostración
+-- 6ª demostración
 example :
   xs ++ (ys ++ zs) = (xs ++ ys) ++ zs :=
 begin
@@ -110,7 +125,7 @@ begin
   { by exact (cons_inj a).mpr HI, },
 end
 
--- 6ª demostración
+-- 7ª demostración
 example :
   xs ++ (ys ++ zs) = (xs ++ ys) ++ zs :=
 begin
@@ -123,7 +138,7 @@ begin
     rw cons_append, },
 end
 
--- 7ª demostración
+-- 8ª demostración
 example :
   xs ++ (ys ++ zs) = (xs ++ ys) ++ zs :=
 list.rec_on xs
@@ -142,14 +157,14 @@ list.rec_on xs
         ... = (a :: (as ++ ys)) ++ zs : by rw cons_append
         ... = ((a :: as) ++ ys) ++ zs : by rw ← cons_append)
 
--- 8ª demostración
+-- 9ª demostración
 example :
   xs ++ (ys ++ zs) = (xs ++ ys) ++ zs :=
 list.rec_on xs
   (by simp)
   (by simp [*])
 
--- 9ª demostración
+-- 10ª demostración
 lemma conc_asoc_1 :
   ∀ xs, xs ++ (ys ++ zs) = (xs ++ ys) ++ zs
 | [] := by calc
@@ -163,18 +178,18 @@ lemma conc_asoc_1 :
     ... = (a :: (as ++ ys)) ++ zs : by rw cons_append
     ... = ((a :: as) ++ ys) ++ zs : by rw ← cons_append
 
--- 10ª demostración
+-- 11ª demostración
 example :
   (xs ++ ys) ++ zs = xs ++ (ys ++ zs) :=
 -- by library_search
 append_assoc xs ys zs
 
--- 11ª demostración
+-- 12ª demostración
 example :
   (xs ++ ys) ++ zs = xs ++ (ys ++ zs) :=
 by induction xs ; simp [*]
 
--- 12ª demostración
+-- 13ª demostración
 example :
   (xs ++ ys) ++ zs = xs ++ (ys ++ zs) :=
 by simp
