@@ -141,7 +141,7 @@ begin
 end
 </pre>
 
-Se puede interactuar con la prueba anterior en <a href="https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Si_x_es_el_supremo_de_A,_entonces_forall__y,_y_lt_x_to_exists_a_in_A,_y_lt_a.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
+Se puede interactuar con la prueba anterior en <a href="https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Si_x_es_el_supremo_de_A_entonces_forall_y_y_lt_x_to_exists_a_in_A_y_lt_a.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
 
 En los comentarios se pueden escribir otras soluciones, escribiendo el código entre una línea con &#60;pre lang=&quot;lean&quot;&#62; y otra con &#60;/pre&#62;
 [/expand]
@@ -149,7 +149,7 @@ En los comentarios se pueden escribir otras soluciones, escribiendo el código e
 [expand title="Soluciones con Isabelle/HOL"]
 
 <pre lang="isar">
-theory "Si_x_es_el_supremo_de_A,_entonces_forall__y,_y_lt_x_to_exists_a_in_A,_y_lt_a"
+theory "Si_x_es_el_supremo_de_A_entonces_forall_y_y_lt_x_to_exists_a_in_A_y_lt_a"
   imports Main HOL.Real
 begin
 

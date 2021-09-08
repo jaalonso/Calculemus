@@ -1,4 +1,4 @@
-(* Si_x_es_el_supremo_de_A,_entonces_forall__y,_y_lt_x_to_exists_a_in_A,_y_lt_a.lean
+(* Si_x_es_el_supremo_de_A_entonces_forall_y_y_lt_x_to_exists_a_in_A_y_lt_a.lean
 -- Si x es el supremo de A, entonces \<forall> y, y < x \<rightarrow> \<exists> a \<in> A, y < a
 -- José A. Alonso Jiménez
 -- Sevilla, 14 de septiembre de 2021
@@ -10,14 +10,14 @@
 --      "cota_superior A x \<longleftrightarrow> (\<forall>a\<in>A. a \<le> x)"
 -- y x es el supremo de A por
 --    definition es_supremo :: "(real set) \<Rightarrow> real \<Rightarrow> bool" where
---      "es_supremo A x \<longleftrightarrow> (cota_superior A x \<and> 
+--      "es_supremo A x \<longleftrightarrow> (cota_superior A x \<and>
 --                           (\<forall> y. cota_superior A y \<longrightarrow> x \<le> y))"
 --
 -- Demostrar que si x es el supremo de A, entonces
 --    "\<forall>y<x. \<exists>a\<in>A. y < a"
 -- ------------------------------------------------------------------ *)
 
-theory "Si_x_es_el_supremo_de_A,_entonces_forall__y,_y_lt_x_to_exists_a_in_A,_y_lt_a"
+theory "Si_x_es_el_supremo_de_A_entonces_forall_y_y_lt_x_to_exists_a_in_A_y_lt_a"
   imports Main HOL.Real
 begin
 
@@ -25,20 +25,20 @@ definition cota_superior :: "(real set) \<Rightarrow> real \<Rightarrow> bool" w
   "cota_superior A x \<longleftrightarrow> (\<forall>a\<in>A. a \<le> x)"
 
 definition es_supremo :: "(real set) \<Rightarrow> real \<Rightarrow> bool" where
-  "es_supremo A x \<longleftrightarrow> (cota_superior A x \<and> 
+  "es_supremo A x \<longleftrightarrow> (cota_superior A x \<and>
                        (\<forall> y. cota_superior A y \<longrightarrow> x \<le> y))"
 
 (* 1\<ordfeminine> demostración *)
-lemma 
+lemma
   assumes "es_supremo A x"
   shows   "\<forall>y<x. \<exists>a\<in>A. y < a"
 proof (intro allI impI)
   fix y
-  assume "y < x" 
-  show "\<exists>a\<in>A. y < a" 
+  assume "y < x"
+  show "\<exists>a\<in>A. y < a"
   proof (rule ccontr)
     assume "\<not> (\<exists>a\<in>A. y < a)"
-    then have "\<forall>a\<in>A. a \<le> y" 
+    then have "\<forall>a\<in>A. a \<le> y"
       by auto
     then have "cota_superior A y"
       using cota_superior_def by simp
@@ -51,13 +51,13 @@ proof (intro allI impI)
 qed
 
 (* 2\<ordfeminine> demostración *)
-lemma 
+lemma
   assumes "es_supremo A x"
   shows   "\<forall>y<x. \<exists>a\<in>A. y < a"
 proof (intro allI impI)
   fix y
-  assume "y < x" 
-  show "\<exists>a\<in>A. y < a" 
+  assume "y < x"
+  show "\<exists>a\<in>A. y < a"
   proof (rule ccontr)
     assume "\<not> (\<exists>a\<in>A. y < a)"
     then have "cota_superior A y"
@@ -66,6 +66,6 @@ proof (intro allI impI)
       using assms es_supremo_def \<open>y < x\<close> by auto
   qed
 qed
-  
+
 
 end
