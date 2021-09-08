@@ -12,14 +12,14 @@
 --    rev  [3,2,5,1] = [1,5,2,3]
 -- Su definición es
 --    primrec rev :: "'a list \<Rightarrow> 'a list" where
---      "rev [] = []" 
+--      "rev [] = []"
 --    | "rev (x # xs) = rev xs @ [x]"
 --
 -- Una definición alternativa es
 --    fun inversa_aux :: "'a list \<Rightarrow> 'a list \<Rightarrow> 'a list" where
 --      "inversa_aux [] ys     = ys"
 --    | "inversa_aux (x#xs) ys = inversa_aux xs (x#ys)"
--- 
+--
 --    fun inversa :: "'a list \<Rightarrow> 'a list" where
 --      "inversa xs = inversa_aux xs []"
 --
@@ -45,7 +45,7 @@ fun inversa :: "'a list \<Rightarrow> 'a list" where
 (* ================================================ *)
 
 (* 1\<ordfeminine> demostración del lema auxiliar *)
-lemma 
+lemma
   "inversa_aux xs ys = (rev xs) @ ys"
 proof (induct xs arbitrary: ys)
   fix ys :: "'a list"
@@ -55,40 +55,40 @@ proof (induct xs arbitrary: ys)
     by (simp only: append.simps(1))
   also have "\<dots> = rev [] @ ys"
     by (simp only: rev.simps(1))
-  finally show "inversa_aux [] ys = rev [] @ ys" 
+  finally show "inversa_aux [] ys = rev [] @ ys"
     by this
 next
-  fix a ::'a and xs :: "'a list" 
+  fix a ::'a and xs :: "'a list"
   assume HI: "\<And>ys. inversa_aux xs ys = rev xs@ys"
   show "\<And>ys. inversa_aux (a#xs) ys = rev (a#xs)@ys"
   proof -
     fix ys
-    have "inversa_aux (a#xs) ys = inversa_aux xs (a#ys)" 
+    have "inversa_aux (a#xs) ys = inversa_aux xs (a#ys)"
       by (simp only: inversa_aux.simps(2))
-    also have "\<dots> = rev xs@(a#ys)" 
+    also have "\<dots> = rev xs@(a#ys)"
       by (simp only: HI)
     also have "\<dots> = rev xs @ ([a] @ ys)"
-      by (simp only: append.simps) 
+      by (simp only: append.simps)
     also have "\<dots> = (rev xs @ [a]) @ ys"
-      by (simp only: append_assoc) 
+      by (simp only: append_assoc)
     also have "\<dots> = rev (a # xs) @ ys"
-      by (simp only: rev.simps(2)) 
-    finally show "inversa_aux (a#xs) ys = rev (a#xs)@ys" 
+      by (simp only: rev.simps(2))
+    finally show "inversa_aux (a#xs) ys = rev (a#xs)@ys"
       by this
   qed
 qed
 
 (* 2\<ordfeminine> demostración del lema auxiliar *)
-lemma 
+lemma
   "inversa_aux xs ys = (rev xs) @ ys"
 proof (induct xs arbitrary: ys)
   fix ys :: "'a list"
   have "inversa_aux [] ys = ys" by simp
   also have "\<dots> = [] @ ys" by simp
   also have "\<dots> = rev [] @ ys" by simp
-  finally show "inversa_aux [] ys = rev [] @ ys" . 
+  finally show "inversa_aux [] ys = rev [] @ ys" .
 next
-  fix a ::'a and xs :: "'a list" 
+  fix a ::'a and xs :: "'a list"
   assume HI: "\<And>ys. inversa_aux xs ys = rev xs@ys"
   show "\<And>ys. inversa_aux (a#xs) ys = rev (a#xs)@ys"
   proof -
@@ -98,41 +98,41 @@ next
     also have "\<dots> = rev xs @ ([a] @ ys)" by simp
     also have "\<dots> = (rev xs @ [a]) @ ys" by simp
     also have "\<dots> = rev (a # xs) @ ys" by simp
-    finally show "inversa_aux (a#xs) ys = rev (a#xs)@ys" . 
+    finally show "inversa_aux (a#xs) ys = rev (a#xs)@ys" .
   qed
 qed
 
 (* 3\<ordfeminine> demostración del lema auxiliar *)
-lemma 
+lemma
   "inversa_aux xs ys = (rev xs) @ ys"
 proof (induct xs arbitrary: ys)
   fix ys :: "'a list"
-  show "inversa_aux [] ys = rev [] @ ys" by simp 
+  show "inversa_aux [] ys = rev [] @ ys" by simp
 next
-  fix a ::'a and xs :: "'a list" 
+  fix a ::'a and xs :: "'a list"
   assume HI: "\<And>ys. inversa_aux xs ys = rev xs@ys"
   show "\<And>ys. inversa_aux (a#xs) ys = rev (a#xs)@ys"
   proof -
     fix ys
     have "inversa_aux (a#xs) ys = rev xs@(a#ys)" using HI by simp
     also have "\<dots> = rev (a # xs) @ ys" by simp
-    finally show "inversa_aux (a#xs) ys = rev (a#xs)@ys" . 
+    finally show "inversa_aux (a#xs) ys = rev (a#xs)@ys" .
   qed
 qed
 
 (* 4\<ordfeminine> demostración del lema auxiliar *)
-lemma 
+lemma
   "inversa_aux xs ys = (rev xs) @ ys"
 proof (induct xs arbitrary: ys)
-  show "\<And>ys. inversa_aux [] ys = rev [] @ ys" by simp 
+  show "\<And>ys. inversa_aux [] ys = rev [] @ ys" by simp
 next
-  fix a ::'a and xs :: "'a list" 
+  fix a ::'a and xs :: "'a list"
   assume "\<And>ys. inversa_aux xs ys = rev xs@ys"
   then show "\<And>ys. inversa_aux (a#xs) ys = rev (a#xs)@ys" by simp
 qed
 
 (* 5\<ordfeminine> demostración del lema auxiliar *)
-lemma 
+lemma
   "inversa_aux xs ys = (rev xs) @ ys"
 proof (induct xs arbitrary: ys)
   case Nil
