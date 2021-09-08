@@ -48,6 +48,22 @@ variable {α : Type}
 variable (x : α)
 variable (n : ℕ)
 
+-- 1ª demostración
+example :
+  length (repeat x n) = n :=
+begin
+  induction n with n HI,
+  { calc length (repeat x 0)
+          = length []                : congr_arg length (repeat.equations._eqn_1 x)
+      ... = 0                        : length.equations._eqn_1 },
+  { calc length (repeat x (succ n))
+         = length (x :: repeat x n)  : congr_arg length (repeat.equations._eqn_2 x n)
+     ... = length (repeat x n) + 1   : length.equations._eqn_2 x (repeat x n)
+     ... = n + 1                     : congr_arg2 (+) HI rfl
+     ... = succ n                    : rfl, },
+end
+
+-- 2ª demostración
 example :
   length (repeat x n) = n :=
 begin
@@ -62,7 +78,7 @@ begin
      ... = succ n                    : rfl, },
 end
 
--- 2ª demostración
+-- 3ª demostración
 example : length (repeat x n) = n :=
 begin
   induction n with n HI,
@@ -71,7 +87,7 @@ begin
     rw HI, },
 end
 
--- 3ª demostración
+-- 4ª demostración
 example : length (repeat x n) = n :=
 begin
   induction n with n HI,
@@ -79,11 +95,11 @@ begin
   { simp [HI], },
 end
 
--- 4ª demostración
+-- 5ª demostración
 example : length (repeat x n) = n :=
 by induction n ; simp [*]
 
--- 5ª demostración
+-- 6ª demostración
 example : length (repeat x n) = n :=
 nat.rec_on n
   ( show length (repeat x 0) = 0, from
@@ -99,21 +115,21 @@ nat.rec_on n
        ... = n + 1                    : by rw HI
        ... = succ n                   : rfl )
 
--- 6ª demostración
+-- 7ª demostración
 example : length (repeat x n) = n :=
 nat.rec_on n
   ( by simp )
   ( λ n HI, by simp [HI])
 
--- 7ª demostración
+-- 8ª demostración
 example : length (repeat x n) = n :=
 length_repeat x n
 
--- 8ª demostración
+-- 9ª demostración
 example : length (repeat x n) = n :=
 by simp
 
--- 9ª demostración
+-- 10ª demostración
 lemma length_repeat_1 :
   ∀ n, length (repeat x n) = n
 | 0 := by calc length (repeat x 0)
@@ -124,7 +140,7 @@ lemma length_repeat_1 :
                ... = length (repeat x n) + 1  : rfl
                ... = n + 1                    : by rw length_repeat_1
 
--- 10ª demostración
+-- 11ª demostración
 lemma length_repeat_2 :
   ∀ n, length (repeat x n) = n
 | 0     := by simp
