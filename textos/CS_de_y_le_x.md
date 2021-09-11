@@ -1,9 +1,9 @@
 ---
-Título: Pruebas de "(∀ ε > 0, y ≤ x + ε) →  y ≤ x"
+Título: Pruebas de "(∀ ε > 0, y ≤ x + ε) → y ≤ x"
 Autor:  José A. Alonso
 ---
 
-Sean x, y ∈ ℝ. Demostrar que§
+Sean x, y ∈ ℝ. Demostrar que
 <pre lang="text">
    (∀ ε > 0, y ≤ x + ε) →  y ≤ x
 </pre>
