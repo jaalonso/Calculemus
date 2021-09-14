@@ -23,7 +23,7 @@ def suma : ℕ → ℕ
 | 0     := 0
 | (n+1) := suma n + (n+1)
 
--- ?ª demostración
+-- 1ª demostración
 example :
   2 * suma n = n * (n + 1) :=
 begin
@@ -40,7 +40,7 @@ begin
      ... = (n + 1) * (n + 2)         : mul_comm (n + 2) (n + 1) },
 end
 
--- ?ª demostración
+-- 2ª demostración
 example :
   2 * suma n = n * (n + 1) :=
 begin
@@ -57,7 +57,7 @@ begin
      ... = (n + 1) * (n + 2)         : by ring, },
 end
 
--- ?ª demostración
+-- 3ª demostración
 example :
   2 * suma n = n * (n + 1) :=
 begin
