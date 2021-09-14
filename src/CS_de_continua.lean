@@ -1,0 +1,6 @@
+-- CS_de_continua.lean
+-- Si para todas las sucesiones uₙ de límite c se tiene que el límite
+--   de f(uₙ) es f(c), entonces f es continua en c
+-- José A. Alonso Jiménez
+-- Sevilla, 18 de septiembre de 2021
+-- ---------------------------------------------------------------------
