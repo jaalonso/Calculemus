@@ -136,3 +136,23 @@ Los problemas publicados (por orden cronológico inverso) son
 + 18-09-21: [[./textos/Suma_de_los_primeros_n_numeros_naturales.md][Suma de los primeros números naturales]] (En [[./src/Suma_de_los_primeros_n_numeros_naturales.lean][Lean]] y en [[./thy/Suma_de_los_primeros_n_numeros_naturales.thy][Isabelle]]).
 + 19-09-21: [[./textos/Suma_de_progresion_aritmetica.md][Suma de progresión aritmética]] (En [[./src/Suma_de_progresion_aritmetica.lean][Lean]] y en [[./thy/Suma_de_progresion_aritmetica.thy][Isabelle]]).
 + 20-09-21: [[./textos/Suma_de_progresion_geometrica.md][Suma de progresión geométrica]] (En [[./src/Suma_de_progresion_geometrica.lean][Lean]] y en [[./thy/Suma_de_progresion_geometrica.thy][Isabelle]]).
++ 21-09-21: [[./textos/Suma_de_los_primeros_cuadrados.md][Suma de los primeros cuadrados]] (En [[./src/Suma_de_los_primeros_cuadrados.lean][Lean]] y en [[./thy/Suma_de_los_primeros_cuadrados.thy][Isabelle]]).
+
+* Teoremas por Libros
+
+En esta sesión se ordenan los teoremas por las páginas de los libros donde se
+encuentran:
+
+** [[http://abstract.ups.edu/download/aata-20200730.pdf][Abstract algebra: Theory and applications]] de Thomas W. Judson
++ 36 [[./textos/Unicidad_del_elemento_neutro_en_los_grupos.md][Unicidad del elemento neutro en los grupos]] (En [[./src/Unicidad_del_elemento_neutro_en_los_grupos.lean][Lean]] y en [[./thy/Unicidad_del_elemento_neutro_en_los_grupos.thy][Isabelle]]).
++ 36 [[./textos/Unicidad_de_los_inversos_en_los_grupos.md][Unicidad de los inversos en los grupos]] (En [[./src/Unicidad_de_los_inversos_en_los_grupos.lean][Lean]] y en [[./thy/Unicidad_de_los_inversos_en_los_grupos.thy][Isabelle]]).
++ 36 [[./textos/Inverso_del_producto.md][Inverso del producto]] (En [[./src/Inverso_del_producto.lean][Lean]] y en [[./thy/Inverso_del_producto.thy][Isabelle]]).
++ 36 [[./textos/Inverso_de_inverso_en_grupos.md][Inverso del inverso en grupos]] (En [[./src/Inverso_del_inverso_en_grupos.lean][Lean]] y en [[./thy/Inverso_del_inverso_en_grupos.thy][Isabelle]]).
++ 37 [[./textos/Propiedad_cancelativa_en_grupos.md][Propiedad cancelativa en grupos]] (En [[./src/Propiedad_cancelativa_en_grupos.lean][Lean]] y en [[./thy/Propiedad_cancelativa_en_grupos.thy][Isabelle]]).
++ 37 [[./textos/Producto_de_potencias_de_la_misma_base_en_monoides.md][Producto_de_potencias_de_la_misma_base_en_monoides]] (En [[./src/Producto_de_potencias_de_la_misma_base_en_monoides.lean][Lean]] y en [[./thy/Producto_de_potencias_de_la_misma_base_en_monoides.thy][Isabelle]]).
+
+** [[https://archive.org/details/QuEsLaMatemticaR.CourantH.Robbins_201812][¿Qué es la Matemática?]] de R. Courant y H. Robbins
++ 19 [[./textos/Suma_de_los_primeros_n_numeros_naturales.md][Suma de los primeros números naturales]] (En [[./src/Suma_de_los_primeros_n_numeros_naturales.lean][Lean]] y en [[./thy/Suma_de_los_primeros_n_numeros_naturales.thy][Isabelle]]).
++ 20 [[./textos/Suma_de_progresion_aritmetica.md][Suma de progresión aritmética]] (En [[./src/Suma_de_progresion_aritmetica.lean][Lean]] y en [[./thy/Suma_de_progresion_aritmetica.thy][Isabelle]]).
++ 20 [[./textos/Suma_de_progresion_geometrica.md][Suma de progresión geométrica]] (En [[./src/Suma_de_progresion_geometrica.lean][Lean]] y en [[./thy/Suma_de_progresion_geometrica.thy][Isabelle]]).
++ 21 [[./textos/Suma_de_los_primeros_cuadrados.md][Suma de los primeros cuadrados]] (En [[./src/Suma_de_los_primeros_cuadrados.lean][Lean]] y en [[./thy/Suma_de_los_primeros_cuadrados.thy][Isabelle]]).
