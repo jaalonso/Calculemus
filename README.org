@@ -138,6 +138,7 @@ Los problemas publicados (por orden cronológico inverso) son
 + 20-09-21: [[./textos/Suma_de_progresion_geometrica.md][Suma de progresión geométrica]] (En [[./src/Suma_de_progresion_geometrica.lean][Lean]] y en [[./thy/Suma_de_progresion_geometrica.thy][Isabelle]]).
 + 21-09-21: [[./textos/Suma_de_los_primeros_cuadrados.md][Suma de los primeros cuadrados]] (En [[./src/Suma_de_los_primeros_cuadrados.lean][Lean]] y en [[./thy/Suma_de_los_primeros_cuadrados.thy][Isabelle]]).
 + 22-09-21: [[./textos/Suma_de_los_primeros_cubos.md][Suma de los primeros cubos]] (En [[./src/Suma_de_los_primeros_cubos.lean][Lean]] y en [[./thy/Suma_de_los_primeros_cubos.thy][Isabelle]]).
++ 23-09-21: [[./textos/Prueba_de_(1+p)^n_mayor_o_igual_que_1+np.md][Prueba de (1+p)^n mayor o igual que 1+np]] (En [[./src/Prueba_de_(1+p)^n_mayor_o_igual_que_1+np.lean][Lean]] y en [[./thy/Prueba_de_(1+p)^n_mayor_o_igual_que_1+np.thy][Isabelle]]).
 
 * Teoremas por Libros
 
@@ -158,3 +159,4 @@ encuentran:
 + 20 [[./textos/Suma_de_progresion_geometrica.md][Suma de progresión geométrica]] (En [[./src/Suma_de_progresion_geometrica.lean][Lean]] y en [[./thy/Suma_de_progresion_geometrica.thy][Isabelle]]).
 + 21 [[./textos/Suma_de_los_primeros_cuadrados.md][Suma de los primeros cuadrados]] (En [[./src/Suma_de_los_primeros_cuadrados.lean][Lean]] y en [[./thy/Suma_de_los_primeros_cuadrados.thy][Isabelle]]).
 + 22 [[./textos/Suma_de_los_primeros_cubos.md][Suma de los primeros cubos]] (En [[./src/Suma_de_los_primeros_cubos.lean][Lean]] y en [[./thy/Suma_de_los_primeros_cubos.thy][Isabelle]]).
++ 22 [[./textos/Prueba_de_(1+p)^n_mayor_o_igual_que_1+np.md][Prueba de (1+p)^n mayor o igual que 1+np]] (En [[./src/Prueba_de_(1+p)^n_mayor_o_igual_que_1+np.lean][Lean]] y en [[./thy/Prueba_de_(1+p)^n_mayor_o_igual_que_1+np.thy][Isabelle]]).
