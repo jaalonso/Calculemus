@@ -1,5 +1,5 @@
 -- Prueba_de_(1+p)^n_mayor_o_igual_que_1+np.lean
--- Prueba de (1+p)^n ≥ 1+np
+-- Prueba de (1+p)ⁿ ≥ 1+np
 -- José A. Alonso Jiménez
 -- Sevilla, 23 de septiembre de 2021
 -- ---------------------------------------------------------------------

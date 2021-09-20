@@ -82,9 +82,6 @@ fun sumaPG :: "real ⇒ real ⇒ nat ⇒ real" where
   "sumaPG a q 0 = a"
 | "sumaPG a q (Suc n) = sumaPG a q n + (a * q^(n + 1))"
 
-thm algebra_simps
-thm field_split_simps
-
 (* 1ª demostración *)
 lemma
   "(1 - q) * sumaPG a q n = a * (1 - q^(n + 1))"

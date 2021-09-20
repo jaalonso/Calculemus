@@ -1,5 +1,5 @@
 ---
-Título: Prueba de (1+p)^n ≥ 1+np
+Título: Prueba de (1+p)ⁿ ≥ 1+np
 Autor:  José A. Alonso
 ---
 

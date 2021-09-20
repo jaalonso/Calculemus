@@ -21,19 +21,16 @@ fun sumaPG :: "real \<Rightarrow> real \<Rightarrow> nat \<Rightarrow> real" whe
   "sumaPG a q 0 = a"
 | "sumaPG a q (Suc n) = sumaPG a q n + (a * q^(n + 1))"
 
-thm algebra_simps
-thm field_split_simps
-
 (* 1\<ordfeminine> demostración *)
 lemma
   "(1 - q) * sumaPG a q n = a * (1 - q^(n + 1))"
-proof (induct n) 
-  show "(1 - q) * sumaPG a q 0 = a * (1 - q ^ (0 + 1))" 
+proof (induct n)
+  show "(1 - q) * sumaPG a q 0 = a * (1 - q ^ (0 + 1))"
     by simp
 next
   fix n
   assume HI : "(1 - q) * sumaPG a q n = a * (1 - q ^ (n + 1))"
-  have "(1 - q) * sumaPG a q (Suc n) = 
+  have "(1 - q) * sumaPG a q (Suc n) =
         (1 - q) * (sumaPG a q n + (a * q^(n + 1)))"
     by simp
   also have "\<dots> = (1 - q) * sumaPG a q n + (1 - q) * a * q^(n + 1)"
@@ -55,13 +52,13 @@ qed
 (* 2\<ordfeminine> demostración *)
 lemma
   "(1 - q) * sumaPG a q n = a * (1 - q^(n + 1))"
-proof (induct n) 
-  show "(1 - q) * sumaPG a q 0 = a * (1 - q ^ (0 + 1))" 
+proof (induct n)
+  show "(1 - q) * sumaPG a q 0 = a * (1 - q ^ (0 + 1))"
     by simp
 next
   fix n
   assume HI : "(1 - q) * sumaPG a q n = a * (1 - q ^ (n + 1))"
-  have "(1 - q) * sumaPG a q (Suc n) = 
+  have "(1 - q) * sumaPG a q (Suc n) =
         (1 - q) * sumaPG a q n + (1 - q) * a * q^(n + 1)"
     by (simp add: algebra_simps)
   also have "\<dots> = a * (1 - q ^ (n + 1)) + (1 - q) * a * q^(n + 1)"
@@ -76,8 +73,6 @@ qed
 lemma
   "(1 - q) * sumaPG a q n = a * (1 - q^(n + 1))"
   using power_add
-  by (induct n) (auto simp: algebra_simps) 
+  by (induct n) (auto simp: algebra_simps)
 
 end
-
-

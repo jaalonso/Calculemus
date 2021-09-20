@@ -139,8 +139,11 @@ Los problemas publicados (por orden cronológico inverso) son
 + 21-09-21: [[./textos/Suma_de_los_primeros_cuadrados.md][Suma de los primeros cuadrados]] (En [[./src/Suma_de_los_primeros_cuadrados.lean][Lean]] y en [[./thy/Suma_de_los_primeros_cuadrados.thy][Isabelle]]).
 + 22-09-21: [[./textos/Suma_de_los_primeros_cubos.md][Suma de los primeros cubos]] (En [[./src/Suma_de_los_primeros_cubos.lean][Lean]] y en [[./thy/Suma_de_los_primeros_cubos.thy][Isabelle]]).
 + 23-09-21: [[./textos/Prueba_de_(1+p)^n_mayor_o_igual_que_1+np.md][Prueba de (1+p)^n mayor o igual que 1+np]] (En [[./src/Prueba_de_(1+p)^n_mayor_o_igual_que_1+np.lean][Lean]] y en [[./thy/Prueba_de_(1+p)^n_mayor_o_igual_que_1+np.thy][Isabelle]]).
++ 24-09-21: [[./textos/Formula_de_Gauss_de_la_suma.md][Formula_de_Gauss_de_la_suma]] (En [[./src/Formula_de_Gauss_de_la_suma.lean][Lean]] y en [[./thy/Formula_de_Gauss_de_la_suma.thy][Isabelle]]).
 
-* Teoremas por Libros
++ ??-09-21: [[./textos/El_binomio_de_Newton.md][El binomio de Newton]] (En [[./src/El_binomio_de_Newton.lean][Lean]] y en [[./thy/El_binomio_de_Newton.thy][Isabelle]]).
+
+* Teoremas por libros
 
 En esta sesión se ordenan los teoremas por las páginas de los libros donde se
 encuentran:
@@ -153,10 +156,16 @@ encuentran:
 + 37 [[./textos/Propiedad_cancelativa_en_grupos.md][Propiedad cancelativa en grupos]] (En [[./src/Propiedad_cancelativa_en_grupos.lean][Lean]] y en [[./thy/Propiedad_cancelativa_en_grupos.thy][Isabelle]]).
 + 37 [[./textos/Producto_de_potencias_de_la_misma_base_en_monoides.md][Producto_de_potencias_de_la_misma_base_en_monoides]] (En [[./src/Producto_de_potencias_de_la_misma_base_en_monoides.lean][Lean]] y en [[./thy/Producto_de_potencias_de_la_misma_base_en_monoides.thy][Isabelle]]).
 
+
+** [[https://www.academia.edu/34284868/El_metodo_de_la_induccion_matematica_Sominski][El método de la inducción matemática]] de I.S. Sominski
++ 45 [[./textos/El_binomio_de_Newton.md][El binomio de Newton]] (En [[./src/El_binomio_de_Newton.lean][Lean]] y en [[./thy/El_binomio_de_Newton.thy][Isabelle]]).
+
 ** [[https://archive.org/details/QuEsLaMatemticaR.CourantH.Robbins_201812][¿Qué es la Matemática?]] de R. Courant y H. Robbins
 + 19 [[./textos/Suma_de_los_primeros_n_numeros_naturales.md][Suma de los primeros números naturales]] (En [[./src/Suma_de_los_primeros_n_numeros_naturales.lean][Lean]] y en [[./thy/Suma_de_los_primeros_n_numeros_naturales.thy][Isabelle]]).
++ 19 [[./textos/Formula_de_Gauss_de_la_suma.md][Formula_de_Gauss_de_la_suma]] (En [[./src/Formula_de_Gauss_de_la_suma.lean][Lean]] y en [[./thy/Formula_de_Gauss_de_la_suma.thy][Isabelle]]).
 + 20 [[./textos/Suma_de_progresion_aritmetica.md][Suma de progresión aritmética]] (En [[./src/Suma_de_progresion_aritmetica.lean][Lean]] y en [[./thy/Suma_de_progresion_aritmetica.thy][Isabelle]]).
 + 20 [[./textos/Suma_de_progresion_geometrica.md][Suma de progresión geométrica]] (En [[./src/Suma_de_progresion_geometrica.lean][Lean]] y en [[./thy/Suma_de_progresion_geometrica.thy][Isabelle]]).
 + 21 [[./textos/Suma_de_los_primeros_cuadrados.md][Suma de los primeros cuadrados]] (En [[./src/Suma_de_los_primeros_cuadrados.lean][Lean]] y en [[./thy/Suma_de_los_primeros_cuadrados.thy][Isabelle]]).
 + 22 [[./textos/Suma_de_los_primeros_cubos.md][Suma de los primeros cubos]] (En [[./src/Suma_de_los_primeros_cubos.lean][Lean]] y en [[./thy/Suma_de_los_primeros_cubos.thy][Isabelle]]).
 + 22 [[./textos/Prueba_de_(1+p)^n_mayor_o_igual_que_1+np.md][Prueba de (1+p)^n mayor o igual que 1+np]] (En [[./src/Prueba_de_(1+p)^n_mayor_o_igual_que_1+np.lean][Lean]] y en [[./thy/Prueba_de_(1+p)^n_mayor_o_igual_que_1+np.thy][Isabelle]]).
++ 23 [[./textos/El_binomio_de_Newton.md][El binomio de Newton]] (En [[./src/El_binomio_de_Newton.lean][Lean]] y en [[./thy/El_binomio_de_Newton.thy][Isabelle]]).
