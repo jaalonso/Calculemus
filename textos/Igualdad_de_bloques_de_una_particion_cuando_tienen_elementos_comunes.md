@@ -21,34 +21,59 @@ Una [partición](https://bit.ly/3uplABS) de un conjunto `A` es un conjunto de su
      ∀ X Y ∈ C, X ∩ Y ≠ ∅ → X = Y
 </pre>
 
-En Lean, se puede definir el tipo de las particiones sobre un tipo `A` mediante una estructura con 4 campos donde el primero es el conjunto de los elementos de la partición y los restantes expresan las tres condiciones anteriores:
+En Lean, se puede definir el tipo de las particiones sobre un tipo `A` mediante una estructura con 4 campos:
+
++ Un conjunto de subconjuntos de `A` llamados los bloques de la partición.
++ Una prueba de que los bloques son no vacíos.
++ Una prueba de que cada término de tipo `A` está en uno de los bloques.
++ Una prueba de que dos bloques con intersección no vacía son iguales.
+
+Su definición es
 <pre lang="text">
-   @[ext] structure particion (A : Type) :=
-   (C : set (set A))
-   (Hno_vacios : ∀ X ∈ C, (X : set A).nonempty)
-   (Hrecubren : ∀ a, ∃ X ∈ C, a ∈ X)
-   (Hdisjuntos : ∀ X Y ∈ C, (X ∩ Y : set A).nonempty → X = Y)
+    @[ext] structure particion (A : Type) :=
+    (Bloques    : set (set A))
+    (Hno_vacios : ∀ X ∈ Bloques, (X : set A).nonempty)
+    (Hrecubren  : ∀ a, ∃ X ∈ Bloques, a ∈ X)
+    (Hdisjuntos : ∀ X Y ∈ Bloques, (X ∩ Y : set A).nonempty → X = Y)
 </pre>
 
-El término `P : particion A`  expresa que `P` es una partición sobre `A`.
+Con la definición anterior,
 
-Se puede usar la notación de puntos para obtener los campos de una partición `P`. Por ejemplo, `P.C` es el conjunto de los conjuntos de la partición y `P.Hno_vacios` expresa que los conjuntos de `P` son no vacíos.
-
-Los conjuntos de `P.C` se llamarán los bloques de `P`.
++ `P : particion A` expresa que `P` es una partición de `A`.
++ `Bloques P` es el conjunto de los bloque de P.
++ `Hno_vacios P` prueba que los bloques de `P` son no vacíos.
++ `Hrecubren P` prueba que los bloque de `P` recubren a `A`.
++ `Hdisjuntos p` prueba que los bloques de `P` son disjuntos entre sí
 
 Demostrar que si dos bloques de una partición tienen un elemento en común, entonces son iguales.
 
 Para ello, completar la siguiente teoría de Lean:
 
 <pre lang="lean">
+import tactic
+
+@[ext] structure particion (A : Type) :=
+(Bloques    : set (set A))
+(Hno_vacios : ∀ X ∈ Bloques, (X : set A).nonempty)
+(Hrecubren  : ∀ a, ∃ X ∈ Bloques, a ∈ X)
+(Hdisjuntos : ∀ X Y ∈ Bloques, (X ∩ Y : set A).nonempty → X = Y)
+
+namespace particion
+
+variable  {A : Type}
+variable  {P : particion A}
+variables {X Y : set A}
+
 example
-  (hX : X ∈ P.C)
-  (hY : Y ∈ P.C)
+  (hX : X ∈ Bloques P)
+  (hY : Y ∈ Bloques P)
   {a : A}
   (haX : a ∈ X)
   (haY : a ∈ Y)
   : X = Y :=
 sorry
+
+end particion
 </pre>
 
 [expand title="Soluciones con Lean"]
@@ -57,10 +82,12 @@ sorry
 import tactic
 
 @[ext] structure particion (A : Type) :=
-(C : set (set A))
-(Hno_vacios : ∀ X ∈ C, (X : set A).nonempty)
-(Hrecubren : ∀ a, ∃ X ∈ C, a ∈ X)
-(Hdisjuntos : ∀ X Y ∈ C, (X ∩ Y : set A).nonempty → X = Y)
+(Bloques    : set (set A))
+(Hno_vacios : ∀ X ∈ Bloques, (X : set A).nonempty)
+(Hrecubren  : ∀ a, ∃ X ∈ Bloques, a ∈ X)
+(Hdisjuntos : ∀ X Y ∈ Bloques, (X ∩ Y : set A).nonempty → X = Y)
+
+namespace particion
 
 variable  {A : Type}
 variable  {P : particion A}
@@ -68,8 +95,8 @@ variables {X Y : set A}
 
 -- 1ª demostración
 example
-  (hX : X ∈ P.C)
-  (hY : Y ∈ P.C)
+  (hX : X ∈ Bloques P)
+  (hY : Y ∈ Bloques P)
   {a : A}
   (haX : a ∈ X)
   (haY : a ∈ Y)
@@ -87,8 +114,8 @@ end
 
 -- 2ª demostración
 example
-  (hX : X ∈ P.C)
-  (hY : Y ∈ P.C)
+  (hX : X ∈ Bloques P)
+  (hY : Y ∈ Bloques P)
   {a : A}
   (haX : a ∈ X)
   (haY : a ∈ Y)
@@ -103,8 +130,8 @@ end
 
 -- 3ª demostración
 example
-  (hX : X ∈ P.C)
-  (hY : Y ∈ P.C)
+  (hX : X ∈ Bloques P)
+  (hY : Y ∈ Bloques P)
   {a : A}
   (haX : a ∈ X)
   (haY : a ∈ Y)
@@ -118,13 +145,15 @@ end
 
 -- 4ª demostración
 lemma iguales_si_comun
-  (hX : X ∈ P.C)
-  (hY : Y ∈ P.C)
+  (hX : X ∈ Bloques P)
+  (hY : Y ∈ Bloques P)
   {a : A}
   (haX : a ∈ X)
   (haY : a ∈ Y)
   : X = Y :=
-P.Hdisjuntos X Y hX hY ⟨a, haX, haY⟩
+Hdisjuntos P X Y hX hY ⟨a, haX, haY⟩
+
+end particion
 </pre>
 
 Se puede interactuar con la prueba anterior en <a href="https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Igualdad_de_bloques_de_una_particion_cuando_tienen_elementos_comunes.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
