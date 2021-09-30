@@ -5,7 +5,7 @@
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
--- Este ejercicio es el 2ª de una serie cuyo objetivo es demostrar
+-- Este ejercicio es el 2º de una serie cuyo objetivo es demostrar
 -- que el tipo de las particiones de un conjunto `X` es isomorfo al tipo
 -- de las relaciones de equivalencia sobre `X`. El desarrollo de dicha
 -- serie está basado en la [cuarta parte](https://bit.ly/3AQWY7o) de la
@@ -26,24 +26,24 @@
 --      ∀ X Y ∈ C, X ∩ Y ≠ ∅ → X = Y
 --
 -- En Lean, se puede definir el tipo de las particiones sobre un tipo A
--- mediante una estructura con 4 campos donde el primero es el conjunto
--- de los elementos de la partición y los restantes expresan las tres
--- condiciones anteriores:
---    @[ext] structure particion (A : Type) :=
---    (C : set (set A))
---    (Hno_vacios : ∀ X ∈ C, (X : set A).nonempty)
---    (Hrecubren : ∀ a, ∃ X ∈ C, a ∈ X)
---    (Hdisjuntos : ∀ X Y ∈ C, (X ∩ Y : set A).nonempty → X = Y)
+-- mediante una estructura con 4 campos:
+-- + Un conjunto de subconjuntos de A llamados los bloques de la partición.
+-- + Una prueba de que los bloques son no vacíos.
+-- + Una prueba de que cada término de tipo A está en uno de los bloques.
+-- + Una prueba de que dos bloques con intersección no vacía son iguales.
+-- Su definición es
+--     @[ext] structure particion (A : Type) :=
+--     (Bloques    : set (set A))
+--     (Hno_vacios : ∀ X ∈ Bloques, (X : set A).nonempty)
+--     (Hrecubren  : ∀ a, ∃ X ∈ Bloques, a ∈ X)
+--     (Hdisjuntos : ∀ X Y ∈ Bloques, (X ∩ Y : set A).nonempty → X = Y)
 --
--- El término `P : particion A`  expresa que P es una partición sobre
--- A.
---
--- Se puede usar la notación de puntos para obtener los campos de una
--- partición P. Por ejemplo, `P.C` es el conjunto de los conjuntos de la
--- partición y `P.Hno_vacios` expresa que los conjuntos de P son no
--- vacíos.
---
--- Los conjuntos de P.C se llamarán los bloques de P-
+-- Con la definición anterior,
+-- + `P : particion A` expresa que `P` es una partición de `A`.
+-- + `Bloques P` es el conjunto de los bloque de P.
+-- + `Hno_vacios P` prueba que los bloques de `P` son no vacíos.
+-- + `Hrecubren P` prueba que los bloque de `P` recubren a `A`.
+-- + `Hdisjuntos P` prueba que los bloques de `P` son disjuntos entre sí
 --
 -- Demostrar que si dos bloques de una partición tienen elementos
 -- comunes, entonces los elementos de uno también pertenecen al otro.
@@ -52,28 +52,30 @@
 import tactic
 
 @[ext] structure particion (A : Type) :=
-(C : set (set A))
-(Hno_vacios : ∀ X ∈ C, (X : set A).nonempty)
-(Hrecubren : ∀ a, ∃ X ∈ C, a ∈ X)
-(Hdisjuntos : ∀ X Y ∈ C, (X ∩ Y : set A).nonempty → X = Y)
+(Bloques    : set (set A))
+(Hno_vacios : ∀ X ∈ Bloques, (X : set A).nonempty)
+(Hrecubren  : ∀ a, ∃ X ∈ Bloques, a ∈ X)
+(Hdisjuntos : ∀ X Y ∈ Bloques, (X ∩ Y : set A).nonempty → X = Y)
+
+namespace particion
 
 variable  {A : Type}
 variable  {P : particion A}
 variables {X Y : set A}
 
 lemma iguales_si_comun
-  (hX : X ∈ P.C)
-  (hY : Y ∈ P.C)
+  (hX : X ∈ Bloques P)
+  (hY : Y ∈ Bloques P)
   {a : A}
   (haX : a ∈ X)
   (haY : a ∈ Y)
   : X = Y :=
-P.Hdisjuntos X Y hX hY ⟨a, haX, haY⟩
+Hdisjuntos P X Y hX hY ⟨a, haX, haY⟩
 
 -- 1ª demostración
 example
-  (hX : X ∈ P.C)
-  (hY : Y ∈ P.C)
+  (hX : X ∈ Bloques P)
+  (hY : Y ∈ Bloques P)
   {a b : A}
   (haX : a ∈ X)
   (haY : a ∈ Y)
@@ -87,8 +89,8 @@ end
 
 -- 2ª demostración
 example
-  (hX : X ∈ P.C)
-  (hY : Y ∈ P.C)
+  (hX : X ∈ Bloques P)
+  (hY : Y ∈ Bloques P)
   {a b : A}
   (haX : a ∈ X)
   (haY : a ∈ Y)
@@ -102,8 +104,8 @@ end
 
 -- 3ª demostración
 lemma pertenece_si_pertenece
-  (hX : X ∈ P.C)
-  (hY : Y ∈ P.C)
+  (hX : X ∈ Bloques P)
+  (hY : Y ∈ Bloques P)
   {a b : A}
   (haX : a ∈ X)
   (haY : a ∈ Y)
@@ -113,3 +115,5 @@ begin
   convert hbX,
   exact iguales_si_comun hY hX haY haX,
 end
+
+end particion
