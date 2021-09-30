@@ -32,8 +32,8 @@ begin
              : by congr
      ... = n^2 * (2*n^2 - 1) + (1 + 6*n + 12*n^2 + 8*n^3)
              : by nlinarith
-     -- ... = (2*n^4 - n^2) + (1 + 6*n + 12*n^2 + 8*n^3)
-     --         : by {congr' 1; sorry}
+     ... = (2*n^4 - n^2) + (1 + 6*n + 12*n^2 + 8*n^3)
+             : by {congr' 1; zify; sorry}
      ... = 2*n^4 + 8*n^3 + 11*n^2 + 6*n + 1
              : sorry
      ... = succ n ^ 2 * (2 * succ n ^ 2 - 1)

@@ -142,6 +142,8 @@ Los problemas publicados (por orden cronológico inverso) son
 + 24-09-21: [[./textos/Formula_de_Gauss_de_la_suma.md][Formula_de_Gauss_de_la_suma]] (En [[./src/Formula_de_Gauss_de_la_suma.lean][Lean]] y en [[./thy/Formula_de_Gauss_de_la_suma.thy][Isabelle]]).
 + 25-09-21: [[./textos/Suma_de_potencias_de_dos.md][Suma de potencias de dos]] (En [[./src/Suma_de_potencias_de_dos.lean][Lean]] y en [[./thy/Suma_de_potencias_de_dos.thy][Isabelle]]).
 + 26-09-21: [[./textos/Identidad_de_Brahmagupta-Fibonacci.md][Identidad de Brahmagupta-Fibonacci]] (En [[./src/Identidad_de_Brahmagupta-Fibonacci.lean][Lean]] y en [[./thy/Identidad_de_Brahmagupta-Fibonacci.thy][Isabelle]]).
++ 30-09-21: [[./textos/Igualdad_de_bloques_de_una_particion_cuando_tienen_elementos_comunes.md][Igualdad_de_bloques_de_una_particion_cuando_tienen_elementos_comunes]] (En [[./src/Igualdad_de_bloques_de_una_particion_cuando_tienen_elementos_comunes.lean][Lean]]).
+
 
 ** Pendientes
 + [[./textos/El_problema_de_las_monedas.md][El problema de las monedas]] (En [[./src/El_problema_de_las_monedas.lean][Lean]] y en [[./thy/El_problema_de_las_monedas.thy][Isabelle]]).
