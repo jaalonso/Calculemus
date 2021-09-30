@@ -1,5 +1,5 @@
 ---
-Título: Igualdad de bloques de una partición cuando tienen elementos comunes
+Título: Pertenencia a bloques de una partición con elementos comunes
 Autor:  José A. Alonso
 ---
 
@@ -36,18 +36,31 @@ Se puede usar la notación de puntos para obtener los campos de una partición `
 
 Los conjuntos de `P.C` se llamarán los bloques de `P`.
 
-Demostrar que si dos bloques de una partición tienen un elemento en común, entonces son iguales.
+Demostrar que si dos bloques de una partición tienen elementos comunes, entonces los elementos de uno también pertenecen al otro.
 
 Para ello, completar la siguiente teoría de Lean:
 
 <pre lang="lean">
+import tactic
+
+@[ext] structure particion (A : Type) :=
+(C : set (set A))
+(Hno_vacios : ∀ X ∈ C, (X : set A).nonempty)
+(Hrecubren : ∀ a, ∃ X ∈ C, a ∈ X)
+(Hdisjuntos : ∀ X Y ∈ C, (X ∩ Y : set A).nonempty → X = Y)
+
+variable  {A : Type}
+variable  {P : particion A}
+variables {X Y : set A}
+
 example
   (hX : X ∈ P.C)
   (hY : Y ∈ P.C)
-  {a : A}
+  {a b : A}
   (haX : a ∈ X)
   (haY : a ∈ Y)
-  : X = Y :=
+  (hbX : b ∈ X)
+  : b ∈ Y :=
 sorry
 </pre>
 
@@ -66,57 +79,6 @@ variable  {A : Type}
 variable  {P : particion A}
 variables {X Y : set A}
 
--- 1ª demostración
-example
-  (hX : X ∈ P.C)
-  (hY : Y ∈ P.C)
-  {a : A}
-  (haX : a ∈ X)
-  (haY : a ∈ Y)
-  : X = Y :=
-begin
-  apply P.Hdisjuntos,
-  { exact hX, },
-  { exact hY, },
-  { rw set.nonempty_def,
-    use a,
-    split,
-    { exact haX, },
-    { exact haY, }},
-end
-
--- 2ª demostración
-example
-  (hX : X ∈ P.C)
-  (hY : Y ∈ P.C)
-  {a : A}
-  (haX : a ∈ X)
-  (haY : a ∈ Y)
-  : X = Y :=
-begin
-  apply P.Hdisjuntos,
-  { exact hX, },
-  { exact hY, },
-  { use a,
-    exact ⟨haX, haY⟩, },
-end
-
--- 3ª demostración
-example
-  (hX : X ∈ P.C)
-  (hY : Y ∈ P.C)
-  {a : A}
-  (haX : a ∈ X)
-  (haY : a ∈ Y)
-  : X = Y :=
-begin
-  apply P.Hdisjuntos,
-  { exact hX, },
-  { exact hY, },
-  { exact ⟨a, haX, haY⟩, },
-end
-
--- 4ª demostración
 lemma iguales_si_comun
   (hX : X ∈ P.C)
   (hY : Y ∈ P.C)
@@ -125,9 +87,53 @@ lemma iguales_si_comun
   (haY : a ∈ Y)
   : X = Y :=
 P.Hdisjuntos X Y hX hY ⟨a, haX, haY⟩
+
+-- 1ª demostración
+example
+  (hX : X ∈ P.C)
+  (hY : Y ∈ P.C)
+  {a b : A}
+  (haX : a ∈ X)
+  (haY : a ∈ Y)
+  (hbX : b ∈ X)
+  : b ∈ Y :=
+begin
+  convert hbX,
+  apply iguales_si_comun hY hX haY,
+  exact haX,
+end
+
+-- 2ª demostración
+example
+  (hX : X ∈ P.C)
+  (hY : Y ∈ P.C)
+  {a b : A}
+  (haX : a ∈ X)
+  (haY : a ∈ Y)
+  (hbX : b ∈ X)
+  : b ∈ Y :=
+begin
+  have hXY : X = Y := iguales_si_comun hX hY haX haY,
+  rw ← hXY,
+  exact hbX,
+end
+
+-- 3ª demostración
+lemma pertenece_si_pertenece
+  (hX : X ∈ P.C)
+  (hY : Y ∈ P.C)
+  {a b : A}
+  (haX : a ∈ X)
+  (haY : a ∈ Y)
+  (hbX : b ∈ X)
+  : b ∈ Y :=
+begin
+  convert hbX,
+  exact iguales_si_comun hY hX haY haX,
+end
 </pre>
 
-Se puede interactuar con la prueba anterior en <a href="https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Igualdad_de_bloques_de_una_particion_cuando_tienen_elementos_comunes.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
+Se puede interactuar con la prueba anterior en <a href="https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Pertenencia_a_bloques_de_una_particion_con_elementos_comunes.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
 
 En los comentarios se pueden escribir otras soluciones, escribiendo el código entre una línea con &#60;pre lang=&quot;lean&quot;&#62; y otra con &#60;/pre&#62;
 [/expand]

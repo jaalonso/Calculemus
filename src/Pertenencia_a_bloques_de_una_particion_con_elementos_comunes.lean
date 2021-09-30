@@ -1,11 +1,11 @@
--- Igualdad_de_bloques_de_una_particion_cuando_tienen_elementos_comunes.lean
--- Igualdad de bloques de una partición cuando tienen elementos comunes
+-- Pertenencia_a_bloques_de_una_particion_con_elementos_comunes.lean
+-- Pertenencia a bloques de una partición con elementos comunes
 -- José A. Alonso Jiménez
--- Sevilla, 30 de septiembre de 2021
+-- Sevilla, 1 de octubre de 2021
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
--- Este ejercicio es el primero de una serie cuyo objetivo es demostrar
+-- Este ejercicio es el 2ª de una serie cuyo objetivo es demostrar
 -- que el tipo de las particiones de un conjunto `X` es isomorfo al tipo
 -- de las relaciones de equivalencia sobre `X`. El desarrollo de dicha
 -- serie está basado en la [cuarta parte](https://bit.ly/3AQWY7o) de la
@@ -45,8 +45,8 @@
 --
 -- Los conjuntos de P.C se llamarán los bloques de P-
 --
--- Demostrar que si dos bloques de una partición tienen un elemento en
--- común, entonces son iguales.
+-- Demostrar que si dos bloques de una partición tienen elementos
+-- comunes, entonces los elementos de uno también pertenecen al otro.
 -- ---------------------------------------------------------------------
 
 import tactic
@@ -61,57 +61,6 @@ variable  {A : Type}
 variable  {P : particion A}
 variables {X Y : set A}
 
--- 1ª demostración
-example
-  (hX : X ∈ P.C)
-  (hY : Y ∈ P.C)
-  {a : A}
-  (haX : a ∈ X)
-  (haY : a ∈ Y)
-  : X = Y :=
-begin
-  apply P.Hdisjuntos,
-  { exact hX, },
-  { exact hY, },
-  { rw set.nonempty_def,
-    use a,
-    split,
-    { exact haX, },
-    { exact haY, }},
-end
-
--- 2ª demostración
-example
-  (hX : X ∈ P.C)
-  (hY : Y ∈ P.C)
-  {a : A}
-  (haX : a ∈ X)
-  (haY : a ∈ Y)
-  : X = Y :=
-begin
-  apply P.Hdisjuntos,
-  { exact hX, },
-  { exact hY, },
-  { use a,
-    exact ⟨haX, haY⟩, },
-end
-
--- 3ª demostración
-example
-  (hX : X ∈ P.C)
-  (hY : Y ∈ P.C)
-  {a : A}
-  (haX : a ∈ X)
-  (haY : a ∈ Y)
-  : X = Y :=
-begin
-  apply P.Hdisjuntos,
-  { exact hX, },
-  { exact hY, },
-  { exact ⟨a, haX, haY⟩, },
-end
-
--- 4ª demostración
 lemma iguales_si_comun
   (hX : X ∈ P.C)
   (hY : Y ∈ P.C)
@@ -120,3 +69,47 @@ lemma iguales_si_comun
   (haY : a ∈ Y)
   : X = Y :=
 P.Hdisjuntos X Y hX hY ⟨a, haX, haY⟩
+
+-- 1ª demostración
+example
+  (hX : X ∈ P.C)
+  (hY : Y ∈ P.C)
+  {a b : A}
+  (haX : a ∈ X)
+  (haY : a ∈ Y)
+  (hbX : b ∈ X)
+  : b ∈ Y :=
+begin
+  convert hbX,
+  apply iguales_si_comun hY hX haY,
+  exact haX,
+end
+
+-- 2ª demostración
+example
+  (hX : X ∈ P.C)
+  (hY : Y ∈ P.C)
+  {a b : A}
+  (haX : a ∈ X)
+  (haY : a ∈ Y)
+  (hbX : b ∈ X)
+  : b ∈ Y :=
+begin
+  have hXY : X = Y := iguales_si_comun hX hY haX haY,
+  rw ← hXY,
+  exact hbX,
+end
+
+-- 3ª demostración
+lemma pertenece_si_pertenece
+  (hX : X ∈ P.C)
+  (hY : Y ∈ P.C)
+  {a b : A}
+  (haX : a ∈ X)
+  (haY : a ∈ Y)
+  (hbX : b ∈ X)
+  : b ∈ Y :=
+begin
+  convert hbX,
+  exact iguales_si_comun hY hX haY haX,
+end
