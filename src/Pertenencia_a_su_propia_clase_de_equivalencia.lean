@@ -53,7 +53,7 @@ begin
     exact h2, },
 end
 
--- 1ª demostración
+-- 2ª demostración
 example
   {hR : equivalence R}
   (a : A)
