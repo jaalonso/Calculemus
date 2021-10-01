@@ -3,8 +3,7 @@ Título: Las clases de equivalencia contienen a las clases de equivalencia de su
 Autor:  José A. Alonso
 ---
 
-Este ejercicio es el 4º de una serie, que comenzó con el [ejercicio
- del 30 de septiembre](https://bit.ly/2YfsvBZ), cuyo objetivo es demostrar que el tipo de las particiones de un conjunto `X` es isomorfo al tipo de las relaciones de equivalencia sobre `X`.
+Este ejercicio es el 4º de una serie, que comenzó con el [ejercicio del 30 de septiembre](https://bit.ly/2YfsvBZ), cuyo objetivo es demostrar que el tipo de las particiones de un conjunto `X` es isomorfo al tipo de las relaciones de equivalencia sobre `X`.
 
 El ejercicio consiste en demostrar que si `C` es una clase de equivalencia y `a ∈ C`, entonces la clase de equivalencia de `a` está contenida en `C`.
 

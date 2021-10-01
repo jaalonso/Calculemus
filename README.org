@@ -146,7 +146,7 @@ Los problemas publicados (por orden cronológico inverso) son
 + 01-10-21: [[./textos/Pertenencia_a_bloques_de_una_particion_con_elementos_comunes.md][Pertenencia a bloques de una partición con elementos comunes]] (En [[./src/Pertenencia_a_bloques_de_una_particion_con_elementos_comunes.lean][Lean]]).
 + 02-10-21: [[./textos/Pertenencia_a_su_propia_clase_de_equivalencia.md][Pertenencia a su propia clase de equivalencia]] (En [[./src/Pertenencia_a_su_propia_clase_de_equivalencia.lean][Lean]]).
 + 03-10-21: [[./textos/Las_clases_de_equivalencia_contienen_a_las_clases_de_equivalencia_de_sus_elementos.md][Las clases de equivalencia contienen a las clases de equivalencia de_sus elementos]] (En [[./src/Las_clases_de_equivalencia_contienen_a_las_clases_de_equivalencia_de_sus_elementos.lean][Lean]]).
-
++ 04-10-21: [[./textos/Las_clases_de_equivalencia_son_iguales_a_las_de_sus_elementos.md][Las clases de equivalencia son iguales a las de sus elementos]] (En [[./src/Las_clases_de_equivalencia_son_iguales_a_las_de_sus_elementos.lean][Lean]]).
 
 ** Pendientes
 + [[./textos/El_problema_de_las_monedas.md][El problema de las monedas]] (En [[./src/El_problema_de_las_monedas.lean][Lean]] y en [[./thy/El_problema_de_las_monedas.thy][Isabelle]]).
