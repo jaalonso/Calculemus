@@ -147,6 +147,7 @@ Los problemas publicados (por orden cronológico inverso) son
 + 02-10-21: [[./textos/Pertenencia_a_su_propia_clase_de_equivalencia.md][Pertenencia a su propia clase de equivalencia]] (En [[./src/Pertenencia_a_su_propia_clase_de_equivalencia.lean][Lean]]).
 + 03-10-21: [[./textos/Las_clases_de_equivalencia_contienen_a_las_clases_de_equivalencia_de_sus_elementos.md][Las clases de equivalencia contienen a las clases de equivalencia de_sus elementos]] (En [[./src/Las_clases_de_equivalencia_contienen_a_las_clases_de_equivalencia_de_sus_elementos.lean][Lean]]).
 + 04-10-21: [[./textos/Las_clases_de_equivalencia_son_iguales_a_las_de_sus_elementos.md][Las clases de equivalencia son iguales a las de sus elementos]] (En [[./src/Las_clases_de_equivalencia_son_iguales_a_las_de_sus_elementos.lean][Lean]]).
++ 05-10-21: [[./textos/Las_clases_de_equivalencia_son_no_vacias.md][Las clases de equivalencia son no vacías]] (En [[./src/Las_clases_de_equivalencia_son_no_vacias.lean][Lean]]).
 
 ** Pendientes
 + [[./textos/El_problema_de_las_monedas.md][El problema de las monedas]] (En [[./src/El_problema_de_las_monedas.lean][Lean]] y en [[./thy/El_problema_de_las_monedas.thy][Isabelle]]).
