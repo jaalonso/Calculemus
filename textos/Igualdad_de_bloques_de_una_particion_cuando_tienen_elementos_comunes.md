@@ -3,8 +3,7 @@ Título: Igualdad de bloques de una partición cuando tienen elementos comunes
 Autor:  José A. Alonso
 ---
 
-Este ejercicio es el primero de una serie cuyo objetivo es demostrar que el tipo de las particiones de un conjunto `X` es isomorfo al tipo de las relaciones de equivalencia sobre `X`. El desarrollo de dicha serie está basado en la [cuarta parte](https://bit.ly/3AQWY7o) de la primera sesión del curso de Kevin Buzzard
-[Formalising mathematics: workshop 1 — logic, sets, functions, relations](https://bit.ly/3kJo231).
+Este ejercicio es el primero de una serie cuyo objetivo es demostrar que el tipo de las particiones de un conjunto `X` es isomorfo al tipo de las relaciones de equivalencia sobre `X`. El desarrollo de dicha serie está basado en la [cuarta parte](https://bit.ly/3AQWY7o) de la primera sesión del curso de Kevin Buzzard [Formalising mathematics: workshop 1 — logic, sets, functions, relations](https://bit.ly/3kJo231).
 
 Una [partición](https://bit.ly/3uplABS) de un conjunto `A` es un conjunto de subconjuntos no vacíos de `A` tal que todo elemento de `A` está exactamente en uno de dichos subconjuntos. Es decir, una famila de conjuntos `C` es una partición de `A` si se verifican las siguientes condiciones:
 
@@ -43,7 +42,7 @@ Con la definición anterior,
 + `Bloques P` es el conjunto de los bloque de P.
 + `Hno_vacios P` prueba que los bloques de `P` son no vacíos.
 + `Hrecubren P` prueba que los bloque de `P` recubren a `A`.
-+ `Hdisjuntos p` prueba que los bloques de `P` son disjuntos entre sí
++ `Hdisjuntos P` prueba que los bloques de `P` son disjuntos entre sí
 
 Demostrar que si dos bloques de una partición tienen un elemento en común, entonces son iguales.
 
