@@ -5,10 +5,13 @@
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
--- Este ejercicio es el 3º de una serie, que comenzó con el [ejercicio
--- del 30 de septiembre](https://bit.ly/2YfsvBZ), cuyo objetivo es
--- demostrar que el tipo de las particiones de un conjunto `X` es
--- isomorfo al tipo de las relaciones de equivalencia sobre `X`.
+-- Este ejercicio es el 3º de una serie, cuyo objetivo es demostrar que
+-- el tipo de las particiones de un conjunto `X` es isomorfo al tipo de
+-- las relaciones de equivalencia sobre `X`.
+--
+-- Los anteriores son
+-- 1. [Igualdad de bloques de una partición cuando tienen elementos comunes](https://bit.ly/2YfsvBZ).
+-- 2. [Pertenencia a bloques de una partición con elementos comunes](https://bit.ly/3l2onxZ).
 --
 -- Los anteriores fueron sobre particiones y con este empezamos con las
 -- relaciones de equivalencia que están definidas en Lean por:

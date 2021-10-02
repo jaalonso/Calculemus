@@ -3,7 +3,11 @@ Título: Pertenencia a bloques de una partición con elementos comunes
 Autor:  José A. Alonso
 ---
 
-Este ejercicio es el 2º de una serie, que comenzó con el [ejercicio del 30 de septiembre](https://bit.ly/2YfsvBZ), cuyo objetivo es demostrar que el tipo de las particiones de un conjunto `X` es isomorfo al tipo de las relaciones de equivalencia sobre `X`.
+Este ejercicio es el 2º de una serie cuyo objetivo es demostrar que el tipo de las particiones de un conjunto `X` es isomorfo al tipo de las relaciones de equivalencia sobre `X`.
+
+El anterior es
+
++ [Igualdad de bloques de una partición cuando tienen elementos comunes](https://bit.ly/2YfsvBZ).
 
 El ejercicio consiste en demostrar que si dos bloques de una partición tienen elementos comunes, entonces los elementos de uno también pertenecen al otro.
 
