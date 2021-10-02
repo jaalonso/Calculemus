@@ -149,6 +149,7 @@ Los problemas publicados (por orden cronológico inverso) son
 + 04-10-21: [[./textos/Las_clases_de_equivalencia_son_iguales_a_las_de_sus_elementos.md][Las clases de equivalencia son iguales a las de sus elementos]] (En [[./src/Las_clases_de_equivalencia_son_iguales_a_las_de_sus_elementos.lean][Lean]]).
 + 05-10-21: [[./textos/Las_clases_de_equivalencia_son_no_vacias.md][Las clases de equivalencia son no vacías]] (En [[./src/Las_clases_de_equivalencia_son_no_vacias.lean][Lean]]).
 + 06-10-21: [[./textos/Las_clases_de_equivalencia_recubren_el_conjunto.md][Las clases de equivalencia recubren el conjunto]] (En [[./src/Las_clases_de_equivalencia_recubren_el_conjunto.lean][Lean]]).
++ 07-10-21: [[./textos/Las_clases_de_equivalencia_son_disjuntas.md][Las clases de equivalencia son disjuntas]] (En [[./src/Las_clases_de_equivalencia_son_disjuntas.lean][Lean]]).
 
 
 
