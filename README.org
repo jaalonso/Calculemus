@@ -152,7 +152,7 @@ Los problemas publicados (por orden cronológico inverso) son
 + 07-10-21: [[./textos/Las_clases_de_equivalencia_son_disjuntas.md][Las clases de equivalencia son disjuntas]] (En [[./src/Las_clases_de_equivalencia_son_disjuntas.lean][Lean]]).
 + 08-10-21: [[./textos/El_cociente_aplica_relaciones_de_equivalencia_en_particiones.md][El cociente aplica relaciones de equivalencia en particiones]] (En [[./src/El_cociente_aplica_relaciones_de_equivalencia_en_particiones.lean][Lean]]).
 + 09-10-21: [[./textos/Las_relaciones_definidas_por_particiones_son_reflexivas.md][Las relaciones definidas por particiones son reflexivas]] (En [[./src/Las_relaciones_definidas_por_particiones_son_reflexivas.lean][Lean]]).
-
++ 10-10-21: [[./textos/Las_relaciones_definidas_por_particiones_son_simetricas.md][Las relaciones definidas por particiones son simétricas]] (En [[./src/Las_relaciones_definidas_por_particiones_son_simetricas.lean][Lean]]).
 
 
 ** Pendientes
