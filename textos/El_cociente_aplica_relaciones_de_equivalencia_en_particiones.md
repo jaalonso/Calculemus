@@ -15,7 +15,7 @@ Los anteriores son
 7. [Las clases de equivalencia recubren el conjunto](https://bit.ly/3a1wmFc).
 8. [Las clases de equivalencia son disjuntas](https://bit.ly/3FfAX54).
 
-El ejercicio consiste en fefinir la función
+El ejercicio consiste en definir la función
 <pre lang="lean">
    cociente : {R : A → A → Prop // equivalence R} → particion A
 </pre>
