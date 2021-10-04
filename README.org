@@ -154,6 +154,9 @@ Los problemas publicados (por orden cronológico inverso) son
 + 09-10-21: [[./textos/Las_relaciones_definidas_por_particiones_son_reflexivas.md][Las relaciones definidas por particiones son reflexivas]] (En [[./src/Las_relaciones_definidas_por_particiones_son_reflexivas.lean][Lean]]).
 + 10-10-21: [[./textos/Las_relaciones_definidas_por_particiones_son_simetricas.md][Las relaciones definidas por particiones son simétricas]] (En [[./src/Las_relaciones_definidas_por_particiones_son_simetricas.lean][Lean]]).
 + 11-10-21: [[./textos/Las_relaciones_definidas_por_particiones_son_transitivas.md][Las relaciones definidas por particiones son transitivas]] (En [[./src/Las_relaciones_definidas_por_particiones_son_transitivas.lean][Lean]]).
++ 12-10-21: [[./textos/Aplicacion_de_particiones_en_relaciones_de_equivalencia.md][Aplicación de particiones en relaciones de equivalencia]] (En [[./src/Aplicacion_de_particiones_en_relaciones_de_equivalencia.lean][Lean]]).
+
+
 
 
 ** Pendientes
