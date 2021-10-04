@@ -157,7 +157,7 @@ Los problemas publicados (por orden cronológico inverso) son
 + 12-10-21: [[./textos/Aplicacion_de_particiones_en_relaciones_de_equivalencia.md][Aplicación de particiones en relaciones de equivalencia]] (En [[./src/Aplicacion_de_particiones_en_relaciones_de_equivalencia.lean][Lean]]).
 + 13-10-21: [[./textos/La_funcion_relacionP_es_inversa_por_la_izquierda_de_la_funcion_cociente.md][La función relacionP es inversa por la izquierda de la función cociente]] (En [[./src/La_funcion_relacionP_es_inversa_por_la_izquierda_de_la_funcion_cociente.lean][Lean]]).
 + 14-10-21: [[./textos/La_funcion_relacionP_es_inversa_por_la_derecha_de_la_funcion_cociente.md][La función relacionP es inversa por la derecha de la función cociente]] (En [[./src/La_funcion_relacionP_es_inversa_por_la_derecha_de_la_funcion_cociente.lean][Lean]]).
-
++ 15-10-21: [[./textos/Isomorfismo_entre_relaciones_de_equivalencia_y_particiones.md][Isomorfismo entre relaciones de equivalencia y particiones]] (En [[./src/Isomorfismo_entre_relaciones_de_equivalencia_y_particiones.lean][Lean]]).
 
 ** Pendientes
 + [[./textos/El_problema_de_las_monedas.md][El problema de las monedas]] (En [[./src/El_problema_de_las_monedas.lean][Lean]] y en [[./thy/El_problema_de_las_monedas.thy][Isabelle]]).
