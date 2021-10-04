@@ -1,5 +1,5 @@
 ---
-Título:Aplicación de particiones en relaciones de equivalencia
+Título: Aplicación de particiones en relaciones de equivalencia
 Autor:  José A. Alonso
 ---
 
