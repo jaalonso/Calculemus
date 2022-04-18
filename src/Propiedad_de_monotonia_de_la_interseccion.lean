@@ -12,6 +12,7 @@
 -- ----------------------------------------------------------------------
 
 import data.set.basic
+import tactic
 open set
 
 variable {α : Type}
@@ -80,4 +81,13 @@ end
 example
   (h : s ⊆ t)
   : s ∩ u ⊆ t ∩ u :=
+-- by library_search
 inter_subset_inter_left u h
+
+-- 6ª demostración
+-- ===============
+
+example
+  (h : s ⊆ t)
+  : s ∩ u ⊆ t ∩ u :=
+by tidy
