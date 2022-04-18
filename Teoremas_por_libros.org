@@ -1,0 +1,36 @@
+#+TITLE: Teoremas por libros
+
+En esta sesión se ordenan los teoremas por las páginas de los libros donde se
+encuentran:
+
+** [[http://abstract.ups.edu/download/aata-20200730.pdf][Abstract algebra: Theory and applications]] de Thomas W. Judson
++ 36 [[./textos/Unicidad_del_elemento_neutro_en_los_grupos.md][Unicidad del elemento neutro en los grupos]] (En [[./src/Unicidad_del_elemento_neutro_en_los_grupos.lean][Lean]] y en [[./thy/Unicidad_del_elemento_neutro_en_los_grupos.thy][Isabelle]]).
++ 36 [[./textos/Unicidad_de_los_inversos_en_los_grupos.md][Unicidad de los inversos en los grupos]] (En [[./src/Unicidad_de_los_inversos_en_los_grupos.lean][Lean]] y en [[./thy/Unicidad_de_los_inversos_en_los_grupos.thy][Isabelle]]).
++ 36 [[./textos/Inverso_del_producto.md][Inverso del producto]] (En [[./src/Inverso_del_producto.lean][Lean]] y en [[./thy/Inverso_del_producto.thy][Isabelle]]).
++ 36 [[./textos/Inverso_de_inverso_en_grupos.md][Inverso del inverso en grupos]] (En [[./src/Inverso_del_inverso_en_grupos.lean][Lean]] y en [[./thy/Inverso_del_inverso_en_grupos.thy][Isabelle]]).
++ 37 [[./textos/Propiedad_cancelativa_en_grupos.md][Propiedad cancelativa en grupos]] (En [[./src/Propiedad_cancelativa_en_grupos.lean][Lean]] y en [[./thy/Propiedad_cancelativa_en_grupos.thy][Isabelle]]).
++ 37 [[./textos/Producto_de_potencias_de_la_misma_base_en_monoides.md][Producto_de_potencias_de_la_misma_base_en_monoides]] (En [[./src/Producto_de_potencias_de_la_misma_base_en_monoides.lean][Lean]] y en [[./thy/Producto_de_potencias_de_la_misma_base_en_monoides.thy][Isabelle]]).
+
+** [[https://www.academia.edu/34284868/El_metodo_de_la_induccion_matematica_Sominski][El método de la inducción matemática]] de I.S. Sominski
++ 13 [[./textos/Prueba_de_1:(1x2)+1:(2x3)+1:(3x4)+...+1:(nx(n+1))_es_n:(n+1).md][Prueba de 1/(1x2)+1/(2x3)+1/(3x4)+...+1/(nx(n+1))_es_n/(n+1)]] (En [[./src/Prueba_de_1:(1x2)+1:(2x3)+1:(3x4)+...+1:(nx(n+1))_es_n:(n+1).lean][Lean]] y en [[./thy/Prueba_de_1:(1x2)+1:(2x3)+1:(3x4)+...+1:(nx(n+1))_es_n:(n+1).thy][Isabelle]]).
++ 18 [[./textos/La_suma_de_los_n_primeros_impares_es_n^2.md][La_suma_de_los_n_primeros_impares_es_n^2]] (En [[./src/La_suma_de_los_n_primeros_impares_es_n^2.lean][Lean]] y en [[./thy/La_suma_de_los_n_primeros_impares_es_n^2.thy][Isabelle]]).
++ 20 [[./textos/Suma_de_potencias_de_dos.md][Suma de potencias de dos]] (En [[./src/Suma_de_potencias_de_dos.lean][Lean]] y en [[./thy/Suma_de_potencias_de_dos.thy][Isabelle]]).
++ 20 [[./textos/Suma_de_los_primeros_n_numeros_naturales.md][Suma de los primeros números naturales]] (En [[./src/Suma_de_los_primeros_n_numeros_naturales.lean][Lean]] y en [[./thy/Suma_de_los_primeros_n_numeros_naturales.thy][Isabelle]]).
++ 20 [[./textos/Suma_de_los_primeros_cuadrados.md][Suma de los primeros cuadrados]] (En [[./src/Suma_de_los_primeros_cuadrados.lean][Lean]] y en [[./thy/Suma_de_los_primeros_cuadrados.thy][Isabelle]]).
++ 21 [[./textos/Suma_de_los_primeros_cubos.md][Suma de los primeros cubos]] (En [[./src/Suma_de_los_primeros_cubos.lean][Lean]] y en [[./thy/Suma_de_los_primeros_cubos.thy][Isabelle]]).
++ 21 [[./textos/Suma_de_progresion_geometrica.md][Suma de progresión geométrica]] (En [[./src/Suma_de_progresion_geometrica.lean][Lean]] y en [[./thy/Suma_de_progresion_geometrica.thy][Isabelle]]).
++ 26 [[./textos/El_problema_de_las_monedas.md][El problema de las monedas]] (En [[./src/El_problema_de_las_monedas.lean][Lean]] y en [[./thy/El_problema_de_las_monedas.thy][Isabelle]]).
++ 45 [[./textos/El_binomio_de_Newton.md][El binomio de Newton]] (En [[./src/El_binomio_de_Newton.lean][Lean]] y en [[./thy/El_binomio_de_Newton.thy][Isabelle]]).
+
+** [[https://proofwiki.org][ProofWiki]]
++ [[enlace]]: [[./textos/Suma_de_cubos_de_impares.md][Suma de cubos de impares]] (En [[./src/Suma_de_cubos_de_impares.lean][Lean]] y en [[./thy/Suma_de_cubos_de_impares.thy][Isabelle]]).
+
+** [[https://archive.org/details/QuEsLaMatemticaR.CourantH.Robbins_201812][¿Qué es la Matemática?]] de R. Courant y H. Robbins
++ 19 [[./textos/Suma_de_los_primeros_n_numeros_naturales.md][Suma de los primeros números naturales]] (En [[./src/Suma_de_los_primeros_n_numeros_naturales.lean][Lean]] y en [[./thy/Suma_de_los_primeros_n_numeros_naturales.thy][Isabelle]]).
++ 19 [[./textos/Formula_de_Gauss_de_la_suma.md][Formula_de_Gauss_de_la_suma]] (En [[./src/Formula_de_Gauss_de_la_suma.lean][Lean]] y en [[./thy/Formula_de_Gauss_de_la_suma.thy][Isabelle]]).
++ 20 [[./textos/Suma_de_progresion_aritmetica.md][Suma de progresión aritmética]] (En [[./src/Suma_de_progresion_aritmetica.lean][Lean]] y en [[./thy/Suma_de_progresion_aritmetica.thy][Isabelle]]).
++ 20 [[./textos/Suma_de_progresion_geometrica.md][Suma de progresión geométrica]] (En [[./src/Suma_de_progresion_geometrica.lean][Lean]] y en [[./thy/Suma_de_progresion_geometrica.thy][Isabelle]]).
++ 21 [[./textos/Suma_de_los_primeros_cuadrados.md][Suma de los primeros cuadrados]] (En [[./src/Suma_de_los_primeros_cuadrados.lean][Lean]] y en [[./thy/Suma_de_los_primeros_cuadrados.thy][Isabelle]]).
++ 22 [[./textos/Suma_de_los_primeros_cubos.md][Suma de los primeros cubos]] (En [[./src/Suma_de_los_primeros_cubos.lean][Lean]] y en [[./thy/Suma_de_los_primeros_cubos.thy][Isabelle]]).
++ 22 [[./textos/Prueba_de_(1+p)^n_mayor_o_igual_que_1+np.md][Prueba de (1+p)^n mayor o igual que 1+np]] (En [[./src/Prueba_de_(1+p)^n_mayor_o_igual_que_1+np.lean][Lean]] y en [[./thy/Prueba_de_(1+p)^n_mayor_o_igual_que_1+np.thy][Isabelle]]).
++ 23 [[./textos/El_binomio_de_Newton.md][El binomio de Newton]] (En [[./src/El_binomio_de_Newton.lean][Lean]] y en [[./thy/El_binomio_de_Newton.thy][Isabelle]]).
