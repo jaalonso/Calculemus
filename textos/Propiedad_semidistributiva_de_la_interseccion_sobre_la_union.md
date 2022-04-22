@@ -3,9 +3,7 @@ Título: Propiedad semidistributiva de la intersección sobre la unión
 Autor:  José A. Alonso
 ---
 
-Demostrar que
-
-> s ∩ (t ∪ u) ⊆ (s ∩ t) ∪ (s ∩ u)
+Demostrar que `s ∩ (t ∪ u) ⊆ (s ∩ t) ∪ (s ∩ u)`.
 
 Para ello, completar la siguiente teoría de Lean:
 
@@ -21,18 +19,12 @@ example :
 sorry
 </pre>
 
-**Notas**
-
-* En [este enlace](https://bit.ly/3uWFUtF) se puede escribir las soluciones en Lean.
-* A continuación se muestran algunas soluciones (que se pueden probar en [este enlace](https://bit.ly/3uYXTjs)).
-* En los comentarios se pueden publicar otras soluciones, en Lean o en otros sistemas de razonamiento.
-  + Para publicar las demostraciones en Lean se deben de escribir entre una línea con &#60;pre lang=&quot;lean&quot;&#62; y otra con &#60;/pre&#62;
-  + Para publicar las demostraciones en Isabelle/HOL se deben de escribir entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
-
-**Soluciones con Lean**
+## 1. Soluciones con Lean
 
 <pre lang="lean">
 import data.set.basic
+import tactic
+
 open set
 
 variable {α : Type}
@@ -45,16 +37,16 @@ example :
   s ∩ (t ∪ u) ⊆ (s ∩ t) ∪ (s ∩ u) :=
 begin
   intros x hx,
-  have xs : x ∈ s := hx.1,
-  have xtu : x ∈ t ∪ u := hx.2,
-  clear hx,
-  cases xtu with xt xu,
+  cases hx with hxs hxtu,
+  cases hxtu with hxt hxu,
   { left,
-    show x ∈ s ∩ t,
-    exact ⟨xs, xt⟩ },
+    split,
+    { exact hxs, },
+    { exact hxt, }},
   { right,
-    show x ∈ s ∩ u,
-    exact ⟨xs, xu⟩ },
+    split,
+    { exact hxs, },
+    { exact hxu, }},
 end
 
 -- 2ª demostración
@@ -63,11 +55,11 @@ end
 example :
   s ∩ (t ∪ u) ⊆ (s ∩ t) ∪ (s ∩ u) :=
 begin
-  rintros x ⟨xs, xt | xu⟩,
+  rintros x ⟨hxs, hxt | hxu⟩,
   { left,
-    exact ⟨xs, xt⟩ },
+    exact ⟨hxs, hxt⟩, },
   { right,
-    exact ⟨xs, xu⟩ },
+    exact ⟨hxs, hxu⟩, },
 end
 
 -- 3ª demostración
@@ -76,8 +68,9 @@ end
 example :
   s ∩ (t ∪ u) ⊆ (s ∩ t) ∪ (s ∩ u) :=
 begin
-  intros x hx,
-  by finish
+  rintros x ⟨hxs, hxt | hxu⟩,
+  { exact or.inl ⟨hxs, hxt⟩, },
+  { exact or.inr ⟨hxs, hxu⟩, },
 end
 
 -- 4ª demostración
@@ -85,11 +78,26 @@ end
 
 example :
   s ∩ (t ∪ u) ⊆ (s ∩ t) ∪ (s ∩ u) :=
-by rw inter_union_distrib_left
+begin
+  intros x hx,
+  by finish,
+end
 
+-- 5ª demostración
+-- ===============
+
+example :
+  s ∩ (t ∪ u) ⊆ (s ∩ t) ∪ (s ∩ u) :=
+by rw inter_union_distrib_left
 </pre>
 
-**Soluciones con Isabelle/HOL**
+El código de las demostraciones se encuentra en [GitHub](https://github.com/jaalonso/Demostrando-con-Lean/blob/main/src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.lean) y puede ejecutarse con el [Lean Web editor](https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Demostrando-con-Lean/main/src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.lean).
+
+La construcción de las demostraciones se muestra en el siguiente vídeo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DRKAjEeeM_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 2. Soluciones con Isabelle/HOL
 
 <pre lang="isar">
 theory Propiedad_semidistributiva_de_la_interseccion_sobre_la_union

@@ -3,9 +3,7 @@ Título: Diferencia de diferencia de conjuntos
 Autor:  José A. Alonso
 ---
 
-Demostrar que
-
-> (s \ t) \ u ⊆ s \ (t ∪ u)
+Demostrar que `(s \ t) \ u ⊆ s \ (t ∪ u)`
 
 Para ello, completar la siguiente teoría de Lean:
 
@@ -20,15 +18,7 @@ example : (s \ t) \ u ⊆ s \ (t ∪ u) :=
 sorry
 </pre>
 
-**Notas**
-
-* En [este enlace](https://bit.ly/3ynxFJx) se puede escribir las soluciones en Lean.
-* A continuación se muestran algunas soluciones (que se pueden probar en [este enlace](https://bit.ly/3bxjzva)).
-* En los comentarios se pueden publicar otras soluciones, en Lean o en otros sistemas de razonamiento.
-  + Para publicar las demostraciones en Lean se deben de escribir entre una línea con &#60;pre lang=&quot;lean&quot;&#62; y otra con &#60;/pre&#62;
-  + Para publicar las demostraciones en Isabelle/HOL se deben de escribir entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
-
-**Soluciones con Lean**
+## Soluciones con Lean
 
 <pre lang="lean">
 import data.set.basic
@@ -91,7 +81,7 @@ example : (s \ t) \ u ⊆ s \ (t ∪ u) :=
 by rw diff_diff
 </pre>
 
-**Soluciones con Isabelle/HOL**
+## Soluciones con Isabelle/HOL
 
 <pre lang="isar">
 theory Diferencia_de_diferencia_de_conjuntos

@@ -1,7 +1,7 @@
 -- Propiedad_de_monotonia_de_la_interseccion.lean
 -- Propiedad de monotonía de la intersección.
 -- José A. Alonso Jiménez
--- Sevilla, 17 de mayo de 2021
+-- Sevilla, 19 de abril de 2022
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
@@ -13,6 +13,7 @@
 
 import data.set.basic
 import tactic
+
 open set
 
 variable {α : Type}
@@ -29,13 +30,13 @@ begin
   rw inter_def,
   rw inter_def,
   dsimp,
-  intros x h,
-  cases h with xs xu,
+  intros x h1,
+  cases h1 with xs xu,
   split,
   { rw subset_def at h,
     apply h,
-    assumption },
-  { assumption },
+    exact xs, },
+  { exact xu, },
 end
 
 -- 2ª demostración
@@ -49,7 +50,7 @@ begin
   dsimp,
   rintros x ⟨xs, xu⟩,
   rw subset_def at h,
-  exact ⟨h _ xs, xu⟩,
+  exact ⟨h x xs, xu⟩,
 end
 
 -- 3ª demostración
@@ -59,8 +60,9 @@ example
   (h : s ⊆ t)
   : s ∩ u ⊆ t ∩ u :=
 begin
-  simp only [subset_def, mem_inter_eq] at *,
+  simp only [subset_def, inter_def, inter_def],
   rintros x ⟨xs, xu⟩,
+  rw subset_def at h,
   exact ⟨h _ xs, xu⟩,
 end
 
@@ -81,10 +83,21 @@ end
 example
   (h : s ⊆ t)
   : s ∩ u ⊆ t ∩ u :=
+begin
+  rintros x ⟨xs, xu⟩,
+  exact ⟨h xs, xu⟩,
+end
+
+-- 6ª demostración
+-- ===============
+
+example
+  (h : s ⊆ t)
+  : s ∩ u ⊆ t ∩ u :=
 -- by library_search
 inter_subset_inter_left u h
 
--- 6ª demostración
+-- 7ª demostración
 -- ===============
 
 example

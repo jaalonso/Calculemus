@@ -3,13 +3,7 @@ Título: Propiedad de monotonía de la intersección.
 Autor:  José A. Alonso
 ---
 
-Demostrar que la intersección es monótona por la izquierda; es decir, si
-
-> s ⊆ t,
-
-entonces
-
-> s ∩ u ⊆ t ∩ u.
+Demostrar que la intersección es monótona por la izquierda; es decir, si `s ⊆ t`, entonces `s ∩ u ⊆ t ∩ u`.
 
 Para ello, completar la siguiente teoría de Lean:
 
@@ -26,18 +20,12 @@ example
 sorry
 </pre>
 
-**Notas**
-
-* En [este enlace](https://bit.ly/3frC0T0) se puede escribir las soluciones en Lean.
-* A continuación se muestran algunas soluciones (que se pueden probar en [este enlace](https://bit.ly/3tZEP3i)).
-* En los comentarios se pueden publicar otras soluciones, en Lean o en otros sistemas de razonamiento.
-  + Para publicar las demostraciones en Lean se deben de escribir entre una línea con &#60;pre lang=&quot;lean&quot;&#62; y otra con &#60;/pre&#62;
-  + Para publicar las demostraciones en Isabelle/HOL se deben de escribir entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
-
 **Soluciones con Lean**
 
 <pre lang="lean">
 import data.set.basic
+import tactic
+
 open set
 
 variable {α : Type}
@@ -54,13 +42,13 @@ begin
   rw inter_def,
   rw inter_def,
   dsimp,
-  intros x h,
-  cases h with xs xu,
+  intros x h1,
+  cases h1 with xs xu,
   split,
   { rw subset_def at h,
     apply h,
-    assumption },
-  { assumption },
+    exact xs, },
+  { exact xu, },
 end
 
 -- 2ª demostración
@@ -74,7 +62,7 @@ begin
   dsimp,
   rintros x ⟨xs, xu⟩,
   rw subset_def at h,
-  exact ⟨h _ xs, xu⟩,
+  exact ⟨h x xs, xu⟩,
 end
 
 -- 3ª demostración
@@ -84,8 +72,9 @@ example
   (h : s ⊆ t)
   : s ∩ u ⊆ t ∩ u :=
 begin
-  simp only [subset_def, mem_inter_eq] at *,
+  simp only [subset_def, inter_def, inter_def],
   rintros x ⟨xs, xu⟩,
+  rw subset_def at h,
   exact ⟨h _ xs, xu⟩,
 end
 
@@ -106,8 +95,34 @@ end
 example
   (h : s ⊆ t)
   : s ∩ u ⊆ t ∩ u :=
+begin
+  rintros x ⟨xs, xu⟩,
+  exact ⟨h xs, xu⟩,
+end
+
+-- 6ª demostración
+-- ===============
+
+example
+  (h : s ⊆ t)
+  : s ∩ u ⊆ t ∩ u :=
+-- by library_search
 inter_subset_inter_left u h
+
+-- 7ª demostración
+-- ===============
+
+example
+  (h : s ⊆ t)
+  : s ∩ u ⊆ t ∩ u :=
+by tidy
 </pre>
+
+El código de las demostraciones se encuentra en [GitHub](https://github.com/jaalonso/Demostrando-con-Lean/blob/main/src/Propiedad_de_monotonia_de_la_interseccion.lean) y puede ejecutarse con el [Lean Web editor](https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Demostrando-con-Lean/main/src/Propiedad_de_monotonia_de_la_interseccion.lean).
+
+La construcción de las demostraciones se muestra en el siguiente vídeo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W2_gMDHRehg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Soluciones con Isabelle/HOL**
 
