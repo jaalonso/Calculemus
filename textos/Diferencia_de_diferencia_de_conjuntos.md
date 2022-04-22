@@ -32,17 +32,18 @@ variables s t u : set α
 
 example : (s \ t) \ u ⊆ s \ (t ∪ u) :=
 begin
-  intros x xstu,
-  have xs : x ∈ s := xstu.1.1,
-  have xnt : x ∉ t := xstu.1.2,
-  have xnu : x ∉ u := xstu.2,
+  intros x hx,
+  cases hx with hxst hxnu,
+  cases hxst with hxs hxnt,
   split,
-  { exact xs },
+  { exact hxs },
   { dsimp,
-    intro xtu,
-    cases xtu with xt xu,
-    { show false, from xnt xt },
-    { show false, from xnu xu }},
+    by_contradiction hxtu,
+    cases hxtu with hxt hxu,
+    { apply hxnt,
+      exact hxt, },
+    { apply hxnu,
+      exact hxu, }},
 end
 
 -- 2ª demostración
@@ -50,12 +51,38 @@ end
 
 example : (s \ t) \ u ⊆ s \ (t ∪ u) :=
 begin
-  rintros x ⟨⟨xs, xnt⟩, xnu⟩,
-  use xs,
-  rintros (xt | xu); contradiction
+  rintros x ⟨⟨hxs, hxnt⟩, hxnu⟩,
+  split,
+  { exact hxs },
+  { by_contradiction hxtu,
+    cases hxtu with hxt hxu,
+    { exact hxnt hxt, },
+    { exact hxnu hxu, }},
 end
 
 -- 3ª demostración
+-- ===============
+
+example : (s \ t) \ u ⊆ s \ (t ∪ u) :=
+begin
+  rintros x ⟨⟨xs, xnt⟩, xnu⟩,
+  use xs,
+  rintros (xt | xu),
+  { contradiction, },
+  { contradiction, },
+end
+
+-- 4ª demostración
+-- ===============
+
+example : (s \ t) \ u ⊆ s \ (t ∪ u) :=
+begin
+  rintros x ⟨⟨xs, xnt⟩, xnu⟩,
+  use xs,
+  rintros (xt | xu); contradiction,
+end
+
+-- 5ª demostración
 -- ===============
 
 example : (s \ t) \ u ⊆ s \ (t ∪ u) :=
@@ -65,7 +92,7 @@ begin
   finish,
 end
 
--- 4ª demostración
+-- 6ª demostración
 -- ===============
 
 example : (s \ t) \ u ⊆ s \ (t ∪ u) :=
@@ -74,11 +101,17 @@ begin
   finish,
 end
 
--- 5ª demostración
+-- 7ª demostración
 -- ===============
 
 example : (s \ t) \ u ⊆ s \ (t ∪ u) :=
 by rw diff_diff
+
+-- 8ª demostración
+-- ===============
+
+example : (s \ t) \ u ⊆ s \ (t ∪ u) :=
+by tidy
 </pre>
 
 ## Soluciones con Isabelle/HOL
