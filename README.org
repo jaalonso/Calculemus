@@ -8,5 +8,6 @@ Los problemas publicados desde el 18-04-22 (por orden cronológico) son
 + 18-04-22: [[./textos/Propiedad_de_monotonia_de_la_interseccion.md][Propiedad de monotonía de la intersección]] (En [[./src/Propiedad_de_monotonia_de_la_interseccion.lean][Lean]] y en [[./thy//Propiedad_de_monotonia_de_la_interseccion.thy][Isabelle]]).
 + 21-04-22: [[./textos/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.md][Propiedad semidistributiva de la intersección sobre la unión]] (En [[./src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.lean][Lean]] y en [[./thy/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.thy][Isabelle]]).
 + 23-04-22: [[./textos/Diferencia_de_diferencia_de_conjuntos.md][Diferencia de diferencia de conjuntos]] (En [[./src/Diferencia_de_diferencia_de_conjuntos.lean][Lean]] y en [[./thy/Diferencia_de_diferencia_de_conjuntos.thy][Isabelle]]).
++ 26-04-21: [[./textos/Interseccion_con_su_union.md][Intersección con su unión]] (En [[./src/Interseccion_con_su_union.lean][Lean]] y en [[./thy/Interseccion_con_su_union.thy][Isabelle]]).
 
 Los ejercicios publicados anteriormente se encuentran en [[./Ejercicios_del_24-01-20_al_15-10-21.org][este enlace]].

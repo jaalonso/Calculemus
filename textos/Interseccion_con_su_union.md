@@ -3,9 +3,7 @@ Título: Intersección con su unión
 Autor:  José A. Alonso
 ---
 
-Demostrar que
-
-> s ∩ (s ∪ t) = s
+Demostrar que `s ∩ (s ∪ t) = s`
 
 Para ello, completar la siguiente teoría de Lean:
 
@@ -20,18 +18,13 @@ example : s ∩ (s ∪ t) = s :=
 sorry
 </pre>
 
-**Notas**
-
-* En [este enlace](https://bit.ly/3vhCL7T) se puede escribir las soluciones en Lean.
-* A continuación se muestran algunas soluciones (que se pueden probar en [este enlace](https://bit.ly/3uhrUtp)).
-* En los comentarios se pueden publicar otras soluciones, en Lean o en otros sistemas de razonamiento.
-  + Para publicar las demostraciones en Lean se deben de escribir entre una línea con &#60;pre lang=&quot;lean&quot;&#62; y otra con &#60;/pre&#62;
-  + Para publicar las demostraciones en Isabelle/HOL se deben de escribir entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
+<!-- more-->
 
 **Soluciones con Lean**
 
 <pre lang="lean">
 import data.set.basic
+import tactic
 open set
 
 variable {α : Type}
@@ -125,8 +118,33 @@ end
 -- ===============
 
 example : s ∩ (s ∪ t) = s :=
+begin
+  apply subset_antisymm,
+  { rintros x ⟨hxs,-⟩,
+    exact hxs, },
+  { intros x hxs,
+    exact ⟨hxs, or.inl hxs⟩, },
+end
+
+-- 8ª demostración
+-- ===============
+
+example : s ∩ (s ∪ t) = s :=
+-- by suggest
 inf_sup_self
+
+-- 9ª demostración
+-- ===============
+
+example : s ∩ (s ∪ t) = s :=
+-- by hint
+by finish
 </pre>
+
+El código de las demostraciones se encuentra en [GitHub](https://github.com/jaalonso/Demostrando-con-Lean/blob/main/src/Interseccion_con_su_union.lean) y puede ejecutarse con el [Lean Web editor](https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Demostrando-con-Lean/main/src/Interseccion_con_su_union.lean).
+
+La construcción de las demostraciones se muestra en el siguiente vídeo
+
 
 **Soluciones con Isabelle/HOL**
 

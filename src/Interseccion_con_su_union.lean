@@ -1,7 +1,7 @@
 -- Interseccion_con_su_union.lean
 -- Intersección con su unión
 -- José A. Alonso Jiménez
--- Sevilla, 25 de mayo de 2021
+-- Sevilla, 26 de abril de 2022
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
@@ -10,10 +10,12 @@
 -- ----------------------------------------------------------------------
 
 import data.set.basic
+import tactic
 open set
 
 variable {α : Type}
 variables s t : set α
+
 
 -- 1ª demostración
 -- ===============
@@ -103,4 +105,24 @@ end
 -- ===============
 
 example : s ∩ (s ∪ t) = s :=
+begin
+  apply subset_antisymm,
+  { rintros x ⟨hxs,-⟩,
+    exact hxs, },
+  { intros x hxs,
+    exact ⟨hxs, or.inl hxs⟩, },
+end
+
+-- 8ª demostración
+-- ===============
+
+example : s ∩ (s ∪ t) = s :=
+-- by suggest
 inf_sup_self
+
+-- 9ª demostración
+-- ===============
+
+example : s ∩ (s ∪ t) = s := 
+-- by hint
+by finish
