@@ -3,10 +3,7 @@ Título: Distributiva de la intersección respecto de la unión general
 Autor:  José A. Alonso
 ---
 
-Demostrar que
-<pre lang="lean">
-s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s)
-</pre>
+Demostrar que `s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s)`
 
 Para ello, completar la siguiente teoría de Lean:
 
@@ -74,11 +71,11 @@ end
 example : s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s) :=
 begin
   ext x,
-  simp only [mem_inter_eq, mem_Union],
+  simp,
   split,
   { rintros ⟨xs, ⟨i, xAi⟩⟩,
-    exact ⟨i, xAi, xs⟩, },
-  { rintros ⟨i, xAi, xs⟩,
+    exact ⟨⟨i, xAi⟩, xs⟩, },
+  { rintros ⟨⟨i, xAi⟩, xs⟩,
     exact ⟨xs, ⟨i, xAi⟩⟩ },
 end
 
@@ -88,17 +85,31 @@ end
 example : s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s) :=
 begin
   ext x,
-  finish [mem_inter_eq, mem_Union],
+  finish,
 end
 
 -- 4ª demostración
 -- ===============
 
 example : s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s) :=
-by finish [mem_inter_eq, mem_Union, ext_iff]
+by ext; finish
+
+-- 5ª demostración
+-- ===============
+
+example : s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s) :=
+by finish [ext_iff]
+
+-- 6ª demostración
+-- ===============
+
+example : s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s) :=
+by tidy
 </pre>
 
-Se puede interactuar con la prueba anterior en [esta sesión con Lean](https://bit.ly/3uKq30u).
+El código de las demostraciones se encuentra en [GitHub](https://github.com/jaalonso/Razonando-con-Lean/blob/main/src/Distributiva_de_la_interseccion_respecto_de_la_union_general.lean) y puede ejecutarse con el [Lean Web editor](https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Razonando-con-Lean/main/src/Distributiva_de_la_interseccion_respecto_de_la_union_general.lean).
+
+La construcción de las demostraciones se muestra en el siguiente vídeo
 
 **Soluciones con Isabelle/HOL**
 
@@ -206,9 +217,3 @@ lemma "s ∩ (⋃ i ∈ I. A i) = (⋃ i ∈ I. (A i ∩ s))"
 
 end
 </pre>
-
-**Nuevas soluciones**
-<ul>
-<li>En los comentarios se pueden escribir nuevas soluciones.
-<li>El código se debe escribir entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
-</ul>

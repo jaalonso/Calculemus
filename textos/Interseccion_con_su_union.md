@@ -145,6 +145,7 @@ El código de las demostraciones se encuentra en [GitHub](https://github.com/jaa
 
 La construcción de las demostraciones se muestra en el siguiente vídeo
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pQ4z5NCE5fU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Soluciones con Isabelle/HOL**
 

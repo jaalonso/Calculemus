@@ -1,7 +1,7 @@
 -- Distributiva_de_la_interseccion_respecto_de_la_union_general.lean
 -- Distributiva de la intersección respecto de la unión general
--- José A. Alonso Jiménez
--- Sevilla, 2 de junio de 2021
+-- José A. Alonso Jiménez <https://jaalonso.github.io>
+-- Sevilla, 28-abril-2022
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
@@ -52,11 +52,11 @@ end
 example : s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s) :=
 begin
   ext x,
-  simp only [mem_inter_eq, mem_Union],
+  simp,
   split,
   { rintros ⟨xs, ⟨i, xAi⟩⟩,
-    exact ⟨i, xAi, xs⟩, },
-  { rintros ⟨i, xAi, xs⟩,
+    exact ⟨⟨i, xAi⟩, xs⟩, },
+  { rintros ⟨⟨i, xAi⟩, xs⟩,
     exact ⟨xs, ⟨i, xAi⟩⟩ },
 end
 
@@ -66,11 +66,23 @@ end
 example : s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s) :=
 begin
   ext x,
-  finish [mem_inter_eq, mem_Union],
+  finish,
 end
 
 -- 4ª demostración
 -- ===============
 
 example : s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s) :=
-by finish [mem_inter_eq, mem_Union, ext_iff]
+by ext; finish
+
+-- 5ª demostración
+-- ===============
+
+example : s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s) :=
+by finish [ext_iff]
+
+-- 6ª demostración
+-- ===============
+
+example : s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s) :=
+by tidy

@@ -5,10 +5,7 @@ Autor:  José A. Alonso
 
 En Lean, la imagen inversa de un conjunto s (de elementos de tipo  por la función f (de tipo α → β) es el conjunto `f ⁻¹' s` de elementos x (de tipo α) tales que `f x ∈ s`.
 
-Demostrar que
-<pre lang="text">
-   f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v
-</pre>
+Demostrar que `f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v`
 
 Para ello, completar la siguiente teoría de Lean:
 
@@ -25,7 +22,6 @@ example : f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v :=
 sorry
 </pre>
 
-<h4>Soluciones</h4>
 <!--more-->
 
 **Soluciones con Lean**
@@ -41,6 +37,10 @@ variables u v : set β
 
 -- 1ª demostración
 -- ===============
+
+#check @mem_preimage α β f u
+#check @mem_of_mem_inter_left
+#check @mem_of_mem_inter_right
 
 example : f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v :=
 begin
@@ -69,41 +69,43 @@ end
 example : f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v :=
 begin
   ext x,
-  exact ⟨λ h, ⟨mem_preimage.mpr (mem_of_mem_inter_left h),
-               mem_preimage.mpr (mem_of_mem_inter_right h)⟩,
-         λ h, ⟨mem_preimage.mp (mem_of_mem_inter_left h),
-               mem_preimage.mp (mem_of_mem_inter_right h)⟩⟩,
+  split,
+  { intro h,
+    split,
+    { simp at *,
+      exact h.1, },
+    { simp at *,
+      exact h.2, }},
+  { intro h,
+    simp at *,
+    exact h, },
 end
 
 -- 3ª demostración
 -- ===============
 
 example : f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v :=
-begin
-  ext,
-  refl,
-end
+-- by hint
+by finish
 
 -- 4ª demostración
 -- ===============
 
 example : f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v :=
-by {ext, refl}
+-- by library_search
+preimage_inter
 
 -- 5ª demostración
 -- ===============
 
 example : f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v :=
 rfl
-
--- 6ª demostración
--- ===============
-
-example : f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v :=
-preimage_inter
 </pre>
 
-Se puede interactuar con la prueba anterior en [esta sesión con Lean](https://bit.ly/3yXZw3j).
+El código de las demostraciones se encuentra en [GitHub](https://github.com/jaalonso/Demostrando-con-Lean/blob/main/src/Imagen_inversa_de_la_interseccion.lean) y puede ejecutarse con el [Lean Web editor](https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Demostrando-con-Lean/main/src/Imagen_inversa_de_la_interseccion.lean).
+
+La construcción de las demostraciones se muestra en el siguiente vídeo
+
 
 **Soluciones con Isabelle/HOL**
 

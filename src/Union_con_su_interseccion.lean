@@ -1,7 +1,7 @@
 -- Union_con_su_interseccion.lean
 -- Unión con su intersección
--- José A. Alonso Jiménez
--- Sevilla, 26 de mayo de 2021
+-- José A. Alonso Jiménez <https://jaalonso.github.io>
+-- Sevilla, 28-abril-2022
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------

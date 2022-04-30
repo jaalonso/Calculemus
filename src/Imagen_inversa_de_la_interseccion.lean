@@ -1,7 +1,7 @@
 -- Imagen_inversa_de_la_interseccion.lean
--- Imagen inversa de la intersección
--- José A. Alonso Jiménez
--- Sevilla, 5 de junio de 2021
+-- Imagen inversa de la intersección.
+-- José A. Alonso Jiménez <https://jaalonso.github.io>
+-- Sevilla, 30-abril-2022
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
@@ -23,6 +23,10 @@ variables u v : set β
 
 -- 1ª demostración
 -- ===============
+
+#check @mem_preimage α β f u
+#check @mem_of_mem_inter_left
+#check @mem_of_mem_inter_right
 
 example : f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v :=
 begin
@@ -51,35 +55,34 @@ end
 example : f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v :=
 begin
   ext x,
-  exact ⟨λ h, ⟨mem_preimage.mpr (mem_of_mem_inter_left h),
-               mem_preimage.mpr (mem_of_mem_inter_right h)⟩,
-         λ h, ⟨mem_preimage.mp (mem_of_mem_inter_left h),
-               mem_preimage.mp (mem_of_mem_inter_right h)⟩⟩,
+  split,
+  { intro h,
+    split,
+    { simp at *,
+      exact h.1, },
+    { simp at *,
+      exact h.2, }},
+  { intro h,
+    simp at *,
+    exact h, },
 end
 
 -- 3ª demostración
 -- ===============
 
 example : f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v :=
-begin
-  ext,
-  refl,
-end
+-- by hint
+by finish
 
 -- 4ª demostración
 -- ===============
 
 example : f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v :=
-by {ext, refl}
+-- by library_search
+preimage_inter
 
 -- 5ª demostración
 -- ===============
 
 example : f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v :=
 rfl
-
--- 6ª demostración
--- ===============
-
-example : f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v :=
-preimage_inter
