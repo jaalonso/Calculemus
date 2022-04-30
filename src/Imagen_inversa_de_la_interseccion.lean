@@ -24,10 +24,6 @@ variables u v : set β
 -- 1ª demostración
 -- ===============
 
-#check @mem_preimage α β f u
-#check @mem_of_mem_inter_left
-#check @mem_of_mem_inter_right
-
 example : f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v :=
 begin
   ext x,
