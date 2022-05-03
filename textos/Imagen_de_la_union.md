@@ -3,15 +3,9 @@ Título: Imagen de la unión
 Autor:  José A. Alonso
 ---
 
-En Lean, la imagen de un conjunto s por una función f se representa por `f '' s`; es decir,
-<pre lang="text">
-   f '' s = {y | ∃ x, x ∈ s ∧ f x = y}
-</pre>
+En Lean, la imagen de un conjunto s por una función f se representa por `f '' s`; es decir, `f '' s = {y | ∃ x, x ∈ s ∧ f x = y}`
 
-Demostrar que
-<pre lang="text">
-   f '' (s ∪ t) = f '' s ∪ f '' t
-</pre>
+Demostrar que `f '' (s ∪ t) = f '' s ∪ f '' t`
 
 Para ello, completar la siguiente teoría de Lean:
 
@@ -29,7 +23,6 @@ example : f '' (s ∪ t) = f '' s ∪ f '' t :=
 sorry
 </pre>
 
-<h4>Soluciones</h4>
 <!--more-->
 
 **Soluciones con Lean**
@@ -51,10 +44,12 @@ example : f '' (s ∪ t) = f '' s ∪ f '' t :=
 begin
   ext y,
   split,
-  { intro h1,
-    cases h1 with x hx,
+  { intro h,
+    rw mem_image at h,
+    cases h with x hx,
     cases hx with xst fxy,
     rw ← fxy,
+    rw mem_union,
     cases xst with xs xt,
     { left,
       apply mem_image_of_mem,
@@ -62,19 +57,22 @@ begin
     { right,
       apply mem_image_of_mem,
       exact xt, }},
-  { intro h2,
-    cases h2 with yfs yft,
-    { cases yfs with x hx,
+  { intro h,
+    rw mem_union at h,
+    cases h with yfs yft,
+    { rw mem_image at yfs,
+      cases yfs with x hx,
       cases hx with xs fxy,
       rw ← fxy,
       apply mem_image_of_mem,
-      left,
+      apply mem_union_left,
       exact xs, },
-    { cases yft with x hx,
+    { rw mem_image at yft,
+      cases yft with x hx,
       cases hx with xt fxy,
       rw ← fxy,
       apply mem_image_of_mem,
-      right,
+      apply mem_union_right,
       exact xt, }},
 end
 
@@ -217,16 +215,20 @@ end
 -- ===============
 
 example : f '' (s ∪ t) = f '' s ∪ f '' t :=
-by finish [ext_iff, iff_def, mem_image_eq]
+by finish [ext_iff, iff_def]
 
 -- 11ª demostración
 -- ===============
 
 example : f '' (s ∪ t) = f '' s ∪ f '' t :=
+-- by library_search
 image_union f s t
 </pre>
 
-Se puede interactuar con la prueba anterior en [esta sesión con Lean](https://bit.ly/34NvEbJ).
+El código de las demostraciones se encuentra en [GitHub](https://github.com/jaalonso/Razonando-con-Lean/blob/main/src/Imagen_de_la_union.lean) y puede ejecutarse con el [Lean Web editor](https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Razonando-con-Lean/main/src/Imagen_de_la_union.lean).
+
+La construcción de las demostraciones se muestra en el siguiente vídeo
+
 
 **Soluciones con Isabelle/HOL**
 
@@ -373,9 +375,3 @@ lemma "f ` (s ∪ t) = f ` s ∪ f ` t"
 
 end
 </pre>
-
-**Nuevas soluciones**
-<ul>
-<li>En los comentarios se pueden escribir nuevas soluciones.
-<li>El código se debe escribir entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
-</ul>

@@ -91,7 +91,7 @@ example :
 by rw inter_union_distrib_left
 </pre>
 
-El código de las demostraciones se encuentra en [GitHub](https://github.com/jaalonso/Demostrando-con-Lean/blob/main/src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.lean) y puede ejecutarse con el [Lean Web editor](https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Demostrando-con-Lean/main/src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.lean).
+El código de las demostraciones se encuentra en [GitHub](https://github.com/jaalonso/Razonando-con-Lean/blob/main/src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.lean) y puede ejecutarse con el [Lean Web editor](https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Razonando-con-Lean/main/src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.lean).
 
 La construcción de las demostraciones se muestra en el siguiente vídeo
 

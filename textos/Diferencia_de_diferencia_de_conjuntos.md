@@ -114,7 +114,7 @@ example : (s \ t) \ u ⊆ s \ (t ∪ u) :=
 by tidy
 </pre>
 
-El código de las demostraciones se encuentra en [GitHub](https://github.com/jaalonso/Demostrando-con-Lean/blob/main/src/Diferencia_de_diferencia_de_conjuntos.lean) y puede ejecutarse con el [Lean Web editor](https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Demostrando-con-Lean/main/src/Diferencia_de_diferencia_de_conjuntos.lean).
+El código de las demostraciones se encuentra en [GitHub](https://github.com/jaalonso/Razonando-con-Lean/blob/main/src/Diferencia_de_diferencia_de_conjuntos.lean) y puede ejecutarse con el [Lean Web editor](https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Razonando-con-Lean/main/src/Diferencia_de_diferencia_de_conjuntos.lean).
 
 La construcción de las demostraciones se muestra en el siguiente vídeo
 

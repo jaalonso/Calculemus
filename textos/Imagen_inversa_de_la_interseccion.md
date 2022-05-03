@@ -102,10 +102,11 @@ example : f ⁻¹' (u ∩ v) = f ⁻¹' u ∩ f ⁻¹' v :=
 rfl
 </pre>
 
-El código de las demostraciones se encuentra en [GitHub](https://github.com/jaalonso/Demostrando-con-Lean/blob/main/src/Imagen_inversa_de_la_interseccion.lean) y puede ejecutarse con el [Lean Web editor](https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Razonando-con-Lean/main/src/Imagen_inversa_de_la_interseccion.lean).
+El código de las demostraciones se encuentra en [GitHub](https://github.com/jaalonso/Razonando-con-Lean/blob/main/src/Imagen_inversa_de_la_interseccion.lean) y puede ejecutarse con el [Lean Web editor](https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Razonando-con-Lean/main/src/Imagen_inversa_de_la_interseccion.lean).
 
 La construcción de las demostraciones se muestra en el siguiente vídeo
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/av4vNL8-AJA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Soluciones con Isabelle/HOL**
 

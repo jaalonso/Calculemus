@@ -1,7 +1,7 @@
 -- Imagen_de_la_union.lean
 -- Imagen de la unión.
--- José A. Alonso Jiménez
--- Sevilla, 8 de junio de 2021
+-- José A. Alonso Jiménez <https://jaalonso.github.io>
+-- Sevilla, 4-mayo-2022
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
@@ -22,6 +22,12 @@ variables {α : Type*} {β : Type*}
 variable  f : α → β
 variables s t : set α
 
+#check mem_image
+#check mem_image_of_mem
+#check mem_union
+#check mem_union_left
+#check mem_union_right
+
 -- 1ª demostración
 -- ===============
 
@@ -29,10 +35,12 @@ example : f '' (s ∪ t) = f '' s ∪ f '' t :=
 begin
   ext y,
   split,
-  { intro h1,
-    cases h1 with x hx,
+  { intro h,
+    rw mem_image at h,
+    cases h with x hx,
     cases hx with xst fxy,
     rw ← fxy,
+    rw mem_union,
     cases xst with xs xt,
     { left,
       apply mem_image_of_mem,
@@ -40,19 +48,22 @@ begin
     { right,
       apply mem_image_of_mem,
       exact xt, }},
-  { intro h2,
-    cases h2 with yfs yft,
-    { cases yfs with x hx,
+  { intro h,
+    rw mem_union at h,
+    cases h with yfs yft,
+    { rw mem_image at yfs,
+      cases yfs with x hx,
       cases hx with xs fxy,
       rw ← fxy,
       apply mem_image_of_mem,
-      left,
+      apply mem_union_left,
       exact xs, },
-    { cases yft with x hx,
+    { rw mem_image at yft,
+      cases yft with x hx,
       cases hx with xt fxy,
       rw ← fxy,
       apply mem_image_of_mem,
-      right,
+      apply mem_union_right,
       exact xt, }},
 end
 
@@ -195,10 +206,11 @@ end
 -- ===============
 
 example : f '' (s ∪ t) = f '' s ∪ f '' t :=
-by finish [ext_iff, iff_def, mem_image_eq]
+by finish [ext_iff, iff_def]
 
 -- 11ª demostración
 -- ===============
 
 example : f '' (s ∪ t) = f '' s ∪ f '' t :=
+-- by library_search
 image_union f s t
