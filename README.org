@@ -11,7 +11,6 @@ Los problemas publicados desde el 18-04-22 (por orden cronológico) son
 + 26-04-22: [[./textos/Interseccion_con_su_union.md][Intersección con su unión]] (En [[./src/Interseccion_con_su_union.lean][Lean]] y en [[./thy/Interseccion_con_su_union.thy][Isabelle]]).
 + 28-04-22: [[./textos/Distributiva_de_la_interseccion_respecto_de_la_union_general.md][Distributiva de la intersección respecto de la unión general]] (En [[./src/Distributiva_de_la_interseccion_respecto_de_la_union_general.lean][Lean]] y en [[./thy/Distributiva_de_la_interseccion_respecto_de_la_union_general.thy][Isabelle]]).
 + 30-04-23: [[./textos/Imagen_inversa_de_la_interseccion.md][Imagen inversa de la intersección]] (En [[./src/Imagen_inversa_de_la_interseccion.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_interseccion.thy][Isabelle]]).
-
 + 04-05-22: [[./textos/Imagen_de_la_union.md][Imagen de la unión]] (En [[./src/Imagen_de_la_union.lean][Lean]] y en [[./thy/Imagen_de_la_union.thy][Isabelle]]).
 
 Los ejercicios publicados anteriormente se encuentran en [[./Ejercicios_del_24-01-20_al_15-10-21.org][este enlace]].
