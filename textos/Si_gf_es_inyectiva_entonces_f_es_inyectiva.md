@@ -21,9 +21,7 @@ example
 sorry
 </pre>
 
-<pre lang="lean">
-
-<--!more-->
+<!--more-->
 
 **Soluciones con Lean**
 
