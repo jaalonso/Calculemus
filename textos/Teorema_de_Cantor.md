@@ -3,7 +3,7 @@ Título: Teorema de Cantor
 Autor:  José A. Alonso
 ---
 
-Demostrar que el teorema de Cantor; es decir, que no existe ninhuna aplicación suprayectiva de un conjunto en su conjunto potencia.
+Demostrar el teorema de Cantor; es decir, que no existe ninguna aplicación suprayectiva de un conjunto en su conjunto potencia.
 
 Para ello, completar la siguiente teoría de Lean:
 
@@ -17,7 +17,9 @@ example : ∀ f : α → set α, ¬ surjective f :=
 sorry
 </pre>
 
-[expand title="Soluciones con Lean"]
+<--!more-->
+
+**Soluciones con Lean**
 
 <pre lang="lean">
 import data.set.basic
@@ -30,16 +32,17 @@ variables {α : Type}
 
 example : ∀ f : α → set α, ¬ surjective f :=
 begin
-  intros f surjf,
+  intros f hf,
   let S := {i | i ∉ f i},
-  unfold surjective at surjf,
-  cases surjf S with j fjS,
+  unfold surjective at hf,
+  cases hf S with j hj,
   by_cases j ∈ S,
-  { apply absurd _ h,
-    rw fjS,
+  { dsimp at h,
+    apply h,
+    rw hj,
     exact h, },
   { apply h,
-    rw ← fjS at h,
+    rw ← hj at h,
     exact h, },
 end
 
@@ -48,14 +51,14 @@ end
 
 example : ∀ f : α → set α, ¬ surjective f :=
 begin
-  intros f surjf,
+  intros f hf,
   let S := {i | i ∉ f i},
-  cases surjf S with j fjS,
+  cases hf S with j hj,
   by_cases j ∈ S,
-  { apply absurd _ h,
-    rwa fjS, },
+  { apply  h,
+    rwa hj, },
   { apply h,
-    rwa ← fjS at h, },
+    rwa ← hj at h, },
 end
 
 -- 3ª demostración
@@ -63,13 +66,13 @@ end
 
 example : ∀ f : α → set α, ¬ surjective f :=
 begin
-  intros f surjf,
+  intros f hf,
   let S := {i | i ∉ f i},
-  cases surjf S with j fjS,
+  cases hf S with j hj,
   have h : (j ∈ S) = (j ∉ S), from
     calc  (j ∈ S)
         = (j ∉ f j) : set.mem_set_of_eq
-    ... = (j ∉ S)   : congr_arg not (congr_arg (has_mem.mem j) fjS),
+    ... = (j ∉ S)   : congr_arg not (congr_arg (has_mem.mem j) hj),
   exact false_of_a_eq_not_a h,
 end
 
@@ -77,15 +80,29 @@ end
 -- ===============
 
 example : ∀ f : α → set α, ¬ surjective f :=
+begin
+  intros f hf,
+  let S := {i | i ∉ f i},
+  cases hf S with j hj,
+  have h : (j ∈ S) = (j ∉ S),
+  { dsimp,
+    exact congr_arg not (congr_arg (has_mem.mem j) hj), },
+  { exact false_of_a_eq_not_a (congr_arg not (congr_arg not h)), },
+end
+
+-- 5ª demostración
+-- ===============
+
+example : ∀ f : α → set α, ¬ surjective f :=
 cantor_surjective
 </pre>
 
-Se puede interactuar con la prueba anterior en <a href="https://www.cs.us.es/~jalonso/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Teorema_de_Cantor.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>,
+El código de las demostraciones se encuentra en [GitHub](https://github.com/jaalonso/Razonando-con-Lean/blob/main/src/Teorema_de_Cantor.lean) y puede ejecutarse con el [Lean Web editor](https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Razonando-con-Lean/main/src/Teorema_de_Cantor.lean).
 
-En los comentarios se pueden escribir otras soluciones, escribiendo el código entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
-[/expand]
+La construcción de las demostraciones se muestra en el siguiente vídeo
 
-[expand title="Soluciones con Isabelle/HOL"]
+
+**Soluciones con Isabelle/HOL**
 
 <pre lang="isar">
 theory Teorema_de_Cantor
@@ -241,6 +258,3 @@ theorem
 
 end
 </pre>
-
-En los comentarios se pueden escribir otras soluciones, escribiendo el código entre una línea con &#60;pre lang=&quot;isar&quot;&#62; y otra con &#60;/pre&#62;
-[/expand]
