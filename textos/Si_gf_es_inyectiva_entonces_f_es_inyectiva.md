@@ -82,7 +82,7 @@ begin
 end
 </pre>
 
-El código de las demostraciones se encuentra en [GitHub](https://github.com/jaalonso/Razonando-con-Lean/blob/main/src/Si_gf_es_inyectiva_entonces_f_es_inyectiva.lean) y puede ejecutarse con el [Lean Web editor](https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Razonando-con-Lean/main/src/Si_gf_es_inyectiva_entonces_f_es_inyectiva.lean).
+El código de las demostraciones se encuentra en [GitHub](https://github.com/jaalonso/Calculemus/blob/main/src/Si_gf_es_inyectiva_entonces_f_es_inyectiva.lean) y puede ejecutarse con el [Lean Web editor](https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Si_gf_es_inyectiva_entonces_f_es_inyectiva.lean).
 
 **Soluciones con Isabelle/HOL**
 

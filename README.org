@@ -1,5 +1,5 @@
 #+TITLE: Calculemus (Ejercicios de demostración asistida por ordenador)
-
+ 
 En este repositorio se encuentran los ejercicios propuestos en [[https://www.glc.us.es/~jalonso/calculemus][Calculemus]] para
 demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 
