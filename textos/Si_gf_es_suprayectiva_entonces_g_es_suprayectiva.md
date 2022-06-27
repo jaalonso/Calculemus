@@ -59,6 +59,10 @@ begin
 end  
 </pre>
 
+El código de las demostraciones se encuentra en [GitHub](https://github.com/jaalonso/Calculemus/blob/main/src/Si_gf_es_suprayectiva_entonces_g_es_suprayectiva.lean) y puede ejecutarse con el [Lean Web editor](https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Si_gf_es_suprayectiva_entonces_g_es_suprayectiva.lean).
+
+
+
 **Soluciones con Isabelle/HOL**
 
 <pre lang="isar">
