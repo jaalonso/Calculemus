@@ -16,6 +16,8 @@ variable  {f : X → Y}
 variable  {g : Y → Z}
 
 -- 1ª demostración
+-- ===============
+
 example
   (Hgf : surjective (g ∘ f))
   : surjective g :=
@@ -26,6 +28,9 @@ begin
   calc g (f x) = (g ∘ f) x : rfl
            ... = z         : hx,
 end
+
+-- 2ª demostración
+-- ===============
 
 example
   (Hgf : surjective (g ∘ f))
