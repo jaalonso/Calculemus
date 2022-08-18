@@ -29,6 +29,11 @@ notation `|`x`|` := abs x
 def limite (u : ℕ → ℝ) (c : ℝ) :=
 ∀ ε > 0, ∃ N, ∀ n ≥ N, |u n - c| < ε
 
+variable b : ℝ
+example : b ≤ c → a + b ≤ a + c :=
+-- by library_search
+(add_le_add_iff_left a).mpr
+
 -- 1ª demostración
 example
   (hu : limite u a)
@@ -49,10 +54,11 @@ begin
   have Ha : |u N - a| < ε := HNu N HNu',
   have Hc : |v N - c| < ε := HNv N HNv',
   have HN : u N ≤ v N := hle N,
+  have HN' : u N - c ≤ v N - c := sub_le_sub_right (hle N) c,
   apply lt_irrefl (a - c),
   calc a - c
        = (a - u N) + (u N - c)   : by ring
-   ... ≤ (a - u N) + (v N - c)   : by simp [HN]
+   ... ≤ (a - u N) + (v N - c)   : add_le_add_left HN' (a - u N)
    ... ≤ |(a - u N) + (v N - c)| : le_abs_self ((a - u N) + (v N - c))
    ... ≤ |a - u N| + |v N - c|   : abs_add (a - u N) (v N - c)
    ... = |u N - a| + |v N - c|   : by simp only [abs_sub_comm]
@@ -78,10 +84,11 @@ begin
   have Hc : |v N - c| < ε :=
     HNv N (le_max_right Nu Nv),
   have HN : u N ≤ v N := hle N,
+  have HN' : u N - c ≤ v N - c := sub_le_sub_right (hle N) c,
   apply lt_irrefl (a - c),
   calc a - c
        = (a - u N) + (u N - c)   : by ring
-   ... ≤ (a - u N) + (v N - c)   : by simp [HN]
+   ... ≤ (a - u N) + (v N - c)   : add_le_add_left HN' (a - u N)
    ... ≤ |(a - u N) + (v N - c)| : le_abs_self ((a - u N) + (v N - c))
    ... ≤ |a - u N| + |v N - c|   : abs_add (a - u N) (v N - c)
    ... = |u N - a| + |v N - c|   : by simp only [abs_sub_comm]
@@ -107,10 +114,11 @@ begin
   have Hc : |v N - c| < ε :=
     HNv N (le_max_right Nu Nv),
   have HN : u N ≤ v N := hle N,
+  have HN' : u N - c ≤ v N - c := sub_le_sub_right (hle N) c,
   apply lt_irrefl (a - c),
   calc a - c
        = (a - u N) + (u N - c)   : by ring
-   ... ≤ (a - u N) + (v N - c)   : by simp [HN]
+   ... ≤ (a - u N) + (v N - c)   : add_le_add_left HN' (a - u N)
    ... ≤ |(a - u N) + (v N - c)| : by simp [le_abs_self]
    ... ≤ |a - u N| + |v N - c|   : by simp [abs_add]
    ... = |u N - a| + |v N - c|   : by simp [abs_sub_comm]
