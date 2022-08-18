@@ -25,7 +25,7 @@ universe  u
 variables {M : Type u} [left_cancel_monoid M]
 variables {a b : M}
 
--- ?ª demostración
+-- 1ª demostración
 -- ===============
 
 example : a * b = a ↔ b = 1 :=
@@ -40,20 +40,21 @@ begin
     exact mul_one a, },
 end
 
--- ?ª demostración
+-- 2ª demostración
 -- ===============
 
 example : a * b = a ↔ b = 1 :=
-calc a * b = a ↔ a * b = a * 1 : by rw mul_one
-           ... ↔ b = 1         : mul_left_cancel_iff
+calc a * b = a
+     ↔ a * b = a * 1 : by rw mul_one
+ ... ↔ b = 1         : mul_left_cancel_iff
 
--- ?ª demostración
+-- 3ª demostración
 -- ===============
 
 example : a * b = a ↔ b = 1 :=
 mul_right_eq_self
 
--- ?ª demostración
+-- 4ª demostración
 -- ===============
 
 example : a * b = a ↔ b = 1 :=
