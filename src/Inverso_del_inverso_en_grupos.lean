@@ -53,7 +53,7 @@ calc (a⁻¹)⁻¹
 
 example : (a⁻¹)⁻¹ = a :=
 begin
-  apply inv_eq_of_mul_eq_one,
+  apply mul_eq_one_iff_inv_eq.mp,
   exact mul_left_inv a,
 end
 
@@ -61,7 +61,7 @@ end
 -- ===============
 
 example : (a⁻¹)⁻¹ = a :=
-inv_eq_of_mul_eq_one (mul_left_inv a)
+mul_eq_one_iff_inv_eq.mp (mul_left_inv a)
 
 -- 6ª demostración
 -- ===============
