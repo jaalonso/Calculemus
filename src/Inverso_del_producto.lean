@@ -15,10 +15,6 @@ universe  u
 variables {G : Type u} [group G]
 variables {a b : G}
 
-example : a * b = 1 → a⁻¹ = b :=
-mul_eq_one_iff_inv_eq.mp
-
-
 -- 1ª demostración
 -- ===============
 
