@@ -16,7 +16,6 @@ open set
 variable {α : Type}
 variables s t : set α
 
-
 -- 1ª demostración
 -- ===============
 
@@ -123,6 +122,6 @@ inf_sup_self
 -- 9ª demostración
 -- ===============
 
-example : s ∩ (s ∪ t) = s := 
+example : s ∩ (s ∪ t) = s :=
 -- by hint
 by finish
