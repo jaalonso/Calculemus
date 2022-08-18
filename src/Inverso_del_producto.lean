@@ -15,12 +15,16 @@ universe  u
 variables {G : Type u} [group G]
 variables {a b : G}
 
+example : a * b = 1 → a⁻¹ = b :=
+mul_eq_one_iff_inv_eq.mp
+
+
 -- 1ª demostración
 -- ===============
 
 example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
 begin
-  apply inv_eq_of_mul_eq_one,
+  apply mul_eq_one_iff_inv_eq.mp,
   calc a * b * (b⁻¹ * a⁻¹)
        = ((a * b) * b⁻¹) * a⁻¹ : (mul_assoc _ _ _).symm
    ... = (a * (b * b⁻¹)) * a⁻¹ : congr_arg (* a⁻¹) (mul_assoc a _ _)
@@ -34,7 +38,7 @@ end
 
 example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
 begin
-  apply inv_eq_of_mul_eq_one,
+  apply mul_eq_one_iff_inv_eq.mp,
   calc a * b * (b⁻¹ * a⁻¹)
        = ((a * b) * b⁻¹) * a⁻¹ : by simp only [mul_assoc]
    ... = (a * (b * b⁻¹)) * a⁻¹ : by simp only [mul_assoc]
@@ -48,7 +52,7 @@ end
 
 example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
 begin
-  apply inv_eq_of_mul_eq_one,
+  apply mul_eq_one_iff_inv_eq.mp,
   calc a * b * (b⁻¹ * a⁻¹)
        = ((a * b) * b⁻¹) * a⁻¹ : by simp [mul_assoc]
    ... = (a * (b * b⁻¹)) * a⁻¹ : by simp
