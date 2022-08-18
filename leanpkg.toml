@@ -1,8 +1,8 @@
 [package]
 name = "Calculemus"
 version = "0.1"
-lean_version = "leanprover-community/lean:3.31.0"
+lean_version = "leanprover-community/lean:3.44.1"
 path = "src"
 
 [dependencies]
-mathlib = {git = "https://github.com/leanprover-community/mathlib", rev = "e245b24b8a46f1496cdc588a10e42042371a7cb9"}
+mathlib = {git = "https://github.com/leanprover-community/mathlib", rev = "d45a8ace0fb50f4b0a1ea72bdf57f3881f6f8112"}
