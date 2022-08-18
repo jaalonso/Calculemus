@@ -67,7 +67,8 @@ calc a⁻¹ = a⁻¹ * (a * b) : by simp [h]
 example
   (h : b * a = 1)
   : b = a⁻¹ :=
-eq_inv_of_mul_eq_one h
+-- by library_search
+eq_inv_iff_mul_eq_one.mpr h
 
 -- Referencia
 -- ==========
