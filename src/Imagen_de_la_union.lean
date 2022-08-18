@@ -33,9 +33,9 @@ begin
     rw mem_image at h,
     cases h with x hx,
     cases hx with xst fxy,
-    rw ← fxy, 
+    rw ← fxy,
     rw mem_union at xst,
-    cases xst with xs xt, 
+    cases xst with xs xt,
     { apply mem_union_left,
       apply mem_image_of_mem,
       exact xs, },
@@ -73,7 +73,7 @@ begin
   ext y,
   split,
   { rintro ⟨x, xst, rfl⟩,
-    cases xst with xs xt, 
+    cases xst with xs xt,
     { left,
       exact mem_image_of_mem f xs, },
     { right,
@@ -97,7 +97,7 @@ begin
   ext y,
   split,
   { rintro ⟨x, xst, rfl⟩,
-    cases xst with xs xt, 
+    cases xst with xs xt,
     { left,
       use [x, xs], },
     { right,
@@ -155,7 +155,7 @@ example : f '' (s ∪ t) = f '' s ∪ f '' t :=
 begin
   ext y,
   rw iff_def,
-  finish, 
+  finish,
 end
 
 -- 8ª demostración
