@@ -79,11 +79,11 @@ iff.intro
     show even (n^2), from
       exists.elim h1
         ( assume k,
-          assume hk : n = 2*k ,
-          have h2 : n^2 = 2*(2*k^2), from
+          assume hk : n = k + k ,
+          have h2 : n^2 = 2*k^2 + 2*k^2, from
             calc  n^2
-                = (2*k)^2   : by rw hk
-            ... = 2*(2*k^2) : by ring,
+                = (k + k)^2  : by rw hk
+            ... = 2*k^2 + 2*k^2 : by ring,
           show even (n^2),
             from exists.intro (2*k^2) h2 ))
 
@@ -121,6 +121,6 @@ begin
     cases h with k hk,
     use 2*k^2,
     calc n^2
-         = (2*k)^2   : by rw hk
-     ... = 2*(2*k^2) : by ring, },
+         = (k + k)^2     : by rw hk
+     ... = 2*k^2 + 2*k^2 : by ring, },
 end
