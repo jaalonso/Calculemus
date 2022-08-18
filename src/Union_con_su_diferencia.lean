@@ -37,8 +37,7 @@ begin
       { left,
         split,
         { exact xs, },
-        { dsimp,
-          exact h, }},
+        { exact h, }},
       { right,
         exact xt, }}},
 end
