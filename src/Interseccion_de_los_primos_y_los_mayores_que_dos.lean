@@ -20,7 +20,7 @@ import tactic
 
 open nat
 
-def primos      : set ℕ := {n | prime n}
+def primos      : set ℕ := {n | nat.prime n}
 def mayoresQue2 : set ℕ := {n | n > 2}
 def impares     : set ℕ := {n | ¬ even n}
 
