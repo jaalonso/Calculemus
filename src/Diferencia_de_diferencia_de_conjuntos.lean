@@ -33,7 +33,7 @@ begin
     { apply hxnu,
       exact hxu, }},
 end
-  
+
 -- 2ª demostración
 -- ===============
 
@@ -47,7 +47,7 @@ begin
     { exact hxnt hxt, },
     { exact hxnu hxu, }},
 end
-  
+
 -- 3ª demostración
 -- ===============
 
@@ -67,7 +67,7 @@ example : (s \ t) \ u ⊆ s \ (t ∪ u) :=
 begin
   rintros x ⟨⟨xs, xnt⟩, xnu⟩,
   use xs,
-  rintros (xt | xu); contradiction, 
+  rintros (xt | xu); contradiction,
 end
 
 -- 5ª demostración
@@ -99,4 +99,4 @@ by rw diff_diff
 -- ===============
 
 example : (s \ t) \ u ⊆ s \ (t ∪ u) :=
-by tidy 
+by tidy
