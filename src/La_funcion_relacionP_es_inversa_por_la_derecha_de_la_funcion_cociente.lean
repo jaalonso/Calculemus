@@ -100,7 +100,7 @@ lemma iguales_si_comun
   (haX : a ∈ X)
   (haY : a ∈ Y)
   : X = Y :=
-Hdisjuntos P X Y hX hY ⟨a, haX, haY⟩
+Hdisjuntos P X hX Y hY ⟨a, haX, haY⟩
 
 lemma pertenece_si_pertenece
   (hX : X ∈ Bloques P)
