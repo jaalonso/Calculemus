@@ -38,5 +38,5 @@ begin
      ... = (n + 2) * (2 * a + (n + 1) * d)
            : by ring_nf
      ... = (succ n + 1) * (2 * a + succ n * d)
-           : congr_arg2 (*) (by norm_cast) rfl, },
+           : by norm_cast, },
 end
