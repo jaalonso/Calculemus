@@ -75,7 +75,7 @@ lemma clases_disjuntas
   (hR: equivalence R)
   : ∀ X Y ∈ clases R, (X ∩ Y : set A).nonempty → X = Y :=
 begin
-  rintros X Y ⟨a, rfl⟩ ⟨b, rfl⟩ ⟨c, hca, hcb⟩,
+  rintros X ⟨a, rfl⟩ Y ⟨b, rfl⟩ ⟨c, hca, hcb⟩,
   exact clases_iguales_si_pertenece hR (hR.2.2 (hR.2.1 hca) hcb),
 end
 
