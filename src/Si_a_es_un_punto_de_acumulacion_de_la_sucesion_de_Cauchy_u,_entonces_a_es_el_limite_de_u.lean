@@ -120,6 +120,6 @@ begin
   intros n hn,
   calc  |u n - a|
       = |(u n - u N') + (u N' - a)| : by ring_nf
-  ... ≤ |u n - u N'| + |u N' - a|   : by simp [abs_add]
+  ... ≤ |u n - u N'| + |u N' - a|   : abs_add (u n - u N') (u N' - a)
   ... < ε                           : by linarith [hN n hn N' hNN'],
 end
