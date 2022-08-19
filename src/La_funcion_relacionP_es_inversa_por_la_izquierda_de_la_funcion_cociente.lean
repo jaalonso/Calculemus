@@ -75,7 +75,7 @@ lemma clases_disjuntas
   (hR: equivalence R)
   : ∀ X Y ∈ clases R, (X ∩ Y : set A).nonempty → X = Y :=
 begin
-  rintros X Y ⟨a, rfl⟩ ⟨b, rfl⟩ ⟨c, hca, hcb⟩,
+  rintros X ⟨a, rfl⟩ Y ⟨b, rfl⟩ ⟨c, hca, hcb⟩,
   exact clases_iguales_si_pertenece hR (hR.2.2 (hR.2.1 hca) hcb),
 end
 
@@ -100,7 +100,7 @@ lemma iguales_si_comun
   (haX : a ∈ X)
   (haY : a ∈ Y)
   : X = Y :=
-Hdisjuntos P X Y hX hY ⟨a, haX, haY⟩
+Hdisjuntos P X hX Y hY ⟨a, haX, haY⟩
 
 lemma pertenece_si_pertenece
   (hX : X ∈ Bloques P)
