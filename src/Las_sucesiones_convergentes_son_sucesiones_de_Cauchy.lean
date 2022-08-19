@@ -130,7 +130,7 @@ begin
   intros p hp q hq,
   calc |u p - u q|
        = |(u p - l) + (l - u q)| : by ring_nf
-   ... ≤ |u p - l|  + |l - u q|  : by simp [abs_add]
+   ... ≤ |u p - l|  + |l - u q|  : abs_add (u p - l) (l - u q)
    ... = |u p - l|  + |u q - l|  : by simp [abs_sub_comm]
    ... < ε                       : by linarith [hN p hp, hN q hq],
 end
