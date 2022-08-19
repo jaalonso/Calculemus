@@ -52,13 +52,13 @@ example
   (Hgf : injective (g ∘ f))
   : injective f :=
 begin
-  assume x  : X, 
-  assume x' : X, 
+  assume x  : X,
+  assume x' : X,
   assume f_xx' : f x = f x',
-  have gf_xx' : (g ∘ f) x = (g ∘ f) x', from 
+  have gf_xx' : (g ∘ f) x = (g ∘ f) x', from
     calc (g ∘ f) x = g (f x)    : rfl
                ... = g (f x')   : congr_arg g f_xx'
                ... = (g ∘ f) x' : rfl,
-  show x = x', 
+  show x = x',
     { exact Hgf gf_xx' },
 end
