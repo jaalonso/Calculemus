@@ -28,8 +28,7 @@ example :
   4 * sumaCubos n = (n*(n+1))^2 :=
 begin
   induction n with n HI,
-  { simp,
-    ring, },
+  { simp, },
   { calc 4 * sumaCubos (succ n)
          = 4 * (sumaCubos n + (n+1)^3)
            : by simp
@@ -52,8 +51,7 @@ example :
   4 * sumaCubos n = (n*(n+1))^2 :=
 begin
   induction n with n HI,
-  { simp,
-    ring, },
+  { simp, },
   { calc 4 * sumaCubos (succ n)
          = 4 * sumaCubos n + 4*(n+1)^3
            : by {simp ; ring}
