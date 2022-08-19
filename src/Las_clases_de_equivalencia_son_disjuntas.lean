@@ -48,7 +48,7 @@ example
   (hR: equivalence R)
   : ∀ X Y ∈ clases R, (X ∩ Y : set A).nonempty → X = Y :=
 begin
-  intros X Y hX hY hXY,
+  intros X hX Y hY hXY,
   unfold clases at hX hY,
   dsimp at hX hY,
   cases hX with a ha,
@@ -68,7 +68,7 @@ example
   (hR: equivalence R)
   : ∀ X Y ∈ clases R, (X ∩ Y : set A).nonempty → X = Y :=
 begin
-  intros X Y hX hY hXY,
+  intros X hX Y hY hXY,
   cases hX with a ha,
   cases hY with b hb,
   rw [ha, hb] at *,
@@ -86,7 +86,7 @@ example
   (hR: equivalence R)
   : ∀ X Y ∈ clases R, (X ∩ Y : set A).nonempty → X = Y :=
 begin
-  rintros X Y ⟨a, rfl⟩ ⟨b, rfl⟩ ⟨c, hca, hcb⟩,
+  rintros X ⟨a, rfl⟩ Y ⟨b, rfl⟩ ⟨c, hca, hcb⟩,
   apply clases_iguales_si_pertenece hR,
   apply hR.2.2 _ hcb,
   apply hR.2.1,
@@ -98,6 +98,6 @@ lemma clases_disjuntas
   (hR: equivalence R)
   : ∀ X Y ∈ clases R, (X ∩ Y : set A).nonempty → X = Y :=
 begin
-  rintros X Y ⟨a, rfl⟩ ⟨b, rfl⟩ ⟨c, hca, hcb⟩,
+  rintros X ⟨a, rfl⟩ Y ⟨b, rfl⟩ ⟨c, hca, hcb⟩,
   exact clases_iguales_si_pertenece hR (hR.2.2 (hR.2.1 hca) hcb),
 end
