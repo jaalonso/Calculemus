@@ -27,8 +27,7 @@ begin
   split,
   { rw ← mem_preimage,
     exact hx.1, },
-  { dsimp,
-    rw ← mem_preimage,
+  { rw ← mem_preimage,
     exact hx.2, },
 end
 
