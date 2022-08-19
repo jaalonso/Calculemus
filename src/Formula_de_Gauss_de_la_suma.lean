@@ -41,19 +41,19 @@ begin
   intros x hx,
   replace hx : x < n := mem_range.1 hx,
   replace hx : x ≤ n - 1 := le_pred_of_lt hx,
-  exact nat.add_sub_cancel' hx,
+  exact nat.add_sub_of_le hx,
 end
 
 -- 2ª demostración del lema auxiliar
 example : ∀ x, x ∈ range n → x + (n - 1 - x) = n - 1 :=
 begin
   intros x hx,
-  exact nat.add_sub_cancel' (le_pred_of_lt (mem_range.1 hx)),
+  exact nat.add_sub_of_le (le_pred_of_lt (mem_range.1 hx)),
 end
 
 -- 3ª demostración del lema auxiliar
 lemma auxiliar : ∀ x, x ∈ range n → x + (n - 1 - x) = n - 1 :=
-λ x hx, nat.add_sub_cancel' (le_pred_of_lt (mem_range.1 hx))
+λ x hx, nat.add_sub_of_le (le_pred_of_lt (mem_range.1 hx))
 
 -- Lema principal
 -- ==============
