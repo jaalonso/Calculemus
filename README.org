@@ -171,3 +171,4 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + 22-08-22: [[./textos/Asociativa_conmutativa_de_los_reales.md][Asociativa conmutativa de los reales]] (En [[./src/Asociativa_conmutativa_de_los_reales.lean][Lean]]).
 + M23-08-22: [[./textos/Identidad_condicional_en_los_reales.md][Identidad condicional en los reales]] (En [[./src/Identidad_condicional_en_los_reales.lean][Lean]]).
 + X24-08-22: [[./textos/Cuadrado_del_binomio.md][Cuadrado del binomio]] (En [[./src/Cuadrado_del_binomio.lean][Lean]]).
++ J25-08-22: [[./textos/Producto_de_dos_binomios.md][Producto de dos binomios]] (En [[./src/Producto_de_dos_binomios.lean][Lean]]).
