@@ -3,8 +3,10 @@ Título: Suma por diferencia.
 Autor:  José A. Alonso
 ---
 
-Demostrar que si [latex]a[/latex] y $b$ son números reales, entonces
-$$(a + b) * (a - b) = a^2 - b^2$$
+Demostrar que si a y b son números reales, entonces
+<pre lang="text">
+(a + b) * (a - b) = a^2 - b^2
+</pre>
 
 Para ello, completar la siguiente teoría de Lean:
 
