@@ -172,3 +172,4 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + M23-08-22: [[./textos/Identidad_condicional_en_los_reales.md][Identidad condicional en los reales]] (En [[./src/Identidad_condicional_en_los_reales.lean][Lean]]).
 + X24-08-22: [[./textos/Cuadrado_del_binomio.md][Cuadrado del binomio]] (En [[./src/Cuadrado_del_binomio.lean][Lean]]).
 + J25-08-22: [[./textos/Producto_de_dos_binomios.md][Producto de dos binomios]] (En [[./src/Producto_de_dos_binomios.lean][Lean]]).
++ V26-08-22: [[./textos/Suma_por_diferencia.md][Suma por diferencia]] (En [[./src/Suma_por_diferencia.lean][Lean]]).
