@@ -55,19 +55,6 @@ begin
    rw ← add_assoc,
 end
 
--- El desarrollo de la prueba es
---
---    a b c d : ℝ
---    ⊢ (a + b) * (c + d) = a * c + a * d + b * c + b * d
--- rw add_mul,
---    ⊢ a * (c + d) + b * (c + d) = a * c + a * d + b * c + b * d
--- rw mul_add,
---    ⊢ a * c + a * d + b * (c + d) = a * c + a * d + b * c + b * d
--- rw mul_add,
---    ⊢ a * c + a * d + (b * c + b * d) = a * c + a * d + b * c + b * d
--- rw ← add_assoc,
---    no goals
-
 -- 5ª demostración
 -- ===============
 
