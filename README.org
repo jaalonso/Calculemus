@@ -168,5 +168,6 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + 27-07-22: [[./textos/Si_gf_es_suprayectiva_entonces_g_es_suprayectiva.md][Si g·f es suprayectiva, entonces g es suprayectiva]] (En [[./src/Si_gf_es_suprayectiva_entonces_g_es_suprayectiva.lean][Lean]] y en [[./thy/Si_gf_es_suprayectiva_entonces_g_es_suprayectiva.thy][Isabelle]]).
 + 28-07-22: [[./textos/Si_ff_es_biyectiva_entonces_f_es_biyectiva.md][Si f·f es biyectiva entonces f es biyectiva]] (En [[./src/Si_ff_es_biyectiva_entonces_f_es_biyectiva.lean][Lean]] y en [[./thy/Si_ff_es_biyectiva_entonces_f_es_biyectiva.thy][Isabelle]]).
 + 21-08-22: [[./textos/El_producto_por_un_par_es_par.md][El producto por un par es par]] (En [[./src/El_producto_por_un_par_es_par.lean][Lean]]).
-+ L22-08-22: [[./textos/Asociativa_conmutativa_de_los_reales.md][Asociativa conmutativa de los reales]] (En [[./src/Asociativa_conmutativa_de_los_reales.lean][Lean]]).
++ 22-08-22: [[./textos/Asociativa_conmutativa_de_los_reales.md][Asociativa conmutativa de los reales]] (En [[./src/Asociativa_conmutativa_de_los_reales.lean][Lean]]).
 + M23-08-22: [[./textos/Identidad_condicional_en_los_reales.md][Identidad condicional en los reales]] (En [[./src/Identidad_condicional_en_los_reales.lean][Lean]]).
++ X24-08-22: [[./textos/Cuadrado_del_binomio.md][Cuadrado del binomio]] (En [[./src/Cuadrado_del_binomio.lean][Lean]]).
