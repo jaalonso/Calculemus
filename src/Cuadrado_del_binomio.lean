@@ -1,5 +1,5 @@
 -- Cuadrado_del_binomio.lean
--- Cuadrado del binomio-
+-- Cuadrado del binomio.
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
 -- Sevilla, 24-agosto-2022
 -- ---------------------------------------------------------------------
