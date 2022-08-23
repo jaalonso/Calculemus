@@ -1,5 +1,5 @@
 -- Opuesto_se_cancela_con_la_suma_por_la_izquierda.lean
--- Opuesto se cancela con la suma por la izquierda
+-- Si R es un anillo y a, b ∈ R, entonces -a + (a + b) = b
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
 -- Sevilla, 29-agosto-2022
 -- ---------------------------------------------------------------------
@@ -23,7 +23,6 @@
 -- ---------------------------------------------------------------------
 
 import algebra.ring
-import tactic
 
 variables {R : Type*} [ring R]
 variables a b : R
@@ -44,19 +43,6 @@ begin
   rw add_left_neg,
   rw zero_add,
 end
-
--- El desarrollo de la prueba es
---
---    R : Type u_1,
---    _inst_1 : ring R,
---    a b : R
---    ⊢ -a + (a + b) = b
--- rw ← add_assoc,
---    ⊢ -a + a + b = b
--- rw add_left_neg,
---    ⊢ 0 + b = b
--- rw zero_add,
---    no goals
 
 -- 3ª demostración
 example
