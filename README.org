@@ -174,3 +174,4 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + J25-08-22: [[./textos/Producto_de_dos_binomios.md][Producto de dos binomios]] (En [[./src/Producto_de_dos_binomios.lean][Lean]]).
 + V26-08-22: [[./textos/Suma_por_diferencia.md][Suma por diferencia]] (En [[./src/Suma_por_diferencia.lean][Lean]]).
 + L29-08-22: [[./textos/Opuesto_se_cancela_con_la_suma_por_la_izquierda.md][Opuesto se cancela con la suma por la izquierda]] (En [[./src/Opuesto_se_cancela_con_la_suma_por_la_izquierda.lean][Lean]]).
++ M30-08-22: [[./textos/Opuesto_se_cancela_con_la_suma_por_la_derecha.md][Opuesto se cancela con la suma por la derecha]] (En [[./src/Opuesto_se_cancela_con_la_suma_por_la_derecha.lean][Lean]]).
