@@ -177,3 +177,4 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + M30-08-22 [[./textos/Opuesto_se_cancela_con_la_suma_por_la_derecha.md][Opuesto se cancela con la suma por la derecha]] (En [[./src/Opuesto_se_cancela_con_la_suma_por_la_derecha.lean][Lean]]).
 + X31-08-22 [[./textos/Cancelativa_de_la_suma_por_la_izquierda.md][Cancelativa de la suma por la izquierda]] (En [[./src/Cancelativa_de_la_suma_por_la_izquierda.lean][Lean]]).
 + J01-09-22 [[./textos/Cancelativa_de_la_suma_por_la_derecha.md][Cancelativa de la suma por la derecha]] (En [[./src/Cancelativa_de_la_suma_por_la_derecha.lean][Lean]]).
++ V02-09-22 [[./textos/Producto_por_cero.md][Producto por cero]] (En [[./src/Producto_por_cero.lean][Lean]]).
