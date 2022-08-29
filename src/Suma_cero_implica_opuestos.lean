@@ -24,7 +24,7 @@ example
   : -a = b :=
 calc
   -a  = -a + 0       : (add_zero (-a)).symm
-  ... = -a + (a + b) : congr_arg (λ x, -a +x) h.symm
+  ... = -a + (a + b) : congr_arg (λ x, -a + x) h.symm
   ... = b            : neg_add_cancel_left a b
 
 -- 2ª demostración
