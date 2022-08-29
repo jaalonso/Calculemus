@@ -177,4 +177,5 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + M30-08-22 [[./textos/Opuesto_se_cancela_con_la_suma_por_la_derecha.md][Si R es un anillo y a, b ∈ R, entonces (a + b) + -b = a]] (En [[./src/Opuesto_se_cancela_con_la_suma_por_la_derecha.lean][Lean]]).
 + X31-08-22 [[./textos/Cancelativa_de_la_suma_por_la_izquierda.md][Si R es un anillo y a, b, c ∈ R tales que a + b = a + c, entonces b = c.]] (En [[./src/Cancelativa_de_la_suma_por_la_izquierda.lean][Lean]]).
 + J01-09-22 [[./textos/Cancelativa_de_la_suma_por_la_derecha.md][Si R es un anillo y a, b, c ∈ R tales que a + b = c + b, entonces a = c.]] (En [[./src/Cancelativa_de_la_suma_por_la_derecha.lean][Lean]]).
-+ V02-09-22 [[./textos/Producto_por_cero.md][Producto por cero]] (En [[./src/Producto_por_cero.lean][Lean]]).
++ V02-09-22 [[./textos/Producto_por_cero.md][Si R es un anillo y a ∈ R, entonces a * 0 = 0]] (En [[./src/Producto_por_cero.lean][Lean]]).
++ L05-09-22 [[./textos/Producto_por_cero_por_a.md][Si R es un anillo y a ∈ R, entonces 0 * a = 0]] (En [[./src/Producto_por_cero_por_a.lean][Lean]]).
