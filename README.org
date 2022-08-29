@@ -180,3 +180,4 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + V02-09-22 [[./textos/Producto_por_cero.md][Si R es un anillo y a ∈ R, entonces a * 0 = 0]] (En [[./src/Producto_por_cero.lean][Lean]]).
 + L05-09-22 [[./textos/Producto_por_cero_por_a.md][Si R es un anillo y a ∈ R, entonces 0 * a = 0]] (En [[./src/Producto_por_cero_por_a.lean][Lean]]).
 + M06-09-22 [[./textos/Suma_cero_implica_opuestos.md][Si R es un anillo y a,b∈R tales que a+b=0, entonces -a=b]] (En [[./src/Suma_cero_implica_opuestos.lean][Lean]]).
++ X07-09-22 [[./textos/Suma_cero_implica_opuestos_2.md][Si R es un anillo y a,b∈R tales que a+b=0, entonces a=-b]] (En [[./src/Suma_cero_implica_opuestos_2.lean][Lean]]).
