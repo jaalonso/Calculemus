@@ -12,7 +12,6 @@
 -- ----------------------------------------------------------------------
 
 import algebra.ring
-import tactic
 
 variables {R : Type*} [ring R]
 variables {a b : R}
