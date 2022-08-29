@@ -7,7 +7,7 @@ En Lean, se declara que R es un anillo mediante la expresión
 <pre lang="text">
    variables {R : Type*} [ring R]
 </pre>
-y, como consecuencia, se tienen los siguientes axiomas
+Como consecuencia, se tiene los siguientes axiomas
 <pre lang="text">
    add_assoc    : ∀ a b c : R, (a + b) + c = a + (b + c)
    add_comm     : ∀ a b : R,   a + b = b + a

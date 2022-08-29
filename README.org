@@ -168,13 +168,13 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + 27-07-22 [[./textos/Si_gf_es_suprayectiva_entonces_g_es_suprayectiva.md][Si g·f es suprayectiva, entonces g es suprayectiva]] (En [[./src/Si_gf_es_suprayectiva_entonces_g_es_suprayectiva.lean][Lean]] y en [[./thy/Si_gf_es_suprayectiva_entonces_g_es_suprayectiva.thy][Isabelle]]).
 + 28-07-22 [[./textos/Si_ff_es_biyectiva_entonces_f_es_biyectiva.md][Si f·f es biyectiva entonces f es biyectiva]] (En [[./src/Si_ff_es_biyectiva_entonces_f_es_biyectiva.lean][Lean]] y en [[./thy/Si_ff_es_biyectiva_entonces_f_es_biyectiva.thy][Isabelle]]).
 + 21-08-22 [[./textos/El_producto_por_un_par_es_par.md][El producto por un par es par]] (En [[./src/El_producto_por_un_par_es_par.lean][Lean]]).
-+ 22-08-22 [[./textos/Asociativa_conmutativa_de_los_reales.md][Asociativa conmutativa de los reales]] (En [[./src/Asociativa_conmutativa_de_los_reales.lean][Lean]]).
-+ 23-08-22 [[./textos/Identidad_condicional_en_los_reales.md][Identidad condicional en los reales]] (En [[./src/Identidad_condicional_en_los_reales.lean][Lean]]).
-+ 24-08-22 [[./textos/Cuadrado_del_binomio.md][Cuadrado del binomio]] (En [[./src/Cuadrado_del_binomio.lean][Lean]]).
-+ J25-08-22 [[./textos/Producto_de_dos_binomios.md][Producto de dos binomios]] (En [[./src/Producto_de_dos_binomios.lean][Lean]]).
-+ V26-08-22 [[./textos/Suma_por_diferencia.md][Suma por diferencia]] (En [[./src/Suma_por_diferencia.lean][Lean]]).
-+ L29-08-22 [[./textos/Opuesto_se_cancela_con_la_suma_por_la_izquierda.md][Opuesto se cancela con la suma por la izquierda]] (En [[./src/Opuesto_se_cancela_con_la_suma_por_la_izquierda.lean][Lean]]).
-+ M30-08-22 [[./textos/Opuesto_se_cancela_con_la_suma_por_la_derecha.md][Opuesto se cancela con la suma por la derecha]] (En [[./src/Opuesto_se_cancela_con_la_suma_por_la_derecha.lean][Lean]]).
-+ X31-08-22 [[./textos/Cancelativa_de_la_suma_por_la_izquierda.md][Cancelativa de la suma por la izquierda]] (En [[./src/Cancelativa_de_la_suma_por_la_izquierda.lean][Lean]]).
-+ J01-09-22 [[./textos/Cancelativa_de_la_suma_por_la_derecha.md][Cancelativa de la suma por la derecha]] (En [[./src/Cancelativa_de_la_suma_por_la_derecha.lean][Lean]]).
++ 22-08-22 [[./textos/Asociativa_conmutativa_de_los_reales.md][Si a, b y c son números reales, entonces (a * b) * c = b * (a * c)]] (En [[./src/Asociativa_conmutativa_de_los_reales.lean][Lean]]).
++ 23-08-22 [[./textos/Identidad_condicional_en_los_reales.md][Si a, b, c, d, e y f son números reales tales que a * b = c * d y  e = f entonces, a * (b * e) = c * (d * f)]] (En [[./src/Identidad_condicional_en_los_reales.lean][Lean]]).
++ 24-08-22 [[./textos/Cuadrado_del_binomio.md][Si a y b son números reales, entonces (a + b) * (a + b) = a * a + 2 * (a * b) + b * b]] (En [[./src/Cuadrado_del_binomio.lean][Lean]]).
++ 25-08-22 [[./textos/Producto_de_dos_binomios.md][Si a, b, c y d son números reales, entonces (a + b) * (c + d) = a * c + a * d + b * c + b * d]] (En [[./src/Producto_de_dos_binomios.lean][Lean]]).
++ 26-08-22 [[./textos/Suma_por_diferencia.md][Si a y b son números reales, entonces (a + b) * (a - b) = a^2 - b^2]] (En [[./src/Suma_por_diferencia.lean][Lean]]).
++ 29-08-22 [[./textos/Opuesto_se_cancela_con_la_suma_por_la_izquierda.md][Si R es un anillo y a, b ∈ R, entonces -a + (a + b) = b]] (En [[./src/Opuesto_se_cancela_con_la_suma_por_la_izquierda.lean][Lean]]).
++ M30-08-22 [[./textos/Opuesto_se_cancela_con_la_suma_por_la_derecha.md][Si R es un anillo y a, b ∈ R, entonces (a + b) + -b = a]] (En [[./src/Opuesto_se_cancela_con_la_suma_por_la_derecha.lean][Lean]]).
++ X31-08-22 [[./textos/Cancelativa_de_la_suma_por_la_izquierda.md][Si R es un anillo y a, b, c ∈ R tales que a + b = a + c, entonces b = c.]] (En [[./src/Cancelativa_de_la_suma_por_la_izquierda.lean][Lean]]).
++ J01-09-22 [[./textos/Cancelativa_de_la_suma_por_la_derecha.md][Si R es un anillo y a, b, c ∈ R tales que a + b = c + b, entonces a = c.]] (En [[./src/Cancelativa_de_la_suma_por_la_derecha.lean][Lean]]).
 + V02-09-22 [[./textos/Producto_por_cero.md][Producto por cero]] (En [[./src/Producto_por_cero.lean][Lean]]).
