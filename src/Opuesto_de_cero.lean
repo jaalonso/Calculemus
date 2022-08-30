@@ -1,7 +1,7 @@
 -- Opuesto_de_cero.lean
 -- Si R es un anillo, entonces -0 = 0.
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 30-agosto-2022
+-- Sevilla, 8-septiembre-2022
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
