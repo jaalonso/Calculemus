@@ -20,8 +20,6 @@ import algebra.ring
 variables {R : Type*} [ring R]
 variables {a b : R}
 
-example : 0 = b + -b := (add_neg_self b).symm
-
 example
   (h : a + b = 0)
   : a = -b :=
