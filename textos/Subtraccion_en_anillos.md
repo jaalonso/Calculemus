@@ -1,0 +1,87 @@
+---
+Título: Si R es un anillo y a, b ∈ R, entonces a - b = a + -b
+Autor:  José A. Alonso
+---
+
+Demostrar que si R es un anillo y a, b ∈ R, entonces
+<pre lang="text">
+a - b = a + -b
+</pre>
+
+Para ello, completar la siguiente teoría de Lean:
+
+<pre lang="lean">
+import algebra.ring
+
+variables {R : Type*} [ring R]
+variables {a b : R}
+
+example : a - b = a + -b :=
+sorry
+</pre>
+<!--more-->
+
+<b>Soluciones con Lean</b>
+
+<pre lang="lean">
+import algebra.ring
+
+variables {R : Type*} [ring R]
+variables {a b : R}
+
+-- 1ª demostración
+-- ===============
+
+example : a - b = a + -b :=
+begin
+  apply sub_eq_iff_eq_add.mpr,
+  calc a
+       = a + 0        : (add_zero a).symm
+   ... = a + (-b + b) : congr_arg (λ x, a + x) (neg_add_self b).symm
+   ... = a + -b + b   : (add_assoc a (-b) b).symm
+end
+
+-- 2ª demostración
+-- ===============
+
+example : a - b = a + -b :=
+begin
+  apply sub_eq_iff_eq_add.mpr,
+  calc a
+       = a + 0        : by rw add_zero
+   ... = a + (-b + b) : by {congr; rw neg_add_self}
+   ... = a + -b + b   : by rw add_assoc
+end
+
+-- 3ª demostración
+-- ===============
+
+example : a - b = a + -b :=
+begin
+  rw sub_eq_iff_eq_add,
+  rw add_assoc,
+  rw neg_add_self,
+  rw add_zero,
+end
+
+-- 4ª demostración
+-- ===============
+
+example : a - b = a + -b :=
+by rw [sub_eq_iff_eq_add, add_assoc, neg_add_self, add_zero]
+
+-- 5ª demostración
+-- ===============
+
+example : a - b = a + -b :=
+by simp [sub_eq_iff_eq_add]
+
+-- 6ª demostración
+-- ===============
+
+example : a - b = a + -b :=
+-- by library_search
+sub_eq_add_neg a b
+</pre>
+
+Se puede interactuar con la prueba anterior en <a href="https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Subtraccion_en_anillos.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
