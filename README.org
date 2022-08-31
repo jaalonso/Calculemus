@@ -183,3 +183,4 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + X07-09-22 [[./textos/Suma_cero_implica_opuestos_2.md][Si R es un anillo y a,b∈R tales que a+b=0, entonces a=-b]] (En [[./src/Suma_cero_implica_opuestos_2.lean][Lean]]).
 + J08-09-22 [[./textos/Opuesto_de_cero.md][Si R es un anillo, entonces -0 = 0]] (En [[./src/Opuesto_de_cero.lean][Lean]])
 + V09-09-22 [[./textos/Opuesto_del_opuesto.md][Si R es un anillo y a ∈ R, entonces -(-a) = a]] (En [[./src/Opuesto_del_opuesto.lean][Lean]]).
++ L12-09-22 [[./textos/Subtraccion_en_anillos.md][Si R es un anillo y a,b∈R, entonces a-b=a+(-b)]] (En [[./src/Subtraccion_en_anillos.lean][Lean]]).
