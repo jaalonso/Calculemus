@@ -5,7 +5,7 @@
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
--- En Lean, se declara que G es un anillo mediante la expresión
+-- En Lean, se declara que G es un grupo mediante la expresión
 --    variables {G : Type*} [group G]
 -- y, como consecuencia, se tiene los siguientes axiomas
 --    mul_assoc    : ∀ a b c : G, a * b * c = a * (b * c)
