@@ -18,7 +18,7 @@
 
 import algebra.group
 variables {G : Type*} [group G]
-variables (a b : G)
+variables a : G
 
 -- 1ª demostración
 -- ===============
