@@ -9,11 +9,9 @@
 --    (a * b)⁻¹ = b⁻¹ * a⁻¹
 -- ---------------------------------------------------------------------
 
-import algebra.group.basic
-
-universe  u
-variables {G : Type u} [group G]
-variables {a b : G}
+import algebra.group
+variables {G : Type*} [group G]
+variables a b : G
 
 -- 1ª demostración
 -- ===============
