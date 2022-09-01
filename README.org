@@ -189,3 +189,4 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + J15-09-22 [[./textos/Neutro_derecha.md][Si G es un grupo y a ∈ G, entonces a * 1 = a]] (En [[./src/Neutro_derecha.lean][Lean]]).
 + V16-09-22 [[./textos/CS_inverso_izquierda.md][Si G es un grupo y a, b ∈ G tales que b * a = 1, entonces a⁻¹ = b]] (En [[./src/CS_inverso_izquierda.lean][Lean]]).
 + L19-09-22 [[./textos/Inverso_del_producto.md][Si G es un grupo y a, b ∈ G, entonces (a * b)⁻¹ = b⁻¹ * a⁻¹]] (En [[./src/Inverso_del_producto.lean][Lean]]).
++ M20-09-22 [[./textos/Ejercicio_sobre_orden.md][Si a, b, c, d, e ∈ ℝ tales que a ≤ b, b < c, c ≤ d, d < e, entonces a < e]] (En [[./src/Ejercicio_sobre_orden.lean][Lean]]).
