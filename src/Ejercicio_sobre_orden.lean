@@ -58,3 +58,14 @@ example
   (h₃ : d < e) :
   a < e :=
 by finish
+
+-- 4ª demostración
+-- ===============
+
+example
+  (h₀ : a ≤ b)
+  (h₁ : b < c)
+  (h₂ : c ≤ d)
+  (h₃ : d < e) :
+  a < e :=
+by linarith
