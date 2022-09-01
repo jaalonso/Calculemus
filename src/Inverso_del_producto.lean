@@ -1,11 +1,11 @@
 -- Inverso_del_producto.lean
--- Inverso del producto
+-- Si G es un grupo y a, b ∈ G entonces (a * b)⁻¹ = b⁻¹ * a⁻¹
 -- José A. Alonso Jiménez
--- Sevilla, 6 de julio de 2021
+-- Sevilla, 19-septiembre-2022
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
--- Sea G un grupo y a, b ∈ G. Entonces,
+-- Demostrar que si G un grupo y a, b ∈ G, entonces
 --    (a * b)⁻¹ = b⁻¹ * a⁻¹
 -- ---------------------------------------------------------------------
 
@@ -61,6 +61,7 @@ end
 -- ===============
 
 example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+-- by library_search
 mul_inv_rev a b
 
 -- 5ª demostración
@@ -68,10 +69,3 @@ mul_inv_rev a b
 
 example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
 by simp
-
--- Referencia
--- ==========
-
--- Propiedad 3.19 del libro "Abstract algebra: Theory and applications"
--- de Thomas W. Judson.
--- http://abstract.ups.edu/download/aata-20200730.pdf#page=49
