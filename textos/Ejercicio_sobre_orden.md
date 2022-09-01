@@ -79,6 +79,17 @@ example
   (h₃ : d < e) :
   a < e :=
 by finish
+
+-- 4ª demostración
+-- ===============
+
+example
+  (h₀ : a ≤ b)
+  (h₁ : b < c)
+  (h₂ : c ≤ d)
+  (h₃ : d < e) :
+  a < e :=
+by linarith
 </pre>
 
 Se puede interactuar con la prueba anterior en <a href="https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Ejercicio_sobre_orden.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
