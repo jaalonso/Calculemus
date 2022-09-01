@@ -187,3 +187,4 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + M13-09-22 [[./textos/Dos_por_a_igual_a_mas_a.md][Si R es un anillo y a ∈ R, entonces 2 * a = a + a]] (En [[./src/Dos_por_a_igual_a_mas_a.lean][Lean]]).
 + X14-09-22 [[./textos/Inverso_derecha.md][Si G es un grupo y a ∈ G, entonces a * a⁻¹ = 1]] (En [[./src/Inverso_derecha.lean][Lean]]).
 + J15-09-22 [[./textos/Neutro_derecha.md][Si G es un grupo y a ∈ G, entonces a * 1 = a]] (En [[./src/Neutro_derecha.lean][Lean]]).
++ V16-09-22 [[./textos/CS_inverso_izquierda.md][Si G es un grupo y a, b ∈ G tales que b * a = 1, entonces a⁻¹ = b]] (En [[./src/CS_inverso_izquierda.lean][Lean]]).
