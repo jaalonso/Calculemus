@@ -1,5 +1,5 @@
 -- Desigualdad_con_exponencial_2.lean
--- Si a, b, c, d ∈ ℝ tales que a ≤ b y c < d, entonces a + eᶜ + f < b + eᵈ + f
+-- Si a, b, c, d, f ∈ ℝ tales que a ≤ b y c < d, entonces a + eᶜ + f < b + eᵈ + f
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
 -- Sevilla, 22-septiembre-2022
 -- ---------------------------------------------------------------------
