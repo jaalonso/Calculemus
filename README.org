@@ -190,4 +190,5 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + V16-09-22 [[./textos/CS_inverso_izquierda.md][Si G es un grupo y a, b ∈ G tales que b * a = 1, entonces a⁻¹ = b]] (En [[./src/CS_inverso_izquierda.lean][Lean]]).
 + L19-09-22 [[./textos/Inverso_del_producto.md][Si G es un grupo y a, b ∈ G, entonces (a * b)⁻¹ = b⁻¹ * a⁻¹]] (En [[./src/Inverso_del_producto.lean][Lean]]).
 + M20-09-22 [[./textos/Ejercicio_sobre_orden.md][Si a, b, c, d, e ∈ ℝ tales que a ≤ b, b < c, c ≤ d, d < e, entonces a < e]] (En [[./src/Ejercicio_sobre_orden.lean][Lean]]).
-+ X21-09-22 [[./textos/Desigualdad_con_exponencial.md][Sean a, b, d ∈ ℝ tales que 1 ≤ a y b ≤ d, entonces 2 + a + eᵇ ≤ 3a + eᵈ]] (En [[./src/Desigualdad_con_exponencial.lean][Lean]]).
++ X21-09-22 [[./textos/Desigualdad_con_exponencial.md][Si a, b, d ∈ ℝ tales que 1 ≤ a y b ≤ d, entonces 2 + a + eᵇ ≤ 3a + eᵈ]] (En [[./src/Desigualdad_con_exponencial.lean][Lean]]).
++ J22-09-22 [[./textos/Desigualdad_con_exponencial_2.md][Si a, b, c, d ∈ ℝ tales que a ≤ b y c < d, entonces a + eᶜ + f < b + eᵈ + f]] (En [[./src/Desigualdad_con_exponencial_2.lean][Lean]]).
