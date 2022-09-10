@@ -11,9 +11,7 @@
 
 import analysis.special_functions.log.basic
 import tactic
-
 open real
-
 variables a b c : ℝ
 
 -- 1ª demostración
