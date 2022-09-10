@@ -24,7 +24,7 @@ example
   : c - exp b ≤ c - exp a :=
 begin
    apply sub_le_sub_left _ c,
-   apply exp_le_exp.mpr h,
+   exact exp_le_exp.mpr h,
 end
 
 -- 2ª demostración
