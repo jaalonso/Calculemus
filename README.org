@@ -195,3 +195,4 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + V23-09-22 [[./textos/Desigualdad_con_logaritmos.md][Si a, b ∈ ℝ tales que a ≤ b, entonces log(1 + eᵃ) ≤ log(1 + eᵇ)]] (En [[./src/Desigualdad_con_logaritmos.lean][Lean]]).
 + L26-09-22 [[./textos/Desigualdad-con_exponencial_3.md][Si a, b, c ∈ ℝ tales que a ≤ b, entonces c - eᵇ ≤ c - eᵃ]] (En [[./src/Desigualdad-con_exponencial_3.lean][Lean]]]).
 + M27-08-22 [[./textos/Doble_del_producto_menor_que_suma_de_cuadrados.md][Si a, b ∈ ℝ, entonces 2ab ≤ a² + b²]] (En [[./src/Doble_del_producto_menor_que_suma_de_cuadrados.lean][Lean]]).
++ X28-09-22 [[./textos/Valor_absoluto_del_producto_menor_media_de_cuadrados.md][Si a, b ∈ ℝ, entonces |ab| ≤ (a^2 + b^2)/2]] (En [[./src/Valor_absoluto_del_producto_menor_media_de_cuadrados.lean][Lean]]).
