@@ -72,3 +72,7 @@ two_mul a
 </pre>
 
 Se puede interactuar con la prueba anterior en <a href="https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Dos_por_a_igual_a_mas_a.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
+
+<b>Referencias</b>
+
++ J. Avigad, K. Buzzard, R.Y. Lewis y P. Massot. [Mathematics in Lean](https://bit.ly/3U4UjBk), p. 13.

@@ -78,4 +78,6 @@ by rw [add_mul, mul_add, mul_add, ←add_assoc]
 
 Se puede interactuar con la prueba anterior en <a href="https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Producto_de_dos_binomios.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
 
-En los comentarios se pueden escribir otras soluciones, escribiendo el código entre una línea con &#60;pre lang=&quot;lean&quot;&#62; y otra con &#60;/pre&#62;
+<b>Referencias</b>
+
++ J. Avigad, K. Buzzard, R.Y. Lewis y P. Massot. [Mathematics in Lean](https://bit.ly/3U4UjBk), p. 8.

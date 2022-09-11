@@ -79,3 +79,7 @@ add_eq_zero_iff_neg_eq.mp h
 </pre>
 
 Se puede interactuar con la prueba anterior en <a href="https://leanprover-community.github.io/lean-web-editor/#url=https://raw.githubusercontent.com/jaalonso/Calculemus/main/src/Suma_cero_implica_opuestos.lean" rel="noopener noreferrer" target="_blank">esta sesión con Lean</a>.
+
+<b>Referencias</b>
+
++ J. Avigad, K. Buzzard, R.Y. Lewis y P. Massot. [Mathematics in Lean](https://bit.ly/3U4UjBk), p. 16.
