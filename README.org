@@ -200,3 +200,4 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + V30-09-22 [[./textos/Conmutatividad_del_maximo.md][Si a, b ∈ ℝ, entonces max(a,b) = max(b,a)]] (En [[./src/Conmutatividad_del_maximo.lean][Lean]]).
 + L03-10-22 [[./textos/Asociatividad_del_minimo.md][Si a, b, c ∈ ℝ, entonces min(min(a,b),c) = min(a,min(b,c))]] (En [[./src/Asociatividad_del_minimo.lean][Lean]]).
 + M04-10-22 [[./textos/Minimo_de_suma.md][Si a, b, c ∈ ℝ, entonces min a b + c = min (a + c) (b + c)]] (En [[./src/Minimo_de_suma.lean][Lean]]).
++ X05-10-22 [[./textos/absoluto_resta.md][Si a, b ∈ ℝ, entonces |a| - |b| ≤ |a - b|]] (En [[./src/absoluto_resta.lean][Lean]]).
