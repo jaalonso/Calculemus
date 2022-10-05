@@ -1,7 +1,7 @@
 -- Conmutatividad_del_gcd.lean
 -- Si m, n ∈ ℕ, entonces gcd(m,n) = gcd(n,m).
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 12-octubre-2022
+-- Sevilla, 11-octubre-2022
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------

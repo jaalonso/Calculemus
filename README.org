@@ -204,4 +204,4 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + J06-10-22 [[./textos/Divisivilidad_productos.md][Si x, y, z ∈ ℕ, entonces x ∣ y * x * z]] (En [[./src/Divisivilidad_productos.lean][Lean]]).
 + V07-10-22 [[./textos/Divisibilidad_de_cuadrado.md][Si x ∈ ℕ, entonces x ∣ x^2]] (En [[./src/Divisibilidad_de_cuadrado.lean][Lean]]).
 + L10-10-22 [[./textos/Expresion_divisible.md][Si w,x,y,z ∈ ℕ tales que x ∣ w, entonces x ∣ yxz + x² + w²]] (En [[./src/Expresion_divisible.lean][Lean]]).
-+ M12-10-22 [[./textos/Conmutatividad_del_gcd.md][Si m, n ∈ ℕ, entonces gcd(m,n) = gcd(n,m)]] (En [[./src/Conmutatividad_del_gcd.lean][Lean]]).
++ M11-10-22 [[./textos/Conmutatividad_del_gcd.md][Si m, n ∈ ℕ, entonces gcd(m,n) = gcd(n,m)]] (En [[./src/Conmutatividad_del_gcd.lean][Lean]]).
