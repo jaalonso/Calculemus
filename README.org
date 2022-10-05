@@ -183,23 +183,25 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + 07-09-22 [[./textos/Suma_cero_implica_opuestos_2.md][Si R es un anillo y a,b∈R tales que a+b=0, entonces a=-b]] (En [[./src/Suma_cero_implica_opuestos_2.lean][Lean]]).
 + 08-09-22 [[./textos/Opuesto_de_cero.md][Si R es un anillo, entonces -0 = 0]] (En [[./src/Opuesto_de_cero.lean][Lean]])
 + 09-09-22 [[./textos/Opuesto_del_opuesto.md][Si R es un anillo y a ∈ R, entonces -(-a) = a]] (En [[./src/Opuesto_del_opuesto.lean][Lean]]).
-+ L12-09-22 [[./textos/Subtraccion_en_anillos.md][Si R es un anillo y a,b∈R, entonces a-b=a+(-b)]] (En [[./src/Subtraccion_en_anillos.lean][Lean]]).
-+ M13-09-22 [[./textos/Dos_por_a_igual_a_mas_a.md][Si R es un anillo y a ∈ R, entonces 2 * a = a + a]] (En [[./src/Dos_por_a_igual_a_mas_a.lean][Lean]]).
-+ X14-09-22 [[./textos/Inverso_derecha.md][Si G es un grupo y a ∈ G, entonces a * a⁻¹ = 1]] (En [[./src/Inverso_derecha.lean][Lean]]).
-+ J15-09-22 [[./textos/Neutro_derecha.md][Si G es un grupo y a ∈ G, entonces a * 1 = a]] (En [[./src/Neutro_derecha.lean][Lean]]).
-+ V16-09-22 [[./textos/CS_inverso_izquierda.md][Si G es un grupo y a, b ∈ G tales que b * a = 1, entonces a⁻¹ = b]] (En [[./src/CS_inverso_izquierda.lean][Lean]]).
-+ L19-09-22 [[./textos/Inverso_del_producto.md][Si G es un grupo y a, b ∈ G, entonces (a * b)⁻¹ = b⁻¹ * a⁻¹]] (En [[./src/Inverso_del_producto.lean][Lean]]).
-+ M20-09-22 [[./textos/Ejercicio_sobre_orden.md][Si a, b, c, d, e ∈ ℝ tales que a ≤ b, b < c, c ≤ d, d < e, entonces a < e]] (En [[./src/Ejercicio_sobre_orden.lean][Lean]]).
-+ X21-09-22 [[./textos/Desigualdad_con_exponencial.md][Si a, b, d ∈ ℝ tales que 1 ≤ a y b ≤ d, entonces 2 + a + eᵇ ≤ 3a + eᵈ]] (En [[./src/Desigualdad_con_exponencial.lean][Lean]]).
-+ J22-09-22 [[./textos/Desigualdad_con_exponencial_2.md][Si a, b, c, d, f ∈ ℝ tales que a ≤ b y c < d, entonces a + eᶜ + f < b + eᵈ + f]] (En [[./src/Desigualdad_con_exponencial_2.lean][Lean]]).
-+ V23-09-22 [[./textos/Desigualdad_con_logaritmos.md][Si a, b ∈ ℝ tales que a ≤ b, entonces log(1 + eᵃ) ≤ log(1 + eᵇ)]] (En [[./src/Desigualdad_con_logaritmos.lean][Lean]]).
-+ L26-09-22 [[./textos/Desigualdad-con_exponencial_3.md][Si a, b, c ∈ ℝ tales que a ≤ b, entonces c - eᵇ ≤ c - eᵃ]] (En [[./src/Desigualdad-con_exponencial_3.lean][Lean]]]).
-+ M27-08-22 [[./textos/Doble_del_producto_menor_que_suma_de_cuadrados.md][Si a, b ∈ ℝ, entonces 2ab ≤ a² + b²]] (En [[./src/Doble_del_producto_menor_que_suma_de_cuadrados.lean][Lean]]).
-+ X28-09-22 [[./textos/Valor_absoluto_del_producto_menor_media_de_cuadrados.md][Si a, b ∈ ℝ, entonces |ab| ≤ (a^2 + b^2)/2]] (En [[./src/Valor_absoluto_del_producto_menor_media_de_cuadrados.lean][Lean]]).
-+ J29-09-22 [[./textos/Conmutatividad_del_minimo.md][Si a, b ∈ ℝ, entonces min(a,b) = min(b,a)]] (En [[./src/Conmutatividad_del_minimo.lean][Lean]]).
-+ V30-09-22 [[./textos/Conmutatividad_del_maximo.md][Si a, b ∈ ℝ, entonces max(a,b) = max(b,a)]] (En [[./src/Conmutatividad_del_maximo.lean][Lean]]).
-+ L03-10-22 [[./textos/Asociatividad_del_minimo.md][Si a, b, c ∈ ℝ, entonces min(min(a,b),c) = min(a,min(b,c))]] (En [[./src/Asociatividad_del_minimo.lean][Lean]]).
-+ M04-10-22 [[./textos/Minimo_de_suma.md][Si a, b, c ∈ ℝ, entonces min a b + c = min (a + c) (b + c)]] (En [[./src/Minimo_de_suma.lean][Lean]]).
++ 12-09-22 [[./textos/Subtraccion_en_anillos.md][Si R es un anillo y a,b∈R, entonces a-b=a+(-b)]] (En [[./src/Subtraccion_en_anillos.lean][Lean]]).
++ 13-09-22 [[./textos/Dos_por_a_igual_a_mas_a.md][Si R es un anillo y a ∈ R, entonces 2 * a = a + a]] (En [[./src/Dos_por_a_igual_a_mas_a.lean][Lean]]).
++ 14-09-22 [[./textos/Inverso_derecha.md][Si G es un grupo y a ∈ G, entonces a * a⁻¹ = 1]] (En [[./src/Inverso_derecha.lean][Lean]]).
++ 15-09-22 [[./textos/Neutro_derecha.md][Si G es un grupo y a ∈ G, entonces a * 1 = a]] (En [[./src/Neutro_derecha.lean][Lean]]).
++ 16-09-22 [[./textos/CS_inverso_izquierda.md][Si G es un grupo y a, b ∈ G tales que b * a = 1, entonces a⁻¹ = b]] (En [[./src/CS_inverso_izquierda.lean][Lean]]).
++ 19-09-22 [[./textos/Inverso_del_producto.md][Si G es un grupo y a, b ∈ G, entonces (a * b)⁻¹ = b⁻¹ * a⁻¹]] (En [[./src/Inverso_del_producto.lean][Lean]]).
++ 20-09-22 [[./textos/Ejercicio_sobre_orden.md][Si a, b, c, d, e ∈ ℝ tales que a ≤ b, b < c, c ≤ d, d < e, entonces a < e]] (En [[./src/Ejercicio_sobre_orden.lean][Lean]]).
++ 21-09-22 [[./textos/Desigualdad_con_exponencial.md][Si a, b, d ∈ ℝ tales que 1 ≤ a y b ≤ d, entonces 2 + a + eᵇ ≤ 3a + eᵈ]] (En [[./src/Desigualdad_con_exponencial.lean][Lean]]).
++ 22-09-22 [[./textos/Desigualdad_con_exponencial_2.md][Si a, b, c, d, f ∈ ℝ tales que a ≤ b y c < d, entonces a + eᶜ + f < b + eᵈ + f]] (En [[./src/Desigualdad_con_exponencial_2.lean][Lean]]).
++ 23-09-22 [[./textos/Desigualdad_con_logaritmos.md][Si a, b ∈ ℝ tales que a ≤ b, entonces log(1 + eᵃ) ≤ log(1 + eᵇ)]] (En [[./src/Desigualdad_con_logaritmos.lean][Lean]]).
++ 26-09-22 [[./textos/Desigualdad-con_exponencial_3.md][Si a, b, c ∈ ℝ tales que a ≤ b, entonces c - eᵇ ≤ c - eᵃ]] (En [[./src/Desigualdad-con_exponencial_3.lean][Lean]]]).
++ 27-08-22 [[./textos/Doble_del_producto_menor_que_suma_de_cuadrados.md][Si a, b ∈ ℝ, entonces 2ab ≤ a² + b²]] (En [[./src/Doble_del_producto_menor_que_suma_de_cuadrados.lean][Lean]]).
++ 28-09-22 [[./textos/Valor_absoluto_del_producto_menor_media_de_cuadrados.md][Si a, b ∈ ℝ, entonces |ab| ≤ (a^2 + b^2)/2]] (En [[./src/Valor_absoluto_del_producto_menor_media_de_cuadrados.lean][Lean]]).
++ 29-09-22 [[./textos/Conmutatividad_del_minimo.md][Si a, b ∈ ℝ, entonces min(a,b) = min(b,a)]] (En [[./src/Conmutatividad_del_minimo.lean][Lean]]).
++ 30-09-22 [[./textos/Conmutatividad_del_maximo.md][Si a, b ∈ ℝ, entonces max(a,b) = max(b,a)]] (En [[./src/Conmutatividad_del_maximo.lean][Lean]]).
++ 03-10-22 [[./textos/Asociatividad_del_minimo.md][Si a, b, c ∈ ℝ, entonces min(min(a,b),c) = min(a,min(b,c))]] (En [[./src/Asociatividad_del_minimo.lean][Lean]]).
++ 04-10-22 [[./textos/Minimo_de_suma.md][Si a, b, c ∈ ℝ, entonces min a b + c = min (a + c) (b + c)]] (En [[./src/Minimo_de_suma.lean][Lean]]).
 + X05-10-22 [[./textos/absoluto_resta.md][Si a, b ∈ ℝ, entonces |a| - |b| ≤ |a - b|]] (En [[./src/absoluto_resta.lean][Lean]]).
 + J06-10-22 [[./textos/Divisivilidad_productos.md][Si x, y, z ∈ ℕ, entonces x ∣ y * x * z]] (En [[./src/Divisivilidad_productos.lean][Lean]]).
 + V07-10-22 [[./textos/Divisibilidad_de_cuadrado.md][Si x ∈ ℕ, entonces x ∣ x^2]] (En [[./src/Divisibilidad_de_cuadrado.lean][Lean]]).
++ L10-10-22 [[./textos/Expresion_divisible.md][Si w,x,y,z ∈ ℕ tales que x ∣ w, entonces x ∣ yxz + x² + w²]] (En [[./src/Expresion_divisible.lean][Lean]]).
++ M12-10-22 [[./textos/Conmutatividad_del_gcd.md][Si m, n ∈ ℕ, entonces gcd(m,n) = gcd(n,m)]] (En [[./src/Conmutatividad_del_gcd.lean][Lean]]).
