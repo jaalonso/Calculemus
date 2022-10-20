@@ -208,3 +208,4 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + [[./textos/Conmutatividad_del_infimo.md][Si R es un retículo y x, y ∈ R, entonces x ⊓ y = y ⊓ x]] (En [[./src/Conmutatividad_del_infimo.lean][Lean]]).
 + [[./textos/Conmutatividad_del_supremo.md][Si R es un retículo y x, y ∈ R, entonces x ⊔ y = y ⊔ x]] (En [[./src/Conmutatividad_del_supremo.lean][Lean]]).
 + [[./textos/Asociatividad_del_infimo.md][Si R es un retículo y x, y, z ∈ R, entonces (x ⊓ y) ⊓ z = x ⊓ (y ⊓ z)]] (En [[./src/Asociatividad_del_infimo.lean][Lean]]).
++ [[./textos/Asociatividad_del_supremo.md][Si R es un retículo y x, y, z ∈ R, entonces (x ⊔ y) ⊔ z = x ⊔ (y ⊔ z)]] (En [[./src/Asociatividad_del_supremo.lean][Lean]]).
