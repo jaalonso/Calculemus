@@ -216,6 +216,8 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + [[./textos/Si_es_menor_o_igual_entonces_la_diferencia_es_positiva.md][Si R es un anillo ordenado y a, b ∈ R, entonces a ≤ b → 0 ≤ b - a]] (En [[./src/Si_es_menor_o_igual_entonces_la_diferencia_es_positiva.lean][Lean]]).
 + [[./textos/CN_de_diferencia_no_negativa.md][Si R es un anillo ordenado y a, b ∈ R, entonces 0 ≤ b - a → a ≤ b]] (En [[./src/CN_de_diferencia_no_negativa.lean][Lean]]).
 + [[./textos/Producto_desigualdad_por_no_negativo.md][Si R es un anillo ordenado y a, b, c ∈ R tales que a ≤ b y 0 ≤ c, entonces a * c ≤ b * c]] (En [[./src/Producto_desigualdad_por_no_negativo.lean][Lean]]).
-+ L31-10-22 [[./textos/Distancia_no_negativa.md][Si X es un espacio métrico y x, y ∈ X, entonces dist(x,y) ≥ 0]] (En [[./src/Distancia_no_negativa.lean][Lean]]).
-+ M01-11-22 [[./textos/Cota_del_valor_absoluto_del_producto.md][Si x,y,ε ∈ ℝ tales que 0 < ε ≤ 1, |x| < ε y |y| < ε, entonces |x*y| < ε]] (En [[./src/Cota_del_valor_absoluto_del_producto.lean][Lean]]).
-+ X02-11-22 [[./textos/Suma_de_cotas_superiores.md][La suma de una cota superior de f y una cota superior de g es una cota superior de f+g]] (En [[./src/Suma_de_cotas_superiores.lean][Lean]]).
++ [[./textos/Distancia_no_negativa.md][Si X es un espacio métrico y x, y ∈ X, entonces dist(x,y) ≥ 0]] (En [[./src/Distancia_no_negativa.lean][Lean]]).
++ [[./textos/Cota_del_valor_absoluto_del_producto.md][Si x,y,ε ∈ ℝ tales que 0 < ε ≤ 1, |x| < ε y |y| < ε, entonces |x*y| < ε]] (En [[./src/Cota_del_valor_absoluto_del_producto.lean][Lean]]).
++ [[./textos/Suma_de_cotas_superiores.md][La suma de una cota superior de f y una cota superior de g es una cota superior de f+g]] (En [[./src/Suma_de_cotas_superiores.lean][Lean]]).
++ [[./textos/Suma_de_cotas_inferiores.md][La suma de una cota inferior de f y una cota inferior de g es una cota inferior de f+g]] (En [[./src/Suma_de_cotas_inferiores.lean][Lean]]).
++ [[./textos/Producto_no_negativas.md][El producto de dos funciones no negativas es no negativa]] (En [[./src/Producto_no_negativas.lean][Lean]]).
