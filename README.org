@@ -221,3 +221,4 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + [[./textos/Suma_de_cotas_superiores.md][La suma de una cota superior de f y una cota superior de g es una cota superior de f+g]] (En [[./src/Suma_de_cotas_superiores.lean][Lean]]).
 + [[./textos/Suma_de_cotas_inferiores.md][La suma de una cota inferior de f y una cota inferior de g es una cota inferior de f+g]] (En [[./src/Suma_de_cotas_inferiores.lean][Lean]]).
 + [[./textos/Producto_no_negativas.md][El producto de dos funciones no negativas es no negativa]] (En [[./src/Producto_no_negativas.lean][Lean]]).
++ L07-11-22 [[./textos/Cota_sup_del_producto_de_funciones.md][Si a es una cota superior no negativa de f y b es es una cota superior de la función no negativa g, entonces a·b es una cota superior de f·g]] (En [[./src/Cota_sup_del_producto_de_funciones.lean][Lean]]).
