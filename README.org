@@ -225,3 +225,4 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + [[./textos/Suma_de_funciones_monotonas.md][La suma de dos funciones monótonas es monótona]] (En [[./src/Suma_de_funciones_monotonas.lean][Lean]]).
 + [[./textos/Producto_de_un_positivo_por_una_funcion_monotona.md][Si f es monótona y c ≥ 0, entonces c·f es monótona.]] (En [[./src/Producto_de_un_positivo_por_una_funcion_monotona.lean][Lean]]).
 + [[./textos/Composicion_de_funciones_monotonas.md][Composicion_de_funciones_monotonas]] (En [[./src/Composicion_de_funciones_monotonas.lean][Lean]]).
++ [[./textos/Suma_funciones_pares.md][Suma_funciones_pares]] (En [[./src/Suma_funciones_pares.lean][Lean]]).
