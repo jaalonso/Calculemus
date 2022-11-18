@@ -229,4 +229,5 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 * [[./textos/Producto_funciones_impares.md][El producto de dos funciones impares es par]] (En [[./src/Producto_funciones_impares.lean][Lean]]).
 + [[./textos/Producto_de_funcion_par_por_impar.md][El producto de una función par por una impar es impar.]] (En [[./src/Producto_de_funcion_par_por_impar.lean][Lean]]).
 + [[./textos/Composicion_par_impar.md][Si f es par y g es impar, entonces f ∘ g es par]] (En [[./src/Composicion_par_impar.lean][Lean]]).
-+ V18-11-22 [[./textos/Propiedad_reflexiva_del_subconjunto.md][Para cualquier conjunto s, s ⊆ s]] (En [[./src/Propiedad_reflexiva_del_subconjunto.lean][Lean]]).
++ [[./textos/Propiedad_reflexiva_del_subconjunto.md][Para cualquier conjunto s, s ⊆ s]] (En [[./src/Propiedad_reflexiva_del_subconjunto.lean][Lean]]).
++ [[./textos/Propiedad_transitiva_del_subconjunto.md][Si r ⊆ s y s ⊆ t, entonces r ⊆ t]] (En [[./src/Propiedad_transitiva_del_subconjunto.lean][Lean]]).
