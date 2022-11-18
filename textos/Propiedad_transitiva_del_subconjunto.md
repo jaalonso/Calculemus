@@ -58,24 +58,6 @@ begin
   exact xr
 end
 
--- El desarrollo es
---
--- α : Type u_1,
--- r s t : set α
--- ⊢ r ⊆ s → s ⊆ t → r ⊆ t
---    >> intros rs st x xr,
--- rs : r ⊆ s,
--- st : s ⊆ t,
--- x : α,
--- xr : x ∈ r
--- ⊢ x ∈ t
---    >> apply st,
--- ⊢ x ∈ s
---    >> apply rs,
--- ⊢ x ∈ r
---    >> exact xr
--- no goals
-
 -- 3ª demostración
 -- ===============
 
