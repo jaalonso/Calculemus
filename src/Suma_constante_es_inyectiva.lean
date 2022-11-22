@@ -10,9 +10,9 @@
 -- es inyectiva
 -- ----------------------------------------------------------------------
 
-import data.real.basic                                               -- 1
+import data.real.basic
 
-open function                                                        -- 2
+open function
 
 variable {c : ℝ}
 
