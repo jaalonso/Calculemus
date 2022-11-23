@@ -234,3 +234,4 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + [[./textos/Cotas_superiores_de_conjuntos.md][Si a es una cota superior de s y a ≤ b, entonces b es una cota superior de s]] (En [[./src/Cotas_superiores_de_conjuntos.lean][Lean]]).
 + [[./textos/Suma_constante_es_inyectiva.md][Para todo c ∈ ℝ, la función f(x) = x+c es inyectiva]] (En [[./src/Suma_constante_es_inyectiva.lean][Lean]]).
 + [[./textos/Producto_constante_es_inyectiva.md][Para todo c ∈ ℝ-{0}, la función f(x) = x * c es inyectiva]] (En [[./src/Producto_constante_es_inyectiva.lean][Lean]]).
++ J24 [[./textos/Composicion_de_funciones_inyectivas.md][Composicion_de_funciones_inyectivas]] (En [[./src/Composicion_de_funciones_inyectivas.lean][Lean]]).
