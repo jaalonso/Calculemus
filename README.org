@@ -237,3 +237,4 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + [[./textos/Composicion_de_funciones_inyectivas.md][Composicion_de_funciones_inyectivas]] (En [[./src/Composicion_de_funciones_inyectivas.lean][Lean]]).
 + [[./textos/Existencia_de_valor_intermedio.md][∃ x ∈ ℝ, 2 < x < 3]] (En [[./src/Existencia_de_valor_intermedio.lean][Lean]]).
 + [[./textos/Suma_de_funciones_acotadas_superiormente.md][La suma de dos funciones acotadas superiormente también lo está]] (En [[./src/Suma_de_funciones_acotadas_superiormente.lean][Lean]]).
++ [[./textos/Suma_de_funciones_acotadas_inferiormente.md][La suma de dos funciones acotadas inferiormente también lo está]] (En [[./src/Suma_de_funciones_acotadas_inferiormente.lean][Lean]]).
