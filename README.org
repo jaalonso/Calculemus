@@ -239,3 +239,4 @@ demostrarlos con asistentes de pruebas (como Isabelle/HOL y Lean).
 + [[./textos/Suma_de_funciones_acotadas_superiormente.md][La suma de dos funciones acotadas superiormente también lo está]] (En [[./src/Suma_de_funciones_acotadas_superiormente.lean][Lean]]).
 + [[./textos/Suma_de_funciones_acotadas_inferiormente.md][La suma de dos funciones acotadas inferiormente también lo está]] (En [[./src/Suma_de_funciones_acotadas_inferiormente.lean][Lean]]).
 + [[./textos/Producto_por_funcion_acotada_superiormente.md][Si c ≥ 0 y f está acotada superiormente, entonces c * f también lo está]] (En [[./src/Producto_por_funcion_acotada_superiormente.lean][Lean]]).
++ [[./textos/Producto_de_suma_de_cuadrados.md][Si x e y son sumas de dos cuadrados, entonces xy también lo es]] (En [[./src/Producto_de_suma_de_cuadrados.lean][Lean]]).
