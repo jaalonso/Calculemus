@@ -1,11 +1,11 @@
 -- Suma_divisible.lean
--- Si a divide a b y a c, entonces tambien divide a b + c.
+-- Si a divide a b y a c, entonces también divide a b + c.
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
 -- Sevilla, 5-diciembre-2022
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
--- Demostrar que si a divide a b y a c, entonces tambien divide a b + c.
+-- Demostrar que si a divide a b y a c, entonces también divide a b + c.
 -- ----------------------------------------------------------------------
 
 import tactic
